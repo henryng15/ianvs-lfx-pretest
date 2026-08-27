@@ -1,0 +1,27 @@
+ianvs commit under test : 37a9c60
+load_module source      : /home/hoan/VSCode/projects/KubeEdge/ianvs/core/common/utils.py:92
+python                  : 3.13.13
+
+Two distinct Example metric modules, identical basename:
+  test case 1 -> /tmp/tmp3ntyif18/example_A/testenv/accuracy.py
+  test case 2 -> /tmp/tmp3ntyif18/example_B/testenv/accuracy.py
+
+--- test case 1: load_module(example_A/testenv/accuracy.py) ---
+  sys.modules['accuracy'].__file__   = /tmp/tmp3ntyif18/example_A/testenv/accuracy.py
+  sys.modules['accuracy'].EXAMPLE_ID = example_A
+  accuracy(None, None)               = 0.11
+
+--- test case 2: load_module(example_B/testenv/accuracy.py) ---
+  sys.modules['accuracy'].__file__   = /tmp/tmp3ntyif18/example_A/testenv/accuracy.py
+  sys.modules['accuracy'].EXAMPLE_ID = example_A
+  accuracy(None, None)               = 0.11
+
+====================================================================
+  test case 2 got the SAME module object as test case 1 : True
+  test case 2 actually loaded its own file              : False
+  load_module() raised no error                        : True
+====================================================================
+
+RESULT: test case 2 silently executed test case 1's code.
+        No exception, no warning. The benchmark reports a
+        result for example_B that was produced by example_A.

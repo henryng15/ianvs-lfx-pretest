@@ -1,0 +1,51 @@
+Example .py files parsed : 572  (syntax errors: 0)
+__all__ declarations OK  : 104
+__all__ declarations BAD : 30
+   examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/testalgorithms/cloud_model.py:23  [names not defined in module] ['QwenSemanticSegmentation']
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/f1_score.py:22  [names not defined in module] ['f1_score']
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/idf1.py:22  [names not defined in module] ['idf1']
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/mota.py:22  [names not defined in module] ['mota']
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/motp.py:22  [names not defined in module] ['motp']
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/precision.py:22  [names not defined in module] ['precision']
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/recall.py:22  [names not defined in module] ['recall']
+   examples/RoboDK Palletizing/singletask_learning_bench/testenv/map50.py:10  [STRING not sequence] map50
+   examples/RoboDK Palletizing/singletask_learning_bench/testenv/map90.py:10  [STRING not sequence] map90
+   examples/bdd/lifelong_learning_bench/curb-detection/testenv/map.py:21  [STRING not sequence] map
+   examples/cityscapes/singletask_learning_bench/semantic-segmentation/testenv/map.py:9  [STRING not sequence] accuracy
+   examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testalgorithms/rfnet/RFNet/accuracy.py:7  [STRING not sequence] accuracy
+   examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testenv/accuracy.py:23  [STRING not sequence] accuracy
+   examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/RFNet/accuracy.py:7  [STRING not sequence] accuracy
+   examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py:23  [STRING not sequence] accuracy
+   examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testalgorithms/rfnet/RFNet/accuracy.py:7  [STRING not sequence] accuracy
+   examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testenv/accuracy.py:23  [STRING not sequence] accuracy
+   examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/cloud_model.py:25  [names not defined in module] ['BaseModel']
+   examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/edge_model.py:25  [names not defined in module] ['BaseModel']
+   examples/imagenet/multiedge_inference_bench/testenv/accuracy.py:3  [STRING not sequence] accuracy
+   examples/imagenet/multiedge_inference_bench/testenv/fps.py:8  [STRING not sequence] fps
+   examples/imagenet/multiedge_inference_bench/testenv/peak_memory.py:8  [STRING not sequence] peak_memory
+   examples/imagenet/multiedge_inference_bench/testenv/peak_power.py:8  [STRING not sequence] peak_power
+   examples/pcb-aoi/incremental_learning_bench/fault_detection/testalgorithms/fpn/hard_example_mining.py:21  [STRING not sequence] IBTFilter
+   examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/RFNet/accuracy.py:7  [STRING not sequence] accuracy
+   examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py:23  [STRING not sequence] accuracy
+   examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/ERFNet/accuracy.py:7  [STRING not sequence] accuracy
+   examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/task_allocation_by_domain.py:4  [names not defined in module] ['TaskAllocationByDomain']
+   examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/task_definition_by_domain.py:7  [names not defined in module] ['TaskDefinitionByDomain']
+   examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py:23  [STRING not sequence] accuracy
+
+module-scope `from transformers...` imports: 41 in 32 files
+    3  examples/cloud-edge-speculative-decoding-benchmark/testalgorithms/speculative-decoding/algorithms/block/copied_dflash_model.py
+    3  examples/imagenet/multiedge_inference_bench/testalgorithms/automatic/models/transformers/deit.py
+    3  examples/llm-agent/singletask_learning_bench/testalgorithms/basemodel.py
+    2  examples/cloud-edge-speculative-decoding-benchmark/testalgorithms/speculative-decoding/algorithms/block/verifier.py
+    2  examples/imagenet/multiedge_inference_bench/testalgorithms/automatic/models/transformers/bert.py
+    2  examples/imagenet/multiedge_inference_bench/testalgorithms/automatic/models/transformers/vit.py
+    1  examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/testalgorithms/edge_model.py
+    1  examples/PIPL/edge-cloud_collaborative_learning_bench/test_algorithms/privacy_detection/pii_detector.py
+    1  examples/PIPL/edge-cloud_collaborative_learning_bench/test_algorithms/privacy_encryption/saliency_masking.py
+    1  examples/PIPL/edge-cloud_collaborative_learning_bench/test_algorithms/privacy_preserving_llm/privacy_preserving_llm.py
+    1  examples/TAB/cloud_edge_collaborative_inference_bench/test_algorithms/edge_model/edge_model.py
+    1  examples/TAB/cloud_edge_collaborative_inference_bench/test_algorithms/privacy_desensitization/differential_privacy.py
+
+Example requirements files: 15
+   constrained requirement lines : 234
+   UNCONSTRAINED requirement lines: 302

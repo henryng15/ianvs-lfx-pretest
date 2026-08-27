@@ -1,0 +1,3616 @@
+{
+ "issues": [
+  {
+   "number": 846,
+   "title": "[Example Audit] examples/aoa/single_task_bench/TForest is permanently non-reproducible \u2014 recommend Quarantined classification",
+   "user": "Arijit429",
+   "created": "2026-08-20T19:51:57Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug",
+    "kind/documentation"
+   ]
+  },
+  {
+   "number": 845,
+   "title": "[Proposal] Phase IV: Add pytest suite and schema validation to core/",
+   "user": "Arijit429",
+   "created": "2026-08-20T19:46:24Z",
+   "comments": 2,
+   "labels": [
+    "kind/feature"
+   ]
+  },
+  {
+   "number": 844,
+   "title": "[PHASE IV]: Mass Example Restoration, Matrix Population, and CI Scaling",
+   "user": "AdityaKumarSethia",
+   "created": "2026-08-20T10:09:50Z",
+   "comments": 2,
+   "labels": []
+  },
+  {
+   "number": 842,
+   "title": "[Bug] Evaluation TypeError, UnboundLocalError on hard example generation, and inference update failures in IncrementalLearning",
+   "user": "bhuvan-somisetty",
+   "created": "2026-08-20T00:23:26Z",
+   "comments": 11,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 840,
+   "title": "Fresh-install failure summary for cloud-edge-collaborative-inference-for-llm: both documented install routes fail",
+   "user": "zjr060424-lab",
+   "created": "2026-08-19T08:29:30Z",
+   "comments": 7,
+   "labels": []
+  },
+  {
+   "number": 838,
+   "title": "[Phase IV] Add contract tests for the example validator and CI decision policy",
+   "user": "blackdragoon26",
+   "created": "2026-08-18T14:11:53Z",
+   "comments": 2,
+   "labels": []
+  },
+  {
+   "number": 837,
+   "title": "[Phase IV] Base and pull request validation use the pull request validator and inventory",
+   "user": "blackdragoon26",
+   "created": "2026-08-18T14:11:52Z",
+   "comments": 6,
+   "labels": []
+  },
+  {
+   "number": 836,
+   "title": "[Phase IV] Dynamic validation reports skipped examples as passed and hides execution coverage",
+   "user": "blackdragoon26",
+   "created": "2026-08-18T14:11:23Z",
+   "comments": 5,
+   "labels": []
+  },
+  {
+   "number": 833,
+   "title": "[Bug] TAB regex_pseudonymization applies re.IGNORECASE to case-sensitive PII patterns, masking ordinary prose and inflating privacy metrics",
+   "user": "Abhishek86798",
+   "created": "2026-08-18T12:12:11Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 828,
+   "title": "[Bug] Unsupported save_mode silently skips all leaderboard persistence, and the save_mode type check tests for list instead of str",
+   "user": "Abhishek86798",
+   "created": "2026-08-18T11:00:38Z",
+   "comments": 2,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 823,
+   "title": "Yaoba Example Restoration: Paradigm Dispatch and Configuration Fixes",
+   "user": "31groot",
+   "created": "2026-08-17T22:01:38Z",
+   "comments": 2,
+   "labels": []
+  },
+  {
+   "number": 822,
+   "title": "[Bug] Lifelong learning: `splitting_method: \"default\"` produces `rounds` dataset splits but `run()` indexes `rounds + 1`, raising IndexError on the final round",
+   "user": "IIITManjeet",
+   "created": "2026-08-17T20:35:19Z",
+   "comments": 3,
+   "labels": []
+  },
+  {
+   "number": 819,
+   "title": "Simulation Controller (core/testcasecontroller/simulation): 13 verified breakages in the 2022 implementation",
+   "user": "Prachi194agrawal",
+   "created": "2026-08-17T11:27:02Z",
+   "comments": 4,
+   "labels": []
+  },
+  {
+   "number": 816,
+   "title": "[Bug] Invalid paths and typos in Cloud_Robotics Semantic_Segmentation benchmark configurations",
+   "user": "abhishekkamble12",
+   "created": "2026-08-16T17:04:37Z",
+   "comments": 3,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 814,
+   "title": "Add pytest workflow to run unit tests in CI",
+   "user": "Ganesh-403",
+   "created": "2026-08-16T04:07:17Z",
+   "comments": 0,
+   "labels": [
+    "kind/feature"
+   ]
+  },
+  {
+   "number": 812,
+   "title": "Add foundational unit tests for Ianvs core utilities",
+   "user": "Ganesh-403",
+   "created": "2026-08-16T03:42:13Z",
+   "comments": 0,
+   "labels": [
+    "kind/feature"
+   ]
+  },
+  {
+   "number": 809,
+   "title": "Federated learning silently aggregates with missing/failed clients on training failure",
+   "user": "Aryansingh-ai",
+   "created": "2026-08-15T20:44:33Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 805,
+   "title": "[Bug] Fix sys.path cleanup during dynamic module loading",
+   "user": "Ganesh-403",
+   "created": "2026-08-15T16:55:08Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 801,
+   "title": "[Bug] Race condition in FederatedClassIncrementalLearning causes cross-client state corruption in helper_function",
+   "user": "bhuvan-somisetty",
+   "created": "2026-08-15T00:23:51Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 798,
+   "title": "[PHASE IV] core/module: missing `values` key in hyperparameter config crashes with opaque TypeError",
+   "user": "hayyanbaig",
+   "created": "2026-08-14T22:47:24Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 797,
+   "title": "[PHASE IV] core/algorithm: duplicate module `type` silently overwrites earlier module in get_full_combinations",
+   "user": "hayyanbaig",
+   "created": "2026-08-14T22:45:39Z",
+   "comments": 2,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 781,
+   "title": "[BUG] RoboDK Palletizing example contains outdated internal paths",
+   "user": "Aryansingh-ai",
+   "created": "2026-08-13T17:19:59Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 778,
+   "title": "[BUG] GovDoc2Poster README contains outdated file paths and instructions",
+   "user": "Aryansingh-ai",
+   "created": "2026-08-13T06:38:58Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 766,
+   "title": "[BUG] LLIO pose estimation uses OS separator for KITTI index paths",
+   "user": "Aryansingh-ai",
+   "created": "2026-08-12T11:50:15Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 765,
+   "title": "[PHASE IV] use_gpu: false in testenv.yaml is a no-op, and use_gpu: true is applied after the base model is already constructed",
+   "user": "vjuhhii",
+   "created": "2026-08-12T11:49:29Z",
+   "comments": 5,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 757,
+   "title": "phys_scene_gen: algorithmenv.yaml module url is an invalid dotted-import path, not a file path",
+   "user": "iron-prog",
+   "created": "2026-08-12T03:02:58Z",
+   "comments": 3,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 751,
+   "title": "[PHASE IV][llm-agent]: Model Persistence Contract Broken (save()/load() No-Ops) and Related Latent Defects in llm_agent BaseModel",
+   "user": "hayyanbaig",
+   "created": "2026-08-11T18:28:45Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 749,
+   "title": "PCB-AoI fault_detection example fails: `tensorflow.contrib.slim` removed in TF2.x",
+   "user": "ANISHA-RAWAT",
+   "created": "2026-08-11T16:40:40Z",
+   "comments": 3,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 743,
+   "title": "Add CI check to catch broken example config paths before merge",
+   "user": "iron-prog",
+   "created": "2026-08-10T20:57:51Z",
+   "comments": 1,
+   "labels": [
+    "kind/feature"
+   ]
+  },
+  {
+   "number": 742,
+   "title": "[PRE-TASK] Restoring examples/yaoba: An Orphaned Paradigm and a Chain of Infrastructure Gaps",
+   "user": "hibaa23",
+   "created": "2026-08-10T11:14:32Z",
+   "comments": 10,
+   "labels": []
+  },
+  {
+   "number": 740,
+   "title": "Empty test splits in FCI evaluation yield a nan metric, then ZeroDivisionError",
+   "user": "Eason09053360",
+   "created": "2026-08-10T10:30:50Z",
+   "comments": 2,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 735,
+   "title": "examples/industrialEI/pose-estimation-llio: requirements.txt pins protobuf<=3.20.3, conflicting with core onnx requirement",
+   "user": "subham-hq",
+   "created": "2026-08-09T19:00:45Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 732,
+   "title": "[PHASE IV][RoboDK Palletizing]: Outdated Execution Instructions and Paths in README",
+   "user": "hayyanbaig",
+   "created": "2026-08-09T00:22:29Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 731,
+   "title": "[PHASE IV][RoboDK Palletizing]: Temporary Directory Resource Leakage & Return Type Defect in Model Wrapper",
+   "user": "hayyanbaig",
+   "created": "2026-08-09T00:17:59Z",
+   "comments": 3,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 730,
+   "title": "[PHASE IV][RoboDK Palletizing]: Silent map50/map90 Score Corruption via Hardcoded Metric Dimensions",
+   "user": "hayyanbaig",
+   "created": "2026-08-09T00:13:54Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 728,
+   "title": "[Bug] sys.path left permanently modified on exception in core/common/utils.py (py2dict and load_module)",
+   "user": "Muhammad-Hashir-Code",
+   "created": "2026-08-08T21:04:31Z",
+   "comments": 5,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 723,
+   "title": "RoboDK Palletizing example uses hard-coded absolute paths in benchmark configuration",
+   "user": "iron-prog",
+   "created": "2026-08-08T20:18:04Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 722,
+   "title": "[PHASE IV][GovDoc2Poster]: README Documentation Drift,Broken Quick Start Command, Stale Folder Name, and Non-Portable Absolute Path",
+   "user": "hayyanbaig",
+   "created": "2026-08-08T19:41:14Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 720,
+   "title": "[PHASE IV][GovDoc2Poster]: Silent Result Exclusion in average_scores Calculation (Missing 'evaluation' Key)",
+   "user": "hayyanbaig",
+   "created": "2026-08-08T18:51:11Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 719,
+   "title": "bug: Cloud_Robotics/Semantic_Segmentation is missing its vendored RFNet/ source tree, unlike 4 sibling examples",
+   "user": "Prachi194agrawal",
+   "created": "2026-08-08T18:48:41Z",
+   "comments": 3,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 718,
+   "title": "bug: requirement.txt has invalid pip syntax (dashscope=1.24.5) and aborts the entire install",
+   "user": "Prachi194agrawal",
+   "created": "2026-08-08T16:59:35Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 717,
+   "title": "bug: all three module URLs in perception_reasoning.yaml use the wrong directory name",
+   "user": "Prachi194agrawal",
+   "created": "2026-08-08T15:00:43Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 716,
+   "title": "bug: benchmarkingjob.yaml in perception-reasoning references a non-existent directory (hyphen vs underscore)",
+   "user": "Prachi194agrawal",
+   "created": "2026-08-08T14:39:37Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 712,
+   "title": "[Bug] BDD lifelong-learning curb-detection example uses stale config paths",
+   "user": "ishansurdi",
+   "created": "2026-08-08T04:25:35Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 703,
+   "title": "PIPL example is not runnable due to invalid dependency and broken Ianvs integration",
+   "user": "iron-prog",
+   "created": "2026-08-07T20:53:13Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 700,
+   "title": "[PHASE IV][GovDoc2Poster]: Core Multi-Agent Interface Mismatches & Unhandled Exceptions in Execution Pipeline",
+   "user": "hayyanbaig",
+   "created": "2026-08-07T17:55:00Z",
+   "comments": 2,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 699,
+   "title": "[PHASE IV][GovDoc2Poster]: Dataset Directory Missing, Missing 'answer' Schema Key, and Hardcoded Workspace Permission Error",
+   "user": "hayyanbaig",
+   "created": "2026-08-07T17:48:46Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 695,
+   "title": "[Bug] RoboDK Palletizing example fails with the published Kaggle dataset because the dataset index files contain hardcoded absolute paths",
+   "user": "SurbhiD404",
+   "created": "2026-08-07T10:09:26Z",
+   "comments": 2,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 693,
+   "title": "[Enhancement] CI tests only Python 3.7\u20133.9; should include 3.10+ and drop EOL versions",
+   "user": "Hiteshsai007",
+   "created": "2026-08-07T10:04:01Z",
+   "comments": 0,
+   "labels": [
+    "kind/feature"
+   ]
+  },
+  {
+   "number": 685,
+   "title": "[PHASE IV] TAB: ianvs -v fails with ModuleNotFoundError for prettytable if only example requirements are installed",
+   "user": "hayyanbaig",
+   "created": "2026-08-06T18:53:15Z",
+   "comments": 2,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 684,
+   "title": "[PHASE IV] TAB: dataset filename mismatch (data.json vs data.jsonl) blocks benchmark execution",
+   "user": "hayyanbaig",
+   "created": "2026-08-06T18:43:04Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 681,
+   "title": "Fix: Packaging metadata does not include runtime dependencies from `requirements.txt`",
+   "user": "iron-prog",
+   "created": "2026-08-06T15:39:04Z",
+   "comments": 2,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 677,
+   "title": "[Docs] Fix recurring typo \"detetion\" \u2192 \"detection\" in README.md and proposal docs",
+   "user": "Hiteshsai007",
+   "created": "2026-08-06T11:06:53Z",
+   "comments": 1,
+   "labels": [
+    "kind/documentation"
+   ]
+  },
+  {
+   "number": 675,
+   "title": "[Cleanup] Replace raw print() calls with LOGGER in core modules",
+   "user": "Hiteshsai007",
+   "created": "2026-08-06T11:02:34Z",
+   "comments": 0,
+   "labels": [
+    "kind/cleanup"
+   ]
+  },
+  {
+   "number": 673,
+   "title": "[Bug] colorlog is imported by core/common/log.py but is not listed in requirements.txt",
+   "user": "Hiteshsai007",
+   "created": "2026-08-06T10:43:48Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 671,
+   "title": "[Bug] Duplicate benchmarking.py at repository root is an exact copy of core/cmd/benchmarking.py",
+   "user": "Hiteshsai007",
+   "created": "2026-08-06T10:38:05Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 669,
+   "title": "[Bug] `partition_data` non-IID branch uses incorrect `np.where` comparison with a list",
+   "user": "Hiteshsai007",
+   "created": "2026-08-06T10:26:45Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 668,
+   "title": "Fix \"detetion\" typo in README and docs",
+   "user": "Harkirat1309",
+   "created": "2026-08-06T10:25:46Z",
+   "comments": 1,
+   "labels": [
+    "kind/cleanup"
+   ]
+  },
+  {
+   "number": 666,
+   "title": "[Phase IV] phys_scene_gen: fastapi/pydantic version conflict breaks ianvs after following README install steps",
+   "user": "hayyanbaig",
+   "created": "2026-08-05T22:55:18Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 662,
+   "title": "[Bug] Missing null-guards for testenv/rank in BenchmarkingJob, and/or validation bug in core config classes, and opaque AttributeError in get_visualization_func()",
+   "user": "bhuvan-somisetty",
+   "created": "2026-08-05T19:11:48Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 659,
+   "title": "Rank config validation accepts invalid field types",
+   "user": "iron-prog",
+   "created": "2026-08-05T16:49:00Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 647,
+   "title": "[Bug] Unhandled NoneType crashes, mathematical calculation distortion, and missing validation in system metrics subsystem",
+   "user": "bhuvan-somisetty",
+   "created": "2026-08-04T10:23:22Z",
+   "comments": 4,
+   "labels": []
+  },
+  {
+   "number": 646,
+   "title": "BLEU-4 metric receives predictions and ground truth in reversed order (federated-llm/fedllm-peft)",
+   "user": "ktulkinova",
+   "created": "2026-08-04T09:39:25Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 644,
+   "title": "Self-referential ianvs dependency in requirements.txt breaks fresh installs (GovDoc2Poster, imagenet/multiedge_inference_bench)",
+   "user": "Muhammad-Hashir-Code",
+   "created": "2026-08-03T20:47:30Z",
+   "comments": 3,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 641,
+   "title": "`__all__` in `cloud_model.py` references non-existent name `QwenSemanticSegmentation`",
+   "user": "iron-prog",
+   "created": "2026-08-03T17:56:19Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 639,
+   "title": "[PRE-TASK] Path/Label Disambiguation Gap in Dataset._process_txt_index_file() Risks Silent Data Corruption",
+   "user": "Muhammad-Hashir-Code",
+   "created": "2026-08-02T20:24:38Z",
+   "comments": 3,
+   "labels": []
+  },
+  {
+   "number": 637,
+   "title": "[Bug] Unmanaged tempfile leaks, ZeroDivisionError in dataset splitting, and missing directory creation in dataset subsystem",
+   "user": "bhuvan-somisetty",
+   "created": "2026-08-02T17:07:59Z",
+   "comments": 2,
+   "labels": []
+  },
+  {
+   "number": 635,
+   "title": "MATPLOTLIB_AVAILABLE/OPEN3D_AVAILABLE never set \u2014 visualization silently disabled in pose-estimation-llio",
+   "user": "iron-prog",
+   "created": "2026-08-02T16:38:22Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 633,
+   "title": "Quadratic O(n^2) leaderboard construction in Rank._get_all due to row-by-row DataFrame.loc insertion",
+   "user": "rootp1",
+   "created": "2026-08-02T16:12:40Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 628,
+   "title": "[Bug] draw_heatmap_picture() crashes with FileNotFoundError because output/ subdirectory is never created",
+   "user": "ajmani-x",
+   "created": "2026-08-02T05:35:27Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 626,
+   "title": "[Bug] Orphaned temp directories accumulate outside the workspace in incremental-learning rounds and dataset index preprocessing, causing unbounded disk growth",
+   "user": "bhuvan-somisetty",
+   "created": "2026-08-02T02:03:22Z",
+   "comments": 3,
+   "labels": []
+  },
+  {
+   "number": 621,
+   "title": "[Bug] Infinite loop vulnerability in TestCase._get_output_dir if directory already exists",
+   "user": "vishalmore90",
+   "created": "2026-08-01T10:34:16Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 619,
+   "title": "[Bug] Report a bug encountered while operating Ianvs",
+   "user": "vishalmore90",
+   "created": "2026-08-01T10:10:34Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 616,
+   "title": "Bug Report about: Report a bug encountered while operating Ianvs labels",
+   "user": "vishalmore90",
+   "created": "2026-08-01T09:54:27Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 615,
+   "title": "[Bug] README missing instructions to generate profiler_results.yml's required .npz weights file",
+   "user": "rajdhruvsingh",
+   "created": "2026-08-01T08:00:57Z",
+   "comments": 3,
+   "labels": []
+  },
+  {
+   "number": 614,
+   "title": "[Bug] profiler.py requires a missing bert_input.npz file with no way to generate it in multiedge_inference_bench",
+   "user": "rajdhruvsingh",
+   "created": "2026-08-01T08:00:30Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 613,
+   "title": "[Bug] model_name is not configurable via classification_algorithm.yaml hyperparameters in multiedge_inference_bench",
+   "user": "rajdhruvsingh",
+   "created": "2026-08-01T08:00:01Z",
+   "comments": 2,
+   "labels": []
+  },
+  {
+   "number": 612,
+   "title": "[Bug] requirements.txt pins torch==1.13.1 and other unavailable versions in multiedge_inference_bench",
+   "user": "rajdhruvsingh",
+   "created": "2026-08-01T04:31:06Z",
+   "comments": 5,
+   "labels": []
+  },
+  {
+   "number": 610,
+   "title": "[Core Framework] Benchmark Execution Resiliency & Stability Defect: Infinite Loop Hangs, Cascading Failure Result Loss, and Module State Pollution",
+   "user": "bhuvan-somisetty",
+   "created": "2026-08-01T03:28:23Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 609,
+   "title": "[Bug] devices_one.yaml has malformed type field in multiedge_inference_bench",
+   "user": "rajdhruvsingh",
+   "created": "2026-08-01T02:45:42Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 608,
+   "title": "[Bug] DeiTLayerShard.forward() missing explicit kwargs causes TypeError with transformers >= 4.30 in multiedge_inference_bench",
+   "user": "rajdhruvsingh",
+   "created": "2026-08-01T02:07:37Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 606,
+   "title": "[Bug] dataset.py __main__ strips /dataset from image paths producing broken train.txt entries in multiedge_inference_bench",
+   "user": "rajdhruvsingh",
+   "created": "2026-07-31T17:25:31Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 605,
+   "title": "[Bug] dataset.py __main__ uses os.popen('cp') which is Unix-only in multiedge_inference_bench",
+   "user": "rajdhruvsingh",
+   "created": "2026-07-31T17:24:51Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 604,
+   "title": "[Bug] testenv.yaml uses train_url/test_url which are not recognized by ianvs core dataset processor in multiedge_inference_bench",
+   "user": "rajdhruvsingh",
+   "created": "2026-07-31T10:35:15Z",
+   "comments": 5,
+   "labels": []
+  },
+  {
+   "number": 603,
+   "title": "[Bug] torchvision ImageNet class requires ILSVRC2012_devkit_t12.tar.gz archive even when meta.bin exists in multiedge_inference_bench",
+   "user": "rajdhruvsingh",
+   "created": "2026-07-31T10:34:32Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 602,
+   "title": "[Bug] parents[2] produces wrong dataset root path causing FileNotFoundError in multiedge_inference_bench",
+   "user": "rajdhruvsingh",
+   "created": "2026-07-31T10:34:01Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 601,
+   "title": "[Bug] devices.yaml hardcodes gpu device names forcing CUDA path on non-NVIDIA hardware in multiedge_inference_bench",
+   "user": "rajdhruvsingh",
+   "created": "2026-07-31T10:33:13Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 600,
+   "title": "[Bug] CUDAExecutionProvider hardcoded in basemodel.py with no CPU fallback in multiedge_inference_bench",
+   "user": "rajdhruvsingh",
+   "created": "2026-07-31T10:32:44Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 599,
+   "title": "[Bug] pynvml hard import crashes on non-NVIDIA systems in multiedge_inference_bench",
+   "user": "rajdhruvsingh",
+   "created": "2026-07-31T10:32:13Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 597,
+   "title": "[Bug] parse_kwargs() in core/common/utils.py filters out valid keyword-only parameters",
+   "user": "bhuvan-somisetty",
+   "created": "2026-07-31T06:05:09Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 595,
+   "title": "[Bug] Configuration field validation in core components bypasses type checks due to logical 'and' in _check_fields()",
+   "user": "bhuvan-somisetty",
+   "created": "2026-07-30T20:10:06Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 591,
+   "title": "bug: _city_splitting() crashes with ZeroDivisionError when times=1 (the default)",
+   "user": "bhuvan-somisetty",
+   "created": "2026-07-30T13:23:06Z",
+   "comments": 2,
+   "labels": []
+  },
+  {
+   "number": 589,
+   "title": "Required-field validation in _check_fields() is unreachable due to and/or logic bug",
+   "user": "bhuvan-somisetty",
+   "created": "2026-07-30T01:02:31Z",
+   "comments": 2,
+   "labels": []
+  },
+  {
+   "number": 581,
+   "title": "cityscapes/singletask_learning_bench: broken config paths (missing semantic-segmentation/ segment) block execution, no README",
+   "user": "karanthengane23",
+   "created": "2026-07-08T05:52:12Z",
+   "comments": 4,
+   "labels": []
+  },
+  {
+   "number": 574,
+   "title": "bug(core/singletask): TypeError crash and stale BASE_MODEL_URL when initial_model_url is omitted from YAML",
+   "user": "g-k-s-03",
+   "created": "2026-07-02T07:32:30Z",
+   "comments": 2,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 572,
+   "title": "bug(core/lifelong): HAS_COMPLETED_INITIAL_TRAINING set to True on first training call in standard mode",
+   "user": "g-k-s-03",
+   "created": "2026-07-02T07:10:58Z",
+   "comments": 5,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 568,
+   "title": "EdgeModel fails to import \u2014 `LadeSpecDecLLM` is undefined in cloud-edge-collaborative-inference-for-llm",
+   "user": "Priyanshu6968",
+   "created": "2026-06-28T04:43:16Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 565,
+   "title": "bug(core/federated): TypeError crash when aggregation module missing from YAML",
+   "user": "g-k-s-03",
+   "created": "2026-06-25T13:33:56Z",
+   "comments": 2,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 563,
+   "title": "[Bug] Core setup failures on fresh install: API rename, missing class, wrong docs path, undocumented deps",
+   "user": "31groot",
+   "created": "2026-06-23T19:56:26Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 559,
+   "title": "rank: selected_and_all_and_picture crashes when Matrix metric is missing",
+   "user": "avinxshKD",
+   "created": "2026-06-20T08:42:27Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 557,
+   "title": "core: load_module can reuse the wrong file when module names collide",
+   "user": "avinxshKD",
+   "created": "2026-06-18T06:48:23Z",
+   "comments": 4,
+   "labels": []
+  },
+  {
+   "number": 535,
+   "title": "government_rag example cannot be executed: missing requirements, LangChain import failures, hardcoded credentials/device/paths",
+   "user": "veyron-kairo",
+   "created": "2026-06-12T16:59:32Z",
+   "comments": 14,
+   "labels": []
+  },
+  {
+   "number": 533,
+   "title": "llm-agent example: inference crashes on MPS, and half_lora is silently ignored (masking broken fp16 training)",
+   "user": "veyron-kairo",
+   "created": "2026-06-12T16:41:29Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 531,
+   "title": "[Bug] compute() returns 2 values on error but all callers unpack 3 \u2014 ValueError crash in BWT/FWT/Matrix metrics",
+   "user": "g-k-s-03",
+   "created": "2026-06-11T07:38:42Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 530,
+   "title": "[Bug] GovDoc2Poster: basemodel.py ignores DASHSCOPE_API_KEY environment variable and uses hardcoded placeholder instead",
+   "user": "SurbhiD404",
+   "created": "2026-06-10T12:34:42Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 523,
+   "title": "fix(MOT17/reid): multiple compatibility and reliability issues in basemodel.py",
+   "user": "iron-prog",
+   "created": "2026-06-09T06:15:40Z",
+   "comments": 3,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 522,
+   "title": "[Bug] Missing BaseDataSource import in sedna_predict.py across multiple RFNet example paths",
+   "user": "SurbhiD404",
+   "created": "2026-06-09T05:05:46Z",
+   "comments": 2,
+   "labels": []
+  },
+  {
+   "number": 515,
+   "title": "bug: hardcoded absolute paths (/home/*) across multiple examples make benchmarks non-portable",
+   "user": "rajdhruvsingh",
+   "created": "2026-06-08T04:01:01Z",
+   "comments": 5,
+   "labels": []
+  },
+  {
+   "number": 514,
+   "title": "bug: robot-cityscapes-synthia benchmarkingjob.yaml and testenv.yaml contain stale paths and hardcoded absolute paths",
+   "user": "rajdhruvsingh",
+   "created": "2026-06-08T03:28:51Z",
+   "comments": 6,
+   "labels": []
+  },
+  {
+   "number": 509,
+   "title": "bug: vit.py and deit.py fail with ImportError on transformers >= 5.0 due to removed classes",
+   "user": "rajdhruvsingh",
+   "created": "2026-06-07T08:27:26Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 502,
+   "title": "bug: Hardcoded absolute paths and unhandled ZeroDivisionError in llm_simple_qa example",
+   "user": "shubhamshukla07",
+   "created": "2026-06-05T11:04:04Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 495,
+   "title": "[Audit] Core Framework Stability & Local Benchmark Runtime Validation",
+   "user": "PragnyaKhandelwal",
+   "created": "2026-06-02T16:17:58Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 494,
+   "title": "[Bug] Local benchmarks experience massive idle delays due to unmocked Sedna HTTP retries",
+   "user": "karyxx",
+   "created": "2026-06-02T14:03:54Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 492,
+   "title": "Issue summarization for example of federated-llm/fedllm-peft",
+   "user": "Ronit-Raj9",
+   "created": "2026-05-29T16:07:36Z",
+   "comments": 2,
+   "labels": []
+  },
+  {
+   "number": 491,
+   "title": "Issue summarization for example of imagenet/multiedge_inference_bench",
+   "user": "Nityahiray",
+   "created": "2026-05-29T14:15:28Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 490,
+   "title": "Issue summarization for example of MOT17/multiedge_inference_bench.",
+   "user": "smilingprogrammer",
+   "created": "2026-05-29T03:28:00Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 489,
+   "title": "[Bug] pip install sedna installs wrong PyPI package - silent name collision blocks all LLM examples",
+   "user": "Chidroopakanaparthy",
+   "created": "2026-05-28T13:30:38Z",
+   "comments": 4,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 487,
+   "title": "imagenet/multiedge_inference_bench: ViTSelfAttention API breaks on transformers >= 4.30 in deit.py",
+   "user": "Nityahiray",
+   "created": "2026-05-28T07:31:34Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 483,
+   "title": "Issue summarization for example of pcb-aoi",
+   "user": "ishanvichavan",
+   "created": "2026-05-26T20:24:11Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 482,
+   "title": "[Pre-Test: LFX Term 2 2026] Issue Summarization for imagenet/multiedge_inference_bench",
+   "user": "SurbhiD404",
+   "created": "2026-05-26T14:08:33Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 481,
+   "title": "Issue Summarization for Example of `cityscapes-synthia/lifelong_learning_bench/semantic-segmentation`",
+   "user": "Omswastik-11",
+   "created": "2026-05-26T13:06:05Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 480,
+   "title": "imagenet/multiedge_inference_bench: BertEmbeddings.forward() signature mismatch in bert.py",
+   "user": "Nityahiray",
+   "created": "2026-05-26T11:55:33Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 479,
+   "title": "imagenet/multiedge_inference_bench: BertSelfAttention API breaks on transformers >= 4.30 in bert.py",
+   "user": "Nityahiray",
+   "created": "2026-05-26T11:54:41Z",
+   "comments": 2,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 478,
+   "title": "imagenet/multiedge_inference_bench: save_weights() stores PyTorch tensors instead of numpy arrays in bert.py",
+   "user": "Nityahiray",
+   "created": "2026-05-26T11:51:56Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 476,
+   "title": "Issue summarization for example of bdd/lifelong_learning_bench/curb-detection",
+   "user": "FernandoVaras",
+   "created": "2026-05-25T04:43:16Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 475,
+   "title": "Issue summarization for example of pipeline",
+   "user": "hjaat",
+   "created": "2026-05-24T18:53:15Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 474,
+   "title": "Issue summarization for example of pipeline",
+   "user": "hjaat",
+   "created": "2026-05-24T18:43:18Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 473,
+   "title": "[Bug] task_allocation_by_domain.py and cityscapes.py crash at runtime due to Sedna interface and type mismatches in robot-cityscapes-synthia example",
+   "user": "abhisheksainimitawa",
+   "created": "2026-05-24T09:55:45Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 472,
+   "title": "[Bug] ERFNet training fails with deprecated torchvision API and DataLoader worker import errors in robot-cityscapes-synthia example",
+   "user": "abhisheksainimitawa",
+   "created": "2026-05-24T09:55:06Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 471,
+   "title": "[Bug] ERFNet training crashes on non-CUDA hardware due to hardcoded CUDA assumptions throughout args.py and train.py",
+   "user": "abhisheksainimitawa",
+   "created": "2026-05-24T09:54:37Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 470,
+   "title": "[Bug] lifelong_learning.py and module.py crash with multiple Sedna API mismatches when running robot-cityscapes-synthia example",
+   "user": "abhisheksainimitawa",
+   "created": "2026-05-24T09:54:09Z",
+   "comments": 2,
+   "labels": []
+  },
+  {
+   "number": 469,
+   "title": "Issue summarization for example of industrialEI/single_task_learning_bench",
+   "user": "tushar743-ui",
+   "created": "2026-05-24T09:00:23Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 467,
+   "title": "[robot-cityscapes-synthia] Hardcoded /tmp path in saver.py writes training checkpoints outside Ianvs workspace",
+   "user": "abhisheksainimitawa",
+   "created": "2026-05-23T17:16:34Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 465,
+   "title": "[robot-cityscapes-synthia] No baseline performance published \u2014 BWT, FWT, MATRIX, and task_avg_acc metrics never validated end-to-end",
+   "user": "abhisheksainimitawa",
+   "created": "2026-05-23T16:33:35Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 464,
+   "title": "[robot-cityscapes-synthia] Missing requirements.txt \u2014 ERFNet dependencies undeclared, blocking reproducibility and CI",
+   "user": "abhisheksainimitawa",
+   "created": "2026-05-23T15:20:15Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 463,
+   "title": "[robot-cityscapes-synthia] sedna_evaluate.py and sedna_train.py use stale 2-domain API incompatible with 3-domain YAML configuration",
+   "user": "abhisheksainimitawa",
+   "created": "2026-05-23T15:19:56Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 462,
+   "title": "[Core Framework][no-inference] ZeroDivisionError: division by zero in task average accuracy computation",
+   "user": "abhisheksainimitawa",
+   "created": "2026-05-23T15:19:32Z",
+   "comments": 2,
+   "labels": []
+  },
+  {
+   "number": 461,
+   "title": "[Core Framework][no-inference] AttributeError: 'LifelongLearning' object has no attribute 'my_inference'",
+   "user": "abhisheksainimitawa",
+   "created": "2026-05-23T15:19:10Z",
+   "comments": 2,
+   "labels": []
+  },
+  {
+   "number": 460,
+   "title": "Issue summarization for example of `MOT17/multiedge_inference_bench`",
+   "user": "suhaan-24",
+   "created": "2026-05-23T10:34:28Z",
+   "comments": 5,
+   "labels": []
+  },
+  {
+   "number": 459,
+   "title": "Issue summarization for example of robot-cityscapes-synthia/lifelong_learning_bench",
+   "user": "abhisheksainimitawa",
+   "created": "2026-05-22T22:16:41Z",
+   "comments": 2,
+   "labels": []
+  },
+  {
+   "number": 458,
+   "title": "Issue summarization for example of aoa",
+   "user": "LakshyaMulchandani",
+   "created": "2026-05-22T18:03:39Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 457,
+   "title": "Issue summarization for example of `examples/robot/lifelong_learning_bench`",
+   "user": "phantom-712",
+   "created": "2026-05-22T15:41:17Z",
+   "comments": 2,
+   "labels": []
+  },
+  {
+   "number": 455,
+   "title": "Issue summarization for example of GovDoc2Poster",
+   "user": "psudha2009",
+   "created": "2026-05-22T10:04:10Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 454,
+   "title": "[Pre-Test : LFX-Term 2 2026] Issue Summarization Cifar100",
+   "user": "coldstarted",
+   "created": "2026-05-22T09:07:49Z",
+   "comments": 3,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 453,
+   "title": "Issue summarization for example of cloud-edge-collaborative-inference-for-llm",
+   "user": "irisjimin",
+   "created": "2026-05-22T05:32:52Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 451,
+   "title": "Issue summarization and architectural restoration for example of cityscapes-synthia/lifelong_learning_bench",
+   "user": "Roniscend",
+   "created": "2026-05-21T12:00:38Z",
+   "comments": 2,
+   "labels": []
+  },
+  {
+   "number": 450,
+   "title": "[Core] Unconditional `import onnx` in `multiedge_inference.py` fails for users who do not need model partitioning",
+   "user": "suhaan-24",
+   "created": "2026-05-21T10:00:10Z",
+   "comments": 4,
+   "labels": []
+  },
+  {
+   "number": 449,
+   "title": "[MOT17] Missing `requirements.txt` and Docker-specific workspace path block bare-metal setup",
+   "user": "suhaan-24",
+   "created": "2026-05-21T09:59:11Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 448,
+   "title": "[MOT17] NaN propagation from upstream tracking metrics corrupts leaderboard CSV",
+   "user": "suhaan-24",
+   "created": "2026-05-21T09:58:11Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 447,
+   "title": "[MOT17] ReID metric evaluation crashes on edge cases: `IndexError` in rank metrics; unhandled `RuntimeError` in `mAP.py`",
+   "user": "suhaan-24",
+   "created": "2026-05-21T09:57:08Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 446,
+   "title": "Issue summarization for example of `yaoba`",
+   "user": "SunayKulkarni",
+   "created": "2026-05-21T09:56:33Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 445,
+   "title": "[MOT17] M3L basemodel.py: unguarded regex crashes on non-standard checkpoints; deprecated `addmm_` API removed in PyTorch \u2265 2.0",
+   "user": "suhaan-24",
+   "created": "2026-05-21T09:56:03Z",
+   "comments": 2,
+   "labels": []
+  },
+  {
+   "number": 444,
+   "title": "[MOT17] ByteTrack: tautological GPU assertion never fires; malformed YAML indentation silently drops `batch_size`",
+   "user": "suhaan-24",
+   "created": "2026-05-21T09:54:53Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 443,
+   "title": "[MOT17] ByteTrack basemodel.py crashes on multi-GPU: `DDP` and `dist` never imported",
+   "user": "suhaan-24",
+   "created": "2026-05-21T09:53:56Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 442,
+   "title": "Issue summarization for example of MOT17/multiedge_inference_bench",
+   "user": "zhangjielll",
+   "created": "2026-05-21T09:15:57Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 440,
+   "title": "Issue summarization for example of `examples/smart_coding/smart_coding_learning_bench`",
+   "user": "Chidroopakanaparthy",
+   "created": "2026-05-21T07:37:06Z",
+   "comments": 3,
+   "labels": []
+  },
+  {
+   "number": 439,
+   "title": "Issue summarization for example of PIPL-Compliant Cloud-Edge Collaborative Privacy-Preserving Prompt Processing Framework",
+   "user": "Akshat-Tiwari69",
+   "created": "2026-05-21T07:10:44Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 438,
+   "title": "Issue Summarization for `examples/government/singletask_learning_bench` and `examples/government_rag`",
+   "user": "Sahil-u07",
+   "created": "2026-05-20T23:04:30Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 436,
+   "title": "Issue summarization for example of government (singletask_learning_bench + government_rag)",
+   "user": "AswaniSahoo",
+   "created": "2026-05-20T21:21:14Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 435,
+   "title": "Issue summarization for example of llm-edge-benchmark-suite",
+   "user": "phantom-712",
+   "created": "2026-05-20T21:16:12Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 434,
+   "title": "[Bug] phys_scene_gen blocked on macOS ARM64 due to wheel resolution cascades and C++ compilation failures (std::ptrdiff_t)",
+   "user": "CodeShrek",
+   "created": "2026-05-20T20:49:09Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 431,
+   "title": "Issue summarization for example of PIPL",
+   "user": "Adityabaskati-weeb",
+   "created": "2026-05-20T19:17:35Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 430,
+   "title": "Issue summarization for example of `cloud-edge-collaborative-inference-for-llm`",
+   "user": "Rishabh-git10",
+   "created": "2026-05-20T16:59:15Z",
+   "comments": 4,
+   "labels": []
+  },
+  {
+   "number": 425,
+   "title": "bug: government/singletask_learning_bench example broken by stale paths, missing deps, and dataset layout changes",
+   "user": "Sahil-u07",
+   "created": "2026-05-12T09:41:18Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 423,
+   "title": "[BUG] Framework Crash on Downstream Configuration Fails to Persist Prior Successful Results",
+   "user": "Rishabh-git10",
+   "created": "2026-05-10T18:18:26Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 413,
+   "title": "[Dependencies] Add missing colorlog and PyYAML to requirements.txt",
+   "user": "AswaniSahoo",
+   "created": "2026-05-04T01:09:20Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 411,
+   "title": "[CI/CD] Modernize CI Pipeline: Update Python Matrix, Actions Versions, and Add Example Validation",
+   "user": "AswaniSahoo",
+   "created": "2026-05-02T22:32:53Z",
+   "comments": 0,
+   "labels": []
+  },
+  {
+   "number": 403,
+   "title": "Benchmark Evaluation API Returns Hardcoded Mock Metrics in PIPL Example",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-15T16:33:28Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 401,
+   "title": "ZeroDivisionError in MOT17 `f1_score.py` when precision and recall equal zero",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-13T17:30:03Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 399,
+   "title": "NameError in MOT17 `generate_reports.py` caused by undefined `config_file` variable",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-13T17:14:13Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 397,
+   "title": "MOT17 `tracking_job` & `reid_job` fail to launch due to nested directory mismatches",
+   "user": "rakshaak29",
+   "created": "2026-04-13T16:04:27Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 393,
+   "title": "[Bug]: Cloud-Edge LLM example setup fails on macOS/CPU environments due to requirements.txt",
+   "user": "rakshaak29",
+   "created": "2026-04-12T17:25:53Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 391,
+   "title": "MOT17 example fails to run due to broken \"pedestrian_tracking\" path references",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-12T15:56:34Z",
+   "comments": 2,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 389,
+   "title": "Invalid dummy path used as default parameter in `gov_rag.py`",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-12T11:29:28Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 385,
+   "title": "Bug/Refactor: Hardcoded Evaluation Paths in acc.py bypass the generic workspace",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-11T16:58:34Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 381,
+   "title": "[Performance] Government RAG Example: Redundant model reloading inside mutex severely bottlenecks threading",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-10T19:49:03Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 379,
+   "title": "Government RAG Example: Incorrect location extraction in basemodel.py breaks province filtering",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-10T18:22:19Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 372,
+   "title": "Quantization parameter not working in vLLM backend (cloud-edge LLM example)",
+   "user": "yashasviyadav30",
+   "created": "2026-03-01T07:11:52Z",
+   "comments": 1,
+   "labels": []
+  },
+  {
+   "number": 370,
+   "title": "[PRE - Task 1 for LFX Mentorships] Dependency Installation Failure in Ianvs Example imagenet/multiedge_inference_branch",
+   "user": "Zrahay",
+   "created": "2026-02-23T18:06:08Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 369,
+   "title": "[PRE-TEST] Critical Tensor Geometry Failures and Metric Inconsistencies in cloud_VLA_finetune Benchmark",
+   "user": "satyam-coder07",
+   "created": "2026-02-23T16:52:43Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 367,
+   "title": "[PRE-TEST] BDD Curb-Detection Lifelong Learning Example: Non-Reproducible \u2014 Expired Artifacts, Code/Config Fixes Required",
+   "user": "Pratham-Jain-3903",
+   "created": "2026-02-22T18:28:40Z",
+   "comments": 3,
+   "labels": []
+  },
+  {
+   "number": 365,
+   "title": "[PRE-TASK] Scientific Integrity Failures in the GAN + Self-Taught Learning Lifelong Learning Benchmark",
+   "user": "phantom-712",
+   "created": "2026-02-19T12:52:07Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 364,
+   "title": "[BUG] Proposal: Restore llm-agent/singletask_learning_bench Example for KubeEdge Ianvs",
+   "user": "abhisheksainimitawa",
+   "created": "2026-02-17T18:57:59Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 363,
+   "title": "[PRE-TEST] Urgent: requirements.txt Errors Stop Environment Setup",
+   "user": "Adityakk9031",
+   "created": "2026-02-17T13:54:10Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 362,
+   "title": "[Bug Report] government_rag Example: 7 Execution-Blocking Bugs Prevent Any User From Running This Benchmark",
+   "user": "khansalman12",
+   "created": "2026-02-16T17:14:10Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 361,
+   "title": "[Bug] Speculative decoding backends are unreachable, silent cache mismatches, and multiple config/doc inconsistencies in cloud-edge LLM example",
+   "user": "hharshhsaini",
+   "created": "2026-02-16T03:36:23Z",
+   "comments": 2,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 360,
+   "title": "[Bug](missing dependency + broken import + undocumented API requirement)",
+   "user": "26nidhi",
+   "created": "2026-02-15T17:13:22Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 358,
+   "title": "Environment Restoration and Data Integrity Validation for Ianvs Robot Examples",
+   "user": "nisha2k21",
+   "created": "2026-02-14T15:01:43Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 357,
+   "title": "[PRE-TASK] Enable Windows Support & Replace Inaccessible GPQA Dataset in Cloud Edge LLM Example",
+   "user": "phantom-712",
+   "created": "2026-02-14T11:41:44Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 356,
+   "title": "Joint inference pipeline crashes when cloud LLM returns HTTP 400 during API inference",
+   "user": "zjteee",
+   "created": "2026-02-14T03:38:04Z",
+   "comments": 0,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 353,
+   "title": "Government Single-Task : [LFX] Fix Critical Issues in Government Single-Task Learning Benchmark Example",
+   "user": "Mshahnawaz1",
+   "created": "2026-02-13T22:51:22Z",
+   "comments": 1,
+   "labels": [
+    "kind/bug"
+   ]
+  },
+  {
+   "number": 352,
+   "title": "[setup.py] maintainer_email missing and description malformed",
+   "user": "abhishek-8081",
+   "created": "2026-02-13T20:07:41Z",
+   "comments": 1,
+   "labels": [
+    "kind/feature"
+   ]
+  },
+  {
+   "number": 351,
+   "title": "Missing  requirements.txt  in multiple examples (Robot, CIFAR100) prevents execution",
+   "user": "abhishek-8081",
+   "created": "2026-02-13T19:57:04Z",
+   "comments": 1,
+   "labels": [
+    "kind/documentation"
+   ]
+  },
+  {
+   "number": 349,
+   "title": "Update Outdated GitHub Actions Versions in CI Workflow",
+   "user": "abhishek-8081",
+   "created": "2026-02-13T15:43:43Z",
+   "comments": 1,
+   "labels": [
+    "kind/feature"
+   ]
+  },
+  {
+   "number": 348,
+   "title": "[Feature] Simulator for Edge-cloud Collaborative AI: a Lifelong Learning example",
+   "user": "MooreZheng",
+   "created": "2022-02-11T10:40:32Z",
+   "comments": 7,
+   "labels": [
+    "kind/feature"
+   ]
+  }
+ ],
+ "prs": [
+  {
+   "number": 851,
+   "title": "ci: add GitHub Actions workflow for example lint and requirements validation",
+   "user": "Arijit429",
+   "created": "2026-08-21T06:12:02Z",
+   "draft": false
+  },
+  {
+   "number": 850,
+   "title": "fix(core): remove shell=True subprocess injection in simulation_system_admin.py",
+   "user": "Arijit429",
+   "created": "2026-08-21T05:39:13Z",
+   "draft": false
+  },
+  {
+   "number": 849,
+   "title": "fix(core): correct and/isinstance inversion in Algorithm._check_fields",
+   "user": "Arijit429",
+   "created": "2026-08-21T05:07:57Z",
+   "draft": false
+  },
+  {
+   "number": 848,
+   "title": "fix(paradigm): replace UnboundLocalError with clear ValueError for unsupported multi-inference mode",
+   "user": "Arijit429",
+   "created": "2026-08-20T20:22:41Z",
+   "draft": false
+  },
+  {
+   "number": 847,
+   "title": "docs: add debugging playbook for common Ianvs example failures",
+   "user": "Arijit429",
+   "created": "2026-08-20T20:06:32Z",
+   "draft": false
+  },
+  {
+   "number": 843,
+   "title": "fix(core): fix evaluation metric callable, dataset extraction, and inference aggregation in incremental learning",
+   "user": "bhuvan-somisetty",
+   "created": "2026-08-20T00:34:07Z",
+   "draft": false
+  },
+  {
+   "number": 841,
+   "title": "docs: fix quick-start install paths after third_party directory move",
+   "user": "zjr060424-lab",
+   "created": "2026-08-19T08:29:51Z",
+   "draft": false
+  },
+  {
+   "number": 839,
+   "title": "fix(storymanager): correct save_mode validation in rank.py",
+   "user": "Arijit429",
+   "created": "2026-08-19T00:32:29Z",
+   "draft": false
+  },
+  {
+   "number": 835,
+   "title": "ci(examples): add config path validation to catch broken references",
+   "user": "Atharva-Waghmare",
+   "created": "2026-08-18T12:41:18Z",
+   "draft": false
+  },
+  {
+   "number": 834,
+   "title": "fix(examples/TAB): stop case-sensitive PII patterns matching lower-case prose",
+   "user": "Abhishek86798",
+   "created": "2026-08-18T12:12:46Z",
+   "draft": false
+  },
+  {
+   "number": 829,
+   "title": "fix(core/storymanager/rank): validate save_mode value and fail loudly on unsupported modes",
+   "user": "Abhishek86798",
+   "created": "2026-08-18T11:01:25Z",
+   "draft": false
+  },
+  {
+   "number": 827,
+   "title": "fix(smart-coding): add missing preprocess method",
+   "user": "Talha8899",
+   "created": "2026-08-18T08:50:08Z",
+   "draft": false
+  },
+  {
+   "number": 826,
+   "title": "fix(yaoba): add requirements for YOLOX TTA example",
+   "user": "Talha8899",
+   "created": "2026-08-18T08:07:03Z",
+   "draft": false
+  },
+  {
+   "number": 825,
+   "title": "fix(core/lifelong): fail fast when splitting_method under-produces dataset splits",
+   "user": "IIITManjeet",
+   "created": "2026-08-18T07:03:12Z",
+   "draft": false
+  },
+  {
+   "number": 824,
+   "title": "fix(yaoba): restore paradigm dispatch and remove hard-coded config pathsFix/yaoba restoration",
+   "user": "31groot",
+   "created": "2026-08-17T23:18:58Z",
+   "draft": false
+  },
+  {
+   "number": 821,
+   "title": "fix(simulation): fix 5 host-environment check bugs in simulation_syst\u2026",
+   "user": "iron-prog",
+   "created": "2026-08-17T16:42:09Z",
+   "draft": false
+  },
+  {
+   "number": 820,
+   "title": "Feature/simulation sandbox",
+   "user": "Prachi194agrawal",
+   "created": "2026-08-17T11:53:45Z",
+   "draft": false
+  },
+  {
+   "number": 818,
+   "title": "Fix #445: guard regex match and update deprecated addmm_ signature in M3L basemodel",
+   "user": "nitbig",
+   "created": "2026-08-17T06:12:53Z",
+   "draft": false
+  },
+  {
+   "number": 817,
+   "title": "fix(examples): fix invalid paths and typos in Cloud_Robotics Semantic_Segmentation benchmark configs (#816)",
+   "user": "abhishekkamble12",
+   "created": "2026-08-16T19:39:17Z",
+   "draft": false
+  },
+  {
+   "number": 815,
+   "title": "ci(ianvs): run pytest in github actions",
+   "user": "Ganesh-403",
+   "created": "2026-08-16T04:20:23Z",
+   "draft": false
+  },
+  {
+   "number": 813,
+   "title": "test(ianvs): add core utility unit tests",
+   "user": "Ganesh-403",
+   "created": "2026-08-16T03:49:40Z",
+   "draft": false
+  },
+  {
+   "number": 811,
+   "title": "perf(cli): defer BenchmarkingJob import so -v and --help are fast",
+   "user": "Laithamr05",
+   "created": "2026-08-15T23:48:31Z",
+   "draft": false
+  },
+  {
+   "number": 810,
+   "title": "fix(federated-learning): surface client training failures instead of silently swallowing them",
+   "user": "Aryansingh-ai",
+   "created": "2026-08-15T20:45:44Z",
+   "draft": false
+  },
+  {
+   "number": 808,
+   "title": "fix(federated-learning): fix broken non-iid data partitioning",
+   "user": "Aryansingh-ai",
+   "created": "2026-08-15T18:11:39Z",
+   "draft": false
+  },
+  {
+   "number": 807,
+   "title": "fix(cloud-edge-llm): add GPQA-diamond dataset setup without Kaggle/HF auth",
+   "user": "kavaljeetsingh-dev",
+   "created": "2026-08-15T17:26:35Z",
+   "draft": false
+  },
+  {
+   "number": 806,
+   "title": "fix(ianvs): cleanup sys.path after dynamic module loading",
+   "user": "Ganesh-403",
+   "created": "2026-08-15T17:09:28Z",
+   "draft": false
+  },
+  {
+   "number": 804,
+   "title": "fix: correct 'detetion' to 'detection' typo in docs and rename file",
+   "user": "Jah-yee",
+   "created": "2026-08-15T14:45:35Z",
+   "draft": false
+  },
+  {
+   "number": 803,
+   "title": "fix(incremental-learning): prevent stale label reuse in hard example retraining",
+   "user": "Aryansingh-ai",
+   "created": "2026-08-15T09:58:58Z",
+   "draft": false
+  },
+  {
+   "number": 802,
+   "title": "fix(core): fix race condition in FCIL helper_function client routing",
+   "user": "bhuvan-somisetty",
+   "created": "2026-08-15T00:30:02Z",
+   "draft": false
+  },
+  {
+   "number": 800,
+   "title": "[PHASE IV] fix(core/module): raise clear ValueError when hyperparameter 'values' is missing",
+   "user": "hayyanbaig",
+   "created": "2026-08-14T23:39:02Z",
+   "draft": false
+  },
+  {
+   "number": 799,
+   "title": "[PHASE IV] fix(core/algorithm): raise ValueError on duplicate module type instead of silently dropping it",
+   "user": "hayyanbaig",
+   "created": "2026-08-14T23:20:04Z",
+   "draft": false
+  },
+  {
+   "number": 796,
+   "title": "Fix hardcoded absolute path in yaoba testenv.yaml",
+   "user": "hibaa23",
+   "created": "2026-08-14T22:20:52Z",
+   "draft": false
+  },
+  {
+   "number": 795,
+   "title": "Fix invalid YAML indentation in yaoba README documentation",
+   "user": "hibaa23",
+   "created": "2026-08-14T22:07:55Z",
+   "draft": false
+  },
+  {
+   "number": 794,
+   "title": "fix(Cloud_Robotics): vendor missing RFNet tree and fix config paths (\u2026",
+   "user": "abhishekkamble12",
+   "created": "2026-08-14T18:28:54Z",
+   "draft": false
+  },
+  {
+   "number": 793,
+   "title": "Fix: add missing colorlog dependency to requirements.txtAdd missing colorlog dependency to requirements.txt",
+   "user": "hibaa23",
+   "created": "2026-08-14T13:15:43Z",
+   "draft": false
+  },
+  {
+   "number": 792,
+   "title": "fix(bdd): correct curb detection model metric",
+   "user": "Aryansingh-ai",
+   "created": "2026-08-14T10:05:24Z",
+   "draft": false
+  },
+  {
+   "number": 791,
+   "title": "fix: add missing colorlog and PyYAML dependencies to requirements.txt",
+   "user": "blackdragoon26",
+   "created": "2026-08-14T09:14:38Z",
+   "draft": false
+  },
+  {
+   "number": 790,
+   "title": "Fix: examples/llm_simple_qa: broken config paths and CUDA-only model loading",
+   "user": "a-reda-ok",
+   "created": "2026-08-13T23:49:29Z",
+   "draft": false
+  },
+  {
+   "number": 789,
+   "title": "fix(core): expand ~ in dataset path fields before local-file/dir checks",
+   "user": "purunjay-bhardwaj",
+   "created": "2026-08-13T22:12:21Z",
+   "draft": false
+  },
+  {
+   "number": 788,
+   "title": "fix(cityscapes-synthia): fix stale paths and unsupported keys in fulltest/smalltest/traveltest variant configs",
+   "user": "purunjay-bhardwaj",
+   "created": "2026-08-13T22:12:10Z",
+   "draft": false
+  },
+  {
+   "number": 787,
+   "title": "fix(smart_coding/issue): replace hardcoded workspace path with relative path",
+   "user": "purunjay-bhardwaj",
+   "created": "2026-08-13T22:11:58Z",
+   "draft": false
+  },
+  {
+   "number": 786,
+   "title": "fix(cloud_VLA_finetune): replace hardcoded personal cluster paths with relative paths",
+   "user": "purunjay-bhardwaj",
+   "created": "2026-08-13T21:53:58Z",
+   "draft": false
+  },
+  {
+   "number": 785,
+   "title": "docs: fix wrong resources/third_party path in setup instructions",
+   "user": "purunjay-bhardwaj",
+   "created": "2026-08-13T21:50:47Z",
+   "draft": false
+  },
+  {
+   "number": 784,
+   "title": "fix: preserve source JSONL during key normalization",
+   "user": "subham-hq",
+   "created": "2026-08-13T18:58:01Z",
+   "draft": false
+  },
+  {
+   "number": 783,
+   "title": "fix(robodk): correct stale example paths",
+   "user": "Aryansingh-ai",
+   "created": "2026-08-13T17:32:07Z",
+   "draft": false
+  },
+  {
+   "number": 782,
+   "title": "fix(examples/llm_simple_qa): restore llm_simple_qa example benchmark and fix path corruption",
+   "user": "Raj-vardhan01",
+   "created": "2026-08-13T17:30:57Z",
+   "draft": false
+  },
+  {
+   "number": 780,
+   "title": "fix: preserve hyperparameter config during parsing",
+   "user": "subham-hq",
+   "created": "2026-08-13T16:51:00Z",
+   "draft": false
+  },
+  {
+   "number": 779,
+   "title": "docs(govdoc2poster): fix README paths and instructions",
+   "user": "Aryansingh-ai",
+   "created": "2026-08-13T06:40:30Z",
+   "draft": false
+  },
+  {
+   "number": 777,
+   "title": "fix(simulation): update stale pinned kind version in auto-install fal\u2026",
+   "user": "vishnudathks",
+   "created": "2026-08-13T05:17:35Z",
+   "draft": false
+  },
+  {
+   "number": 776,
+   "title": "fix(pcb-aoi): replace removed tensorflow.contrib.slim with tf-slim",
+   "user": "ANISHA-RAWAT",
+   "created": "2026-08-13T04:53:10Z",
+   "draft": false
+  },
+  {
+   "number": 775,
+   "title": "fix(core/storymanager/rank): handle string elements and column names in sort_by and guard empty metric list in _sort_all_df",
+   "user": "Raj-vardhan01",
+   "created": "2026-08-12T18:08:37Z",
+   "draft": false
+  },
+  {
+   "number": 773,
+   "title": "fix: make inference cache keys deterministic",
+   "user": "31groot",
+   "created": "2026-08-12T17:24:24Z",
+   "draft": false
+  },
+  {
+   "number": 772,
+   "title": "fix: handle quasi identifiers in hard sample mining",
+   "user": "31groot",
+   "created": "2026-08-12T16:57:18Z",
+   "draft": false
+  },
+  {
+   "number": 770,
+   "title": "Fix: correct metric function parameter order in FedLLM-PEFT example (Issue #646)",
+   "user": "a-reda-ok",
+   "created": "2026-08-12T13:55:44Z",
+   "draft": false
+  },
+  {
+   "number": 769,
+   "title": "fix: correct invalid module url in phys_scene_gen algorithmenv.yaml",
+   "user": "iron-prog",
+   "created": "2026-08-12T13:15:00Z",
+   "draft": false
+  },
+  {
+   "number": 768,
+   "title": "fix(llio): parse KITTI index paths consistently",
+   "user": "Aryansingh-ai",
+   "created": "2026-08-12T12:01:17Z",
+   "draft": false
+  },
+  {
+   "number": 767,
+   "title": "[PHASE IV] fix(core): honour use_gpu: false and apply gpu visibility before modu\u2026",
+   "user": "vjuhhii",
+   "created": "2026-08-12T12:01:05Z",
+   "draft": false
+  },
+  {
+   "number": 764,
+   "title": "fix(examples): modernize langchain dependencies and execution methods in government_rag (#535)",
+   "user": "Zimal-Fatemah",
+   "created": "2026-08-12T10:37:14Z",
+   "draft": false
+  },
+  {
+   "number": 763,
+   "title": "fix: evaluate LLIO poses against ground truth",
+   "user": "ETS2K7",
+   "created": "2026-08-12T09:11:34Z",
+   "draft": false
+  },
+  {
+   "number": 762,
+   "title": "fix(cifar100): remove hardcoded developer paths",
+   "user": "Aryansingh-ai",
+   "created": "2026-08-12T08:37:33Z",
+   "draft": false
+  },
+  {
+   "number": 761,
+   "title": "docs: document GPU access for Docker quick start",
+   "user": "ETS2K7",
+   "created": "2026-08-12T08:12:53Z",
+   "draft": false
+  },
+  {
+   "number": 759,
+   "title": "fix(core/common): guarantee sys.path cleanup in try-finally on module import failures",
+   "user": "Raj-vardhan01",
+   "created": "2026-08-12T05:28:55Z",
+   "draft": false
+  },
+  {
+   "number": 758,
+   "title": "fix(core): warn on deprecated and unknown dataset config fields",
+   "user": "subham-hq",
+   "created": "2026-08-12T03:08:12Z",
+   "draft": false
+  },
+  {
+   "number": 756,
+   "title": "fix(core): correct filename in Data Info File error message",
+   "user": "subham-hq",
+   "created": "2026-08-12T02:42:51Z",
+   "draft": false
+  },
+  {
+   "number": 755,
+   "title": "fix(core): guard NoneType matrix in rank visualization and zero division in lifelong learning",
+   "user": "Raj-vardhan01",
+   "created": "2026-08-12T00:27:20Z",
+   "draft": false
+  },
+  {
+   "number": 754,
+   "title": "chore: fix meeting link in examples contributing guide",
+   "user": "Manar-Elhabbal7",
+   "created": "2026-08-11T22:59:04Z",
+   "draft": false
+  },
+  {
+   "number": 753,
+   "title": "fix: create output directory before saving heatmap",
+   "user": "xaemonn",
+   "created": "2026-08-11T21:54:58Z",
+   "draft": false
+  },
+  {
+   "number": 752,
+   "title": " [PHASE IV] fix(llm-agent): implement save()/load() persistence contract and harden related edge cases",
+   "user": "hayyanbaig",
+   "created": "2026-08-11T18:55:02Z",
+   "draft": false
+  },
+  {
+   "number": 750,
+   "title": "Fix typo in README.md (detetion \u2192 detection)",
+   "user": "Raghavbhola",
+   "created": "2026-08-11T18:05:00Z",
+   "draft": false
+  },
+  {
+   "number": 745,
+   "title": "fix(simulation): teardown environment after benchmarking",
+   "user": "vishnudathks",
+   "created": "2026-08-11T05:04:20Z",
+   "draft": false
+  },
+  {
+   "number": 744,
+   "title": "Feat/ci validate example configs",
+   "user": "iron-prog",
+   "created": "2026-08-10T21:00:52Z",
+   "draft": false
+  },
+  {
+   "number": 741,
+   "title": "fix: enforce the non-empty test split invariant in FCI evaluation",
+   "user": "Eason09053360",
+   "created": "2026-08-10T10:31:02Z",
+   "draft": false
+  },
+  {
+   "number": 739,
+   "title": "fix(examples): remove protobuf<=3.20.3 pin conflicting with core onnx",
+   "user": "harshaaaaw",
+   "created": "2026-08-10T10:28:58Z",
+   "draft": false
+  },
+  {
+   "number": 738,
+   "title": "fix(government): restore government_rag example benchmark",
+   "user": "ahsan-zamil",
+   "created": "2026-08-10T05:17:54Z",
+   "draft": false
+  },
+  {
+   "number": 737,
+   "title": "[PHASE IV] fix(RoboDK Palletizing): Correct broken Quick Start run commands in README",
+   "user": "hayyanbaig",
+   "created": "2026-08-09T20:02:03Z",
+   "draft": false
+  },
+  {
+   "number": 736,
+   "title": "[PHASE IV] fix(RoboDK Palletizing): clean up orphaned temp directories, fix predict() return type inconsistency, remove unused label extraction",
+   "user": "hayyanbaig",
+   "created": "2026-08-09T19:50:32Z",
+   "draft": false
+  },
+  {
+   "number": 734,
+   "title": "[PHASE IV] fix(RoboDK Palletizing): replace hardcoded image dimensions in map50/map90 metric calculation with dynamic image resolution",
+   "user": "hayyanbaig",
+   "created": "2026-08-09T18:36:08Z",
+   "draft": false
+  },
+  {
+   "number": 733,
+   "title": "fix(government): restore singletask_learning_bench example",
+   "user": "ahsan-zamil",
+   "created": "2026-08-09T11:45:19Z",
+   "draft": false
+  },
+  {
+   "number": 729,
+   "title": "fix: restore sys.path on exception in py2dict and load_module",
+   "user": "Muhammad-Hashir-Code",
+   "created": "2026-08-08T21:25:31Z",
+   "draft": false
+  },
+  {
+   "number": 727,
+   "title": "fix(cloud-robotics): correct perception reasoning config paths",
+   "user": "JAYATIAHUJA",
+   "created": "2026-08-08T20:49:00Z",
+   "draft": false
+  },
+  {
+   "number": 726,
+   "title": "fix: correct dashscope requirement specifier",
+   "user": "JAYATIAHUJA",
+   "created": "2026-08-08T20:36:16Z",
+   "draft": false
+  },
+  {
+   "number": 725,
+   "title": "[PHASE IV] fix(GovDoc2Poster): correct broken Quick Start command, stale folder name, and hardcoded absolute path in README",
+   "user": "hayyanbaig",
+   "created": "2026-08-08T20:36:06Z",
+   "draft": false
+  },
+  {
+   "number": 724,
+   "title": "fix: replace hard-coded paths in RoboDK Palletizing example",
+   "user": "iron-prog",
+   "created": "2026-08-08T20:27:18Z",
+   "draft": false
+  },
+  {
+   "number": 721,
+   "title": "[PHASE IV] fix(GovDoc2Poster): add diagnostics for silently-dropped results in average_scores calculation",
+   "user": "hayyanbaig",
+   "created": "2026-08-08T19:00:08Z",
+   "draft": false
+  },
+  {
+   "number": 715,
+   "title": "fix(core): optimize leaderboard generation to avoid O(n^2) DataFrame insertions",
+   "user": "ahsan-zamil",
+   "created": "2026-08-08T11:14:38Z",
+   "draft": false
+  },
+  {
+   "number": 714,
+   "title": "docs: fix typos in LLM inference README",
+   "user": "kartik23-2",
+   "created": "2026-08-08T11:00:06Z",
+   "draft": false
+  },
+  {
+   "number": 713,
+   "title": "Fix bdd curb detection paths",
+   "user": "ishansurdi",
+   "created": "2026-08-08T05:07:08Z",
+   "draft": false
+  },
+  {
+   "number": 705,
+   "title": "[PHASE IV] fix(GovDoc2Poster): resolve multi-agent interface contract mismatches and execution pipeline crashes",
+   "user": "hayyanbaig",
+   "created": "2026-08-07T21:40:16Z",
+   "draft": false
+  },
+  {
+   "number": 704,
+   "title": "fix: restore PIPL example integration",
+   "user": "iron-prog",
+   "created": "2026-08-07T20:59:54Z",
+   "draft": false
+  },
+  {
+   "number": 702,
+   "title": "fix(utils): preserve keyword-only parameters in parse_kwargs helper",
+   "user": "priyam99",
+   "created": "2026-08-07T20:13:42Z",
+   "draft": false
+  },
+  {
+   "number": 701,
+   "title": "[PHASE IV] fix(GovDoc2Poster): configure relative workspace path and restore missing dataset schema",
+   "user": "hayyanbaig",
+   "created": "2026-08-07T18:52:10Z",
+   "draft": false
+  },
+  {
+   "number": 698,
+   "title": "fix(simulation): enforce config schema and fix string formatting",
+   "user": "DsThakurRawat",
+   "created": "2026-08-07T14:48:30Z",
+   "draft": false
+  },
+  {
+   "number": 697,
+   "title": "fix(examples): restore curb-detection lifelong learning benchmark and update strategy registry",
+   "user": "ahsan-zamil",
+   "created": "2026-08-07T12:48:41Z",
+   "draft": false
+  },
+  {
+   "number": 696,
+   "title": "Fix RoboDK Palletizing example: broken config paths, dataset portability, and weight-discovery bug",
+   "user": "SurbhiD404",
+   "created": "2026-08-07T11:32:27Z",
+   "draft": false
+  },
+  {
+   "number": 694,
+   "title": "build: update CI to test Python 3.9-3.12 and drop EOL versions",
+   "user": "Hiteshsai007",
+   "created": "2026-08-07T10:06:52Z",
+   "draft": false
+  },
+  {
+   "number": 691,
+   "title": "fix(robot): restore environment configuration and add dataset validation for robot examples",
+   "user": "ahsan-zamil",
+   "created": "2026-08-07T06:04:16Z",
+   "draft": false
+  },
+  {
+   "number": 690,
+   "title": "[PHASE IV] fix(TAB): correct install path and remove duplicate metric declarations",
+   "user": "hayyanbaig",
+   "created": "2026-08-07T00:15:16Z",
+   "draft": false
+  },
+  {
+   "number": 689,
+   "title": "[PHASE IV] fix(phys_scene_gen): migrate langchain to langchain-core/langchain-openai for pydantic v2 compatibility",
+   "user": "hayyanbaig",
+   "created": "2026-08-06T23:50:26Z",
+   "draft": false
+  },
+  {
+   "number": 688,
+   "title": "[PHASE IV] fix(TAB): add missing prettytable dependency to example requirements.txt",
+   "user": "hayyanbaig",
+   "created": "2026-08-06T22:25:20Z",
+   "draft": false
+  },
+  {
+   "number": 687,
+   "title": "fix: remove self-referential ianvs dependency from requirements.txt",
+   "user": "Muhammad-Hashir-Code",
+   "created": "2026-08-06T20:24:54Z",
+   "draft": false
+  },
+  {
+   "number": 686,
+   "title": "[PHASE IV] fix(TAB): correct dataset file extension from .jsonl to .json to match README",
+   "user": "hayyanbaig",
+   "created": "2026-08-06T19:28:56Z",
+   "draft": false
+  },
+  {
+   "number": 683,
+   "title": "Remove self referential ianvs dependency",
+   "user": "Arijit429",
+   "created": "2026-08-06T17:48:57Z",
+   "draft": false
+  },
+  {
+   "number": 682,
+   "title": "fix: declare runtime package dependencies",
+   "user": "iron-prog",
+   "created": "2026-08-06T16:16:19Z",
+   "draft": false
+  },
+  {
+   "number": 680,
+   "title": "fix(metrics): harden system metrics evaluation and fix transfer ratio calculation",
+   "user": "priyam99",
+   "created": "2026-08-06T13:03:56Z",
+   "draft": false
+  },
+  {
+   "number": 679,
+   "title": "fix(examples): enable Windows support and backend fallbacks in cloud-edge LLM benchmark",
+   "user": "ahsan-zamil",
+   "created": "2026-08-06T11:47:42Z",
+   "draft": false
+  },
+  {
+   "number": 678,
+   "title": "docs: fix recurring typo detetion -> detection",
+   "user": "Hiteshsai007",
+   "created": "2026-08-06T11:08:46Z",
+   "draft": false
+  },
+  {
+   "number": 676,
+   "title": "cleanup: replace raw print calls with LOGGER in core modules",
+   "user": "Hiteshsai007",
+   "created": "2026-08-06T11:05:13Z",
+   "draft": false
+  },
+  {
+   "number": 674,
+   "title": "fix(deps): add missing colorlog to requirements.txt",
+   "user": "Hiteshsai007",
+   "created": "2026-08-06T10:45:34Z",
+   "draft": false
+  },
+  {
+   "number": 672,
+   "title": "fix: replace duplicate benchmarking.py with wrapper",
+   "user": "Hiteshsai007",
+   "created": "2026-08-06T10:39:52Z",
+   "draft": false
+  },
+  {
+   "number": 670,
+   "title": "fix(dataset): correctly use np.isin for non-IID partitioning",
+   "user": "Hiteshsai007",
+   "created": "2026-08-06T10:33:14Z",
+   "draft": false
+  },
+  {
+   "number": 667,
+   "title": "fix(core): enhance benchmark execution resiliency, result retention, and module isolation",
+   "user": "priyam99",
+   "created": "2026-08-06T03:36:19Z",
+   "draft": false
+  },
+  {
+   "number": 665,
+   "title": "[Phase IV] docs(phys_scene_gen): fix incorrect sedna wheel install path",
+   "user": "hayyanbaig",
+   "created": "2026-08-05T19:41:42Z",
+   "draft": false
+  },
+  {
+   "number": 664,
+   "title": "fix(core): add null guards for testenv/rank in BenchmarkingJob and validate visualization methods",
+   "user": "bhuvan-somisetty",
+   "created": "2026-08-05T19:41:22Z",
+   "draft": false
+  },
+  {
+   "number": 663,
+   "title": "fix(profiler): auto-generate bert_input.npz for BERT models if missing",
+   "user": "Akshat-Raj",
+   "created": "2026-08-05T19:26:10Z",
+   "draft": false
+  },
+  {
+   "number": 661,
+   "title": "fix(examples): MATPLOTLIB_AVAILABLE and OPEN3D_AVAILABLE always False \u2014 add conditional imports to enable visualization in pose-estimation-llio",
+   "user": "Arijit429",
+   "created": "2026-08-05T18:02:34Z",
+   "draft": false
+  },
+  {
+   "number": 660,
+   "title": "fix: validate rank configuration field types",
+   "user": "iron-prog",
+   "created": "2026-08-05T17:12:15Z",
+   "draft": false
+  },
+  {
+   "number": 658,
+   "title": "fix(llm): prevent keyerror and zero division in collaborative inference metrics",
+   "user": "priyam99",
+   "created": "2026-08-05T15:21:50Z",
+   "draft": false
+  },
+  {
+   "number": 657,
+   "title": "fix(core): resolve my_evaluate/my_inference AttributeError and ZeroDivisionError in lifelong learning paradigm",
+   "user": "ahsan-zamil",
+   "created": "2026-08-05T13:04:22Z",
+   "draft": false
+  },
+  {
+   "number": 656,
+   "title": " fix(simulation): restore host environment checks in simulation_system_admin",
+   "user": "DsThakurRawat",
+   "created": "2026-08-05T12:59:03Z",
+   "draft": false
+  },
+  {
+   "number": 655,
+   "title": "feat(llm): enable model quantization support in vllm backend",
+   "user": "priyam99",
+   "created": "2026-08-05T06:22:50Z",
+   "draft": false
+  },
+  {
+   "number": 654,
+   "title": "fix(examples): resolve speculative decoding, cache warnings, and config/doc inconsistencies in cloud-edge LLM benchmark",
+   "user": "ahsan-zamil",
+   "created": "2026-08-05T04:38:28Z",
+   "draft": false
+  },
+  {
+   "number": 653,
+   "title": "fix(examples/TAB): api_key_env should hold env var name, not a litera\u2026",
+   "user": "ktulkinova",
+   "created": "2026-08-04T17:08:19Z",
+   "draft": false
+  },
+  {
+   "number": 652,
+   "title": "ci(pipeline): modernize python matrix, update actions, and add example validation",
+   "user": "priyam99",
+   "created": "2026-08-04T16:26:19Z",
+   "draft": false
+  },
+  {
+   "number": 651,
+   "title": "fix(examples): declare __all__ as a list instead of a parenthesised string",
+   "user": "akshita317",
+   "created": "2026-08-04T13:57:21Z",
+   "draft": false
+  },
+  {
+   "number": 650,
+   "title": "fix(examples): resolve KeyError and ZeroDivisionError in cloud-edge LLM testenv",
+   "user": "ahsan-zamil",
+   "created": "2026-08-04T12:32:46Z",
+   "draft": false
+  },
+  {
+   "number": 649,
+   "title": "fix(examples): correct bleu4 and rouge metric parameter order",
+   "user": "ahsan-zamil",
+   "created": "2026-08-04T11:53:00Z",
+   "draft": false
+  },
+  {
+   "number": 648,
+   "title": "fix(metrics): resolve NoneType crashes, transfer ratio math error, and metric lookup guardrails",
+   "user": "bhuvan-somisetty",
+   "created": "2026-08-04T10:53:56Z",
+   "draft": false
+  },
+  {
+   "number": 645,
+   "title": "fix(core/lifelong): resolve Sedna API mismatches and module object instantiation crashes",
+   "user": "priyam99",
+   "created": "2026-08-04T05:55:33Z",
+   "draft": false
+  },
+  {
+   "number": 643,
+   "title": "fix(examples): replace hardcoded absolute paths with relative paths",
+   "user": "priyam99",
+   "created": "2026-08-03T19:52:31Z",
+   "draft": false
+  },
+  {
+   "number": 642,
+   "title": "fix: correct __all__ mismatch in Cloud_Robotics cloud_model.py",
+   "user": "iron-prog",
+   "created": "2026-08-03T18:06:48Z",
+   "draft": false
+  },
+  {
+   "number": 640,
+   "title": "fix(dataset): preserve non-path labels in txt index file preprocessing",
+   "user": "bhuvan-somisetty",
+   "created": "2026-08-03T04:54:05Z",
+   "draft": false
+  },
+  {
+   "number": 638,
+   "title": "fix(dataset): resolve tempfile leaks, ZeroDivisionError in splitting, and file IO guardrails",
+   "user": "bhuvan-somisetty",
+   "created": "2026-08-02T17:11:25Z",
+   "draft": false
+  },
+  {
+   "number": 636,
+   "title": "fix: implement missing optional-dependency detection for matplotlib/o\u2026",
+   "user": "iron-prog",
+   "created": "2026-08-02T16:47:36Z",
+   "draft": false
+  },
+  {
+   "number": 632,
+   "title": "cleanup: remove dead code in JointInference.set_config()",
+   "user": "iron-prog",
+   "created": "2026-08-02T15:59:09Z",
+   "draft": false
+  },
+  {
+   "number": 631,
+   "title": "fix(imagenet): update multiedge_inference_bench requirements to insta\u2026",
+   "user": "kai11017",
+   "created": "2026-08-02T14:39:43Z",
+   "draft": false
+  },
+  {
+   "number": 629,
+   "title": "fix(core/storymanager): create output/ dir before saving heatmap picture",
+   "user": "ajmani-x",
+   "created": "2026-08-02T05:39:46Z",
+   "draft": false
+  },
+  {
+   "number": 627,
+   "title": "core: stop leaking orphaned temp directories outside the workspace",
+   "user": "bhuvan-somisetty",
+   "created": "2026-08-02T02:10:39Z",
+   "draft": false
+  },
+  {
+   "number": 624,
+   "title": "fix(dataset): use np.isin for non-iid class membership check in partition_data",
+   "user": "InsidiousLion",
+   "created": "2026-08-01T14:36:54Z",
+   "draft": false
+  },
+  {
+   "number": 623,
+   "title": "ci: add Python 3.10 and 3.11 to CI matrix, drop EOL 3.7",
+   "user": "31groot",
+   "created": "2026-08-01T11:35:54Z",
+   "draft": false
+  },
+  {
+   "number": 622,
+   "title": "fix(testcase): resolve infinite loop in _get_output_dir on directory collision",
+   "user": "vishalmore90",
+   "created": "2026-08-01T10:47:11Z",
+   "draft": false
+  },
+  {
+   "number": 620,
+   "title": "fix(core): prevent OS command injection in simulation environment",
+   "user": "vishalmore90",
+   "created": "2026-08-01T10:18:59Z",
+   "draft": false
+  },
+  {
+   "number": 617,
+   "title": "cleanup(core): remove unused paradigm files tightly coupled to examples",
+   "user": "vishalmore90",
+   "created": "2026-08-01T10:03:41Z",
+   "draft": false
+  },
+  {
+   "number": 611,
+   "title": "core: fix benchmark execution resiliency, result persistence, and module state pollution",
+   "user": "bhuvan-somisetty",
+   "created": "2026-08-01T03:36:34Z",
+   "draft": false
+  },
+  {
+   "number": 598,
+   "title": "fix: include keyword-only parameters in parse_kwargs filtering",
+   "user": "bhuvan-somisetty",
+   "created": "2026-07-31T06:17:09Z",
+   "draft": false
+  },
+  {
+   "number": 596,
+   "title": "fix: correct field type validation logic in core modules",
+   "user": "bhuvan-somisetty",
+   "created": "2026-07-30T20:14:55Z",
+   "draft": false
+  },
+  {
+   "number": 594,
+   "title": "fix(examples/robot-cityscapes-synthia): add missing requirements.txt for ERFNet semantic-segmentation example",
+   "user": "ajmani-x",
+   "created": "2026-07-30T19:46:48Z",
+   "draft": false
+  },
+  {
+   "number": 593,
+   "title": "fix(examples/robot-cityscapes-synthia): stop hardcoding /tmp for ERFNet checkpoints",
+   "user": "ajmani-x",
+   "created": "2026-07-30T14:39:57Z",
+   "draft": false
+  },
+  {
+   "number": 592,
+   "title": "fix: avoid ZeroDivisionError in city_splitting when times=1",
+   "user": "bhuvan-somisetty",
+   "created": "2026-07-30T13:48:40Z",
+   "draft": false
+  },
+  {
+   "number": 590,
+   "title": "fix: correct and/or logic bug in _check_fields required-field checks",
+   "user": "bhuvan-somisetty",
+   "created": "2026-07-30T01:44:40Z",
+   "draft": false
+  },
+  {
+   "number": 588,
+   "title": "fix(core/lifelong): guard task_avg_score division against ZeroDivisionError",
+   "user": "ajmani-x",
+   "created": "2026-07-29T20:32:33Z",
+   "draft": false
+  },
+  {
+   "number": 587,
+   "title": "docs: add edge-cloud collaboration with large foundation models ",
+   "user": "DhruvMalviya0",
+   "created": "2026-07-28T09:33:37Z",
+   "draft": false
+  },
+  {
+   "number": 585,
+   "title": "fix(imagenet/multiedge-inference-bench): consolidate transformer API fixes and resolve end-to-end runtime errors",
+   "user": "rajdhruvsingh",
+   "created": "2026-07-25T07:28:17Z",
+   "draft": false
+  },
+  {
+   "number": 583,
+   "title": "fix: add requirements.txt and replace hardcoded paths in government example",
+   "user": "31groot",
+   "created": "2026-07-17T19:51:21Z",
+   "draft": false
+  },
+  {
+   "number": 582,
+   "title": "fix(examples): correct broken config paths in cityscapes singletask_learning_bench",
+   "user": "karanthengane23",
+   "created": "2026-07-08T06:30:28Z",
+   "draft": false
+  },
+  {
+   "number": 580,
+   "title": "fix(examples): replace hardcoded developer paths in smart_coding",
+   "user": "karanthengane23",
+   "created": "2026-07-07T12:46:29Z",
+   "draft": false
+  },
+  {
+   "number": 579,
+   "title": "fix: replace 'ianvs -f' with 'python benchmarking.py -f' in all example READMEs",
+   "user": "31groot",
+   "created": "2026-07-05T17:42:17Z",
+   "draft": false
+  },
+  {
+   "number": 578,
+   "title": "fix: refactor acc.py to remove code duplication in government_rag testenv",
+   "user": "31groot",
+   "created": "2026-07-03T20:29:09Z",
+   "draft": false
+  },
+  {
+   "number": 577,
+   "title": "fix: add missing requirements.txt for smart_coding example",
+   "user": "31groot",
+   "created": "2026-07-03T20:09:49Z",
+   "draft": false
+  },
+  {
+   "number": 576,
+   "title": "fix: add missing requirements.txt for federated-llm example",
+   "user": "31groot",
+   "created": "2026-07-02T17:28:30Z",
+   "draft": false
+  },
+  {
+   "number": 575,
+   "title": "fix(core/singletask): guard BASE_MODEL_URL assignment against None in\u2026",
+   "user": "g-k-s-03",
+   "created": "2026-07-02T07:43:18Z",
+   "draft": false
+  },
+  {
+   "number": 573,
+   "title": "fix(core/lifelong): correct rounds condition to fix HAS_COMPLETED_INITIAL_TRAINING in standard mode",
+   "user": "g-k-s-03",
+   "created": "2026-07-02T07:21:05Z",
+   "draft": false
+  },
+  {
+   "number": 571,
+   "title": "fix: add missing requirements.txt for government_rag and llm_simple_qa examples",
+   "user": "31groot",
+   "created": "2026-07-01T21:50:30Z",
+   "draft": false
+  },
+  {
+   "number": 570,
+   "title": "fix: use elif in _write_data_file and _read_data_file to avoid redundant checks",
+   "user": "31groot",
+   "created": "2026-07-01T21:39:38Z",
+   "draft": false
+  },
+  {
+   "number": 569,
+   "title": "fix: remove undefined LadeSpecDecLLM import from edge_model --  issue#568",
+   "user": "Priyanshu6968",
+   "created": "2026-06-28T05:03:34Z",
+   "draft": false
+  },
+  {
+   "number": 567,
+   "title": "fix(robot-cityscapes-synthia): fix three Sedna interface crashes blocking all pipeline runs",
+   "user": "rajdhruvsingh",
+   "created": "2026-06-27T03:22:37Z",
+   "draft": false
+  },
+  {
+   "number": 566,
+   "title": "fix(core/federated): guard aggregation module lookup against None",
+   "user": "g-k-s-03",
+   "created": "2026-06-26T06:08:33Z",
+   "draft": false
+  },
+  {
+   "number": 564,
+   "title": "fix: replace JsonlDataParse with JSONDataParse to match Sedna API",
+   "user": "31groot",
+   "created": "2026-06-23T20:10:07Z",
+   "draft": false
+  },
+  {
+   "number": 562,
+   "title": "fix 502: portable paths and zero-division guard in llm_simple_qa example",
+   "user": "Priyanshu6968",
+   "created": "2026-06-21T15:55:43Z",
+   "draft": false
+  },
+  {
+   "number": 561,
+   "title": "Fix/mot17 issues 447 449 450",
+   "user": "rajdhruvsingh",
+   "created": "2026-06-21T14:08:22Z",
+   "draft": false
+  },
+  {
+   "number": 560,
+   "title": "Fix rank picture mode without matrix",
+   "user": "avinxshKD",
+   "created": "2026-06-20T08:51:41Z",
+   "draft": false
+  },
+  {
+   "number": 558,
+   "title": "Fix module loading path collision",
+   "user": "avinxshKD",
+   "created": "2026-06-18T11:08:41Z",
+   "draft": false
+  },
+  {
+   "number": 556,
+   "title": "fix: prevent NaN propagation in MOT17 tracking metrics",
+   "user": "Fahmid-Arman",
+   "created": "2026-06-16T16:45:58Z",
+   "draft": false
+  },
+  {
+   "number": 555,
+   "title": "fix: update deprecated torchvision make_grid API and resolve DataLoader worker import failures",
+   "user": "Fahmid-Arman",
+   "created": "2026-06-15T22:20:41Z",
+   "draft": false
+  },
+  {
+   "number": 554,
+   "title": "fix: remove hardcoded CUDA assumptions in ERFNet to support CPU-only execution",
+   "user": "Fahmid-Arman",
+   "created": "2026-06-15T22:00:46Z",
+   "draft": false
+  },
+  {
+   "number": 553,
+   "title": "fix: migrate legacy Sedna API calls to standard inference methods in lifelong learning",
+   "user": "Fahmid-Arman",
+   "created": "2026-06-15T21:44:30Z",
+   "draft": false
+  },
+  {
+   "number": 552,
+   "title": "fix: bypass Sedna network timeouts during local offline benchmarking",
+   "user": "karyxx",
+   "created": "2026-06-15T17:39:41Z",
+   "draft": false
+  },
+  {
+   "number": 551,
+   "title": "fix: add None guard for regex in load() and update addmm_() for PyTorch >= 2.0 compatibility",
+   "user": "SahilKumar75",
+   "created": "2026-06-15T07:24:50Z",
+   "draft": false
+  },
+  {
+   "number": 550,
+   "title": "fix: resolve dataset preparation failure caused by upstream framework update",
+   "user": "Fahmid-Arman",
+   "created": "2026-06-15T07:05:27Z",
+   "draft": false
+  },
+  {
+   "number": 549,
+   "title": "fix: read DASHSCOPE_API_KEY from environment in GovDoc2Poster basemodel",
+   "user": "Fahmid-Arman",
+   "created": "2026-06-14T18:52:35Z",
+   "draft": false
+  },
+  {
+   "number": 548,
+   "title": "fix: resolve TypeError by properly instantiating model before loading state_dict in unseen sample recognition",
+   "user": "Fahmid-Arman",
+   "created": "2026-06-14T11:44:42Z",
+   "draft": false
+  },
+  {
+   "number": 547,
+   "title": "fix: add guards against ZeroDivisionError across cloud-edge LLM metrics and backends",
+   "user": "Fahmid-Arman",
+   "created": "2026-06-14T11:12:15Z",
+   "draft": false
+  },
+  {
+   "number": 546,
+   "title": "fix(aoa/TForest) : add requirements.txt and harden hardcoded paths in tools.py",
+   "user": "SurbhiD404",
+   "created": "2026-06-14T10:36:57Z",
+   "draft": false
+  },
+  {
+   "number": 545,
+   "title": "fix: resolve scientific integrity failures and hardcoded paths in cityscapes GAN+STL benchmark",
+   "user": "Fahmid-Arman",
+   "created": "2026-06-14T10:18:45Z",
+   "draft": false
+  },
+  {
+   "number": 544,
+   "title": "fix: resolve execution blockers and hardcoded paths in llm_simple_qa benchmark",
+   "user": "Fahmid-Arman",
+   "created": "2026-06-14T09:53:31Z",
+   "draft": false
+  },
+  {
+   "number": 543,
+   "title": "fix: replace hardcoded absolute paths with root-relative paths in RoboDK Palletizing example",
+   "user": "Fahmid-Arman",
+   "created": "2026-06-13T16:22:30Z",
+   "draft": false
+  },
+  {
+   "number": 542,
+   "title": "fix: resolve missing dataset and config issues in compression benchmark.",
+   "user": "Fahmid-Arman",
+   "created": "2026-06-13T15:39:23Z",
+   "draft": false
+  },
+  {
+   "number": 540,
+   "title": "fix(examples): add backwards-compatible fallback for transformers>=5.0 in ViT/DeiT models",
+   "user": "Aamod007",
+   "created": "2026-06-13T14:30:14Z",
+   "draft": false
+  },
+  {
+   "number": 539,
+   "title": "fix(examples): add missing BaseDataSource import to RFNet sedna_predict.py files",
+   "user": "Aamod007",
+   "created": "2026-06-13T14:18:26Z",
+   "draft": false
+  },
+  {
+   "number": 538,
+   "title": "fix(metrics): correct compute() return values to prevent ValueError crash",
+   "user": "Aamod007",
+   "created": "2026-06-13T14:10:53Z",
+   "draft": false
+  },
+  {
+   "number": 537,
+   "title": "fix: make query-routing example importable on non-CUDA platforms",
+   "user": "Fahmid-Arman",
+   "created": "2026-06-12T18:59:01Z",
+   "draft": false
+  },
+  {
+   "number": 536,
+   "title": "fix(government_rag): restore example on current LangChain and remove hardcoded credentials",
+   "user": "veyron-kairo",
+   "created": "2026-06-12T16:59:53Z",
+   "draft": false
+  },
+  {
+   "number": 534,
+   "title": "fix(llm-agent): device placement crash on MPS and silently ignored half_lora flag",
+   "user": "veyron-kairo",
+   "created": "2026-06-12T16:42:18Z",
+   "draft": false
+  },
+  {
+   "number": 532,
+   "title": "feat: add opt-in parallel test case execution via ThreadPoolExecutor",
+   "user": "rajdhruvsingh",
+   "created": "2026-06-11T11:00:59Z",
+   "draft": false
+  },
+  {
+   "number": 529,
+   "title": "fix: update stale paths and hardcoded absolute paths in robot-cityscapes-synthia",
+   "user": "rajdhruvsingh",
+   "created": "2026-06-09T10:05:35Z",
+   "draft": false
+  },
+  {
+   "number": 525,
+   "title": "fix(examples): add missing BaseDataSource import in RFNet sedna_predict.py files",
+   "user": "SurbhiD404",
+   "created": "2026-06-09T06:30:40Z",
+   "draft": false
+  },
+  {
+   "number": 524,
+   "title": "fix(reid): improve device compatibility and checkpoint handling",
+   "user": "iron-prog",
+   "created": "2026-06-09T06:22:08Z",
+   "draft": false
+  },
+  {
+   "number": 518,
+   "title": " create requirements.txt file",
+   "user": "sujalkurkute",
+   "created": "2026-06-08T09:09:39Z",
+   "draft": false
+  },
+  {
+   "number": 513,
+   "title": "fix: update stale 2-domain config to 3-domain in robot-cityscapes-synthia",
+   "user": "rajdhruvsingh",
+   "created": "2026-06-07T19:25:14Z",
+   "draft": false
+  },
+  {
+   "number": 511,
+   "title": "fix: add missing DDP/dist imports, fix assertion and YAML indentation in ByteTrack",
+   "user": "rajdhruvsingh",
+   "created": "2026-06-07T15:39:49Z",
+   "draft": false
+  },
+  {
+   "number": 510,
+   "title": "fix: add sedna installation warning and setup verification script",
+   "user": "rajdhruvsingh",
+   "created": "2026-06-07T11:42:57Z",
+   "draft": false
+  },
+  {
+   "number": 505,
+   "title": "fix: add requirements.txt for smart_coding example",
+   "user": "sujalkurkute",
+   "created": "2026-06-06T11:41:24Z",
+   "draft": false
+  },
+  {
+   "number": 500,
+   "title": "fix(examples): align MOT17 config paths and dataset indexing",
+   "user": "PragnyaKhandelwal",
+   "created": "2026-06-03T08:52:33Z",
+   "draft": false
+  },
+  {
+   "number": 499,
+   "title": "fix(examples): restore and optimize LLM collaborative inference example",
+   "user": "PragnyaKhandelwal",
+   "created": "2026-06-03T08:26:59Z",
+   "draft": false
+  },
+  {
+   "number": 498,
+   "title": "fix(engine): sanitize NaN values in leaderboard output",
+   "user": "PragnyaKhandelwal",
+   "created": "2026-06-02T17:04:02Z",
+   "draft": false
+  },
+  {
+   "number": 497,
+   "title": "fix(engine): standardize workspace path portability",
+   "user": "PragnyaKhandelwal",
+   "created": "2026-06-02T16:48:34Z",
+   "draft": false
+  },
+  {
+   "number": 496,
+   "title": "fix(engine): resolve `ZeroDivisionError` in metrics module",
+   "user": "PragnyaKhandelwal",
+   "created": "2026-06-02T16:33:24Z",
+   "draft": false
+  },
+  {
+   "number": 488,
+   "title": "[LFX Term : 01]  : Restoring City-Scape Sythia Semantic Segmentation ",
+   "user": "NishantSinghhhhh",
+   "created": "2026-05-28T08:11:08Z",
+   "draft": false
+  },
+  {
+   "number": 484,
+   "title": "examples: fix compression requirements filename",
+   "user": "vyagh",
+   "created": "2026-05-27T18:06:46Z",
+   "draft": false
+  },
+  {
+   "number": 468,
+   "title": "fix: add missing colorlog and pyyaml dependencies to requirements.txt",
+   "user": "SurbhiD404",
+   "created": "2026-05-24T08:00:23Z",
+   "draft": false
+  },
+  {
+   "number": 441,
+   "title": "[LFX Term : 01 ]Restoration: CItyscape-Sythia Curb detection",
+   "user": "NishantSinghhhhh",
+   "created": "2026-05-21T08:07:34Z",
+   "draft": false
+  },
+  {
+   "number": 433,
+   "title": "fix(phys_scene_gen): comprehensive dependency modernization for modern Python architectures (ARM64)",
+   "user": "CodeShrek",
+   "created": "2026-05-20T20:41:50Z",
+   "draft": false
+  },
+  {
+   "number": 429,
+   "title": "Fix/llm simple qa pipeline",
+   "user": "LakshyaMulchandani",
+   "created": "2026-05-17T12:55:50Z",
+   "draft": false
+  },
+  {
+   "number": 428,
+   "title": "fix(cloud_VLA_finetune): rename requirement.txt to requirements.txt a\u2026",
+   "user": "tushar743-ui",
+   "created": "2026-05-16T11:05:22Z",
+   "draft": false
+  },
+  {
+   "number": 426,
+   "title": "fix(government): restore singletask_learning_bench example",
+   "user": "Sahil-u07",
+   "created": "2026-05-12T09:43:56Z",
+   "draft": false
+  },
+  {
+   "number": 424,
+   "title": "fix(core): enable fault-tolerant execution and incremental result persistence",
+   "user": "Rishabh-git10",
+   "created": "2026-05-10T18:24:29Z",
+   "draft": false
+  },
+  {
+   "number": 419,
+   "title": "docs(proposals): enhance parallel processing proposal",
+   "user": "vibhor-5",
+   "created": "2026-05-08T09:16:22Z",
+   "draft": false
+  },
+  {
+   "number": 418,
+   "title": "fix: resolve stale label corruption in _get_train_dataset",
+   "user": "dev-aditya-hub",
+   "created": "2026-05-08T08:38:40Z",
+   "draft": false
+  },
+  {
+   "number": 417,
+   "title": "ci: add codespell spell-check workflow",
+   "user": "dev-aditya-hub",
+   "created": "2026-05-07T13:28:48Z",
+   "draft": false
+  },
+  {
+   "number": 416,
+   "title": "cleanup: introduce EnvKey constants for all ianvs environment variables",
+   "user": "dev-aditya-hub",
+   "created": "2026-05-07T12:59:41Z",
+   "draft": false
+  },
+  {
+   "number": 415,
+   "title": "fix: skip hard examples with no unique label match in incremental learning",
+   "user": "dev-aditya-hub",
+   "created": "2026-05-06T18:41:21Z",
+   "draft": false
+  },
+  {
+   "number": 410,
+   "title": "(IMPLEMENTATION) / Rstore robot lifelong learning semantic segmentation example",
+   "user": "abhishek-8081",
+   "created": "2026-04-26T06:55:31Z",
+   "draft": false
+  },
+  {
+   "number": 404,
+   "title": "fix(PIPL): replace mocked static float metrics with dynamic runtime e\u2026",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-15T16:54:55Z",
+   "draft": false
+  },
+  {
+   "number": 402,
+   "title": " ZeroDivisionError in MOT17 `f1_score.py` when precision and recall equal zero",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-13T17:40:49Z",
+   "draft": false
+  },
+  {
+   "number": 400,
+   "title": " resolve NameError in `generate_reports` caused by undefined `config_file` variable",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-13T17:22:39Z",
+   "draft": false
+  },
+  {
+   "number": 398,
+   "title": "fix: resolve file routing crashes by correcting MOT17 directory mismatches",
+   "user": "rakshaak29",
+   "created": "2026-04-13T16:12:41Z",
+   "draft": false
+  },
+  {
+   "number": 395,
+   "title": "fix: spelling errors and add spellcheck CI workflow",
+   "user": "hharshhsaini",
+   "created": "2026-04-12T19:20:37Z",
+   "draft": false
+  },
+  {
+   "number": 394,
+   "title": "fix(cloud-edge-llm): fix environment setup crashes and dependency typos",
+   "user": "rakshaak29",
+   "created": "2026-04-12T17:32:22Z",
+   "draft": false
+  },
+  {
+   "number": 392,
+   "title": "fix: update stale pedestrian_tracking paths to fix broken examples",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-12T16:04:50Z",
+   "draft": false
+  },
+  {
+   "number": 390,
+   "title": "fix: remove invalid dummy path from gov_rag base_path and move to config",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-12T11:35:54Z",
+   "draft": false
+  },
+  {
+   "number": 388,
+   "title": "fix(llm_simple_qa): replace hardcoded paths and fix basemodel compatibility",
+   "user": "rakshaak29",
+   "created": "2026-04-12T00:18:45Z",
+   "draft": false
+  },
+  {
+   "number": 386,
+   "title": "Refactor: Use IANVS_EVAL_WORKSPACE for evaluating metric artifact paths",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-11T17:02:34Z",
+   "draft": false
+  },
+  {
+   "number": 384,
+   "title": "Fix ZeroDivisionError in metric evaluation across examples",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-11T16:51:58Z",
+   "draft": false
+  },
+  {
+   "number": 382,
+   "title": "fix: eliminate redundant RAG model reloading that defeated paralleliz\u2026",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-10T19:52:38Z",
+   "draft": false
+  },
+  {
+   "number": 380,
+   "title": "Fix: Correct location extraction logic and RAG other mode initialization",
+   "user": "ARYANPATEL-BIT",
+   "created": "2026-04-10T19:01:30Z",
+   "draft": false
+  },
+  {
+   "number": 378,
+   "title": "fix: tolerate recoverable cloud API failures in APIBasedLLM",
+   "user": "officialasishkumar",
+   "created": "2026-04-09T17:19:52Z",
+   "draft": false
+  },
+  {
+   "number": 377,
+   "title": "docs: clarify dataset format configuration for testenv",
+   "user": "krrish175-byte",
+   "created": "2026-03-23T19:17:41Z",
+   "draft": false
+  },
+  {
+   "number": 371,
+   "title": "fix: resolve path errors and hard-coded dependencies in semantic segmentation example",
+   "user": "krrish175-byte",
+   "created": "2026-02-28T21:51:21Z",
+   "draft": false
+  },
+  {
+   "number": 366,
+   "title": "fix(examples): resolve broken paths in MDIL-SS configuration",
+   "user": "krrish175-byte",
+   "created": "2026-02-20T19:25:00Z",
+   "draft": false
+  },
+  {
+   "number": 359,
+   "title": "fix: add missing retry dependency to LLM example requirements",
+   "user": "Chinyemba-ck",
+   "created": "2026-02-15T03:12:36Z",
+   "draft": false
+  },
+  {
+   "number": 355,
+   "title": "update maintainer email and format description",
+   "user": "shanusehlot",
+   "created": "2026-02-13T23:03:14Z",
+   "draft": false
+  },
+  {
+   "number": 354,
+   "title": "fix(examples): add missing requirements.txt for robot and cifar100",
+   "user": "shanusehlot",
+   "created": "2026-02-13T22:57:55Z",
+   "draft": false
+  },
+  {
+   "number": 350,
+   "title": "chore(ci): update github actions versions",
+   "user": "shanusehlot",
+   "created": "2026-02-13T17:37:58Z",
+   "draft": false
+  },
+  {
+   "number": 339,
+   "title": " Fix KeyError crashes and division by zero in LLM inference benchmark",
+   "user": "Prachi194agrawal",
+   "created": "2026-02-10T16:30:29Z",
+   "draft": false
+  },
+  {
+   "number": 336,
+   "title": "fix: replace 'and' with 'or' in _check_fields validation logic",
+   "user": "Ronit-Raj9",
+   "created": "2026-02-10T11:52:31Z",
+   "draft": false
+  },
+  {
+   "number": 334,
+   "title": "fix: Add missing dependencies and remove dead import in cloud-edge LLM example",
+   "user": "BhoomiAgrawal12",
+   "created": "2026-02-09T19:25:56Z",
+   "draft": false
+  },
+  {
+   "number": 328,
+   "title": "Fixing Ianvs Example Execution Patterns Through Standardization (Proposal)",
+   "user": "PRIYANSHU2026",
+   "created": "2026-02-07T11:12:40Z",
+   "draft": false
+  },
+  {
+   "number": 324,
+   "title": "fix(examples): add missing runtime dependencies for cloud-edge LLM example",
+   "user": "iashutoshyadav",
+   "created": "2026-02-05T21:25:25Z",
+   "draft": false
+  },
+  {
+   "number": 320,
+   "title": "feat: Refactor TestCaseController algorithm parsing and enhance error handling",
+   "user": "yoursanonymous",
+   "created": "2026-02-04T21:38:10Z",
+   "draft": false
+  },
+  {
+   "number": 318,
+   "title": "feat: enhance config parsing with robust validation and type safety",
+   "user": "yoursanonymous",
+   "created": "2026-02-04T15:05:37Z",
+   "draft": false
+  },
+  {
+   "number": 316,
+   "title": "Fail early on Windows for vLLM-based cloud-edge LLM example",
+   "user": "iashutoshyadav",
+   "created": "2026-02-03T13:11:39Z",
+   "draft": false
+  },
+  {
+   "number": 315,
+   "title": "fix: typo in`.md`, `.yaml`, and `.py` files",
+   "user": "omkar-334",
+   "created": "2026-02-03T09:20:59Z",
+   "draft": false
+  },
+  {
+   "number": 314,
+   "title": "Fix critical bugs blocking speculative decoding backend usage",
+   "user": "farhann-saleem",
+   "created": "2026-02-02T21:43:55Z",
+   "draft": false
+  },
+  {
+   "number": 309,
+   "title": "fix: rename base_model_url to initial_model_url for consistency",
+   "user": "aabhinavvvvvvv",
+   "created": "2026-02-01T23:32:39Z",
+   "draft": false
+  },
+  {
+   "number": 308,
+   "title": "docs: Add parallel processing feature proposal for issue #8",
+   "user": "krrish175-byte",
+   "created": "2026-01-29T13:51:01Z",
+   "draft": false
+  },
+  {
+   "number": 301,
+   "title": "lifelong_learning: handle evaluate() returning metrics dict",
+   "user": "Annmool",
+   "created": "2025-12-12T06:30:13Z",
+   "draft": false
+  },
+  {
+   "number": 298,
+   "title": "docs: complete documentation for Ianvs lifelong learning comprehensive example restoration",
+   "user": "abhishek-8081",
+   "created": "2025-11-26T20:18:19Z",
+   "draft": false
+  },
+  {
+   "number": 297,
+   "title": "(IMPLEMENTATION) / Comprehensive Example Restoration for Ianvs(Robot) - Lifelong Learning Example",
+   "user": "abhishek-8081",
+   "created": "2025-11-26T19:44:29Z",
+   "draft": false
+  },
+  {
+   "number": 288,
+   "title": "fix:readme.md(#204)",
+   "user": "hydrogenair",
+   "created": "2025-11-20T04:42:57Z",
+   "draft": false
+  },
+  {
+   "number": 259,
+   "title": "Refactor single_task_bench to remove compression references (to fix issue#250)",
+   "user": "NIKOPACK",
+   "created": "2025-09-01T01:56:09Z",
+   "draft": false
+  },
+  {
+   "number": 251,
+   "title": "fix: example restoration of CIFAR100 fedavg",
+   "user": "Spiral-Memory",
+   "created": "2025-08-23T18:34:15Z",
+   "draft": false
+  },
+  {
+   "number": 242,
+   "title": "EXAMPLE/robot/lifelong_learning_bench/semantic-segmentation verified and updated. ",
+   "user": "RONAK-AI647",
+   "created": "2025-08-12T05:26:06Z",
+   "draft": false
+  },
+  {
+   "number": 241,
+   "title": "EXAMPLE/ llm_simple_qa made more readable and runnable ",
+   "user": "RONAK-AI647",
+   "created": "2025-08-12T05:18:00Z",
+   "draft": false
+  },
+  {
+   "number": 240,
+   "title": "Fix various spelling errors and typos in the documentation and code comments ",
+   "user": "RONAK-AI647",
+   "created": "2025-08-12T05:13:16Z",
+   "draft": false
+  },
+  {
+   "number": 210,
+   "title": "Add optional _preprocess hook to SingleTaskLearning class",
+   "user": "anshRastogi02",
+   "created": "2025-05-23T13:06:27Z",
+   "draft": false
+  },
+  {
+   "number": 133,
+   "title": "Yaml path fix",
+   "user": "octonawish-akcodes",
+   "created": "2024-08-14T04:35:33Z",
+   "draft": false
+  }
+ ]
+}

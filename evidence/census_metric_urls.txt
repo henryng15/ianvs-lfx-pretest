@@ -1,0 +1,67 @@
+metric entries with a url that resolve OK      : 56
+metric entries with an ABSOLUTE developer path : 3
+   examples/RoboDK Palletizing/singletask_learning_bench/testenv/testenv.yaml
+      name='map50' url='/root/ianvs/project/ianvs-0.3.0/examples/Palletizing/singletask_learning_bench/testenv/map50.py'
+   examples/RoboDK Palletizing/singletask_learning_bench/testenv/testenv.yaml
+      name='map90' url='/root/ianvs/project/ianvs-0.3.0/examples/Palletizing/singletask_learning_bench/testenv/map90.py'
+   examples/cloud_VLA_finetune/singletask_learning_bench/testenv/testenv.yaml
+      name='accuracy' url='/inspire/hdd/global_user/chaimingxu-240108540141/jwq-test/ianvs/examples/cloud_VLA_finetune/singletask_learning_bench/testenv/test.py'
+metric entries whose url FILE DOES NOT EXIST   : 28
+   examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/testenv/testenv.yaml
+      name='PA' url='./examples/Cloud_Robotics/cloud-edge-collaborative-inference-bench/perception-reasoning/testenv/acc.py'
+   examples/Cloud_Robotics/singletask_learning_bench/Semantic_Segmentation/testenv/testenv.yaml
+      name='accuracy' url='./examples/cloud_robotics/sinlge_task_learning/testenv/accuracy.py'
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/reid/testenv.yaml
+      name='mAP' url='./examples/pedestrian_tracking/multiedge_inference_bench/testenv/reid/mAP.py'
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/reid/testenv.yaml
+      name='rank_1' url='./examples/pedestrian_tracking/multiedge_inference_bench/testenv/reid/rank_1.py'
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/reid/testenv.yaml
+      name='rank_2' url='./examples/pedestrian_tracking/multiedge_inference_bench/testenv/reid/rank_2.py'
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/reid/testenv.yaml
+      name='rank_5' url='./examples/pedestrian_tracking/multiedge_inference_bench/testenv/reid/rank_5.py'
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/reid/testenv.yaml
+      name='cmc' url='./examples/pedestrian_tracking/multiedge_inference_bench/testenv/reid/cmc.py'
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/testenv.yaml
+      name='recall' url='./examples/pedestrian_tracking/multiedge_inference_bench/testenv/tracking/recall.py'
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/testenv.yaml
+      name='precision' url='./examples/pedestrian_tracking/multiedge_inference_bench/testenv/tracking/precision.py'
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/testenv.yaml
+      name='f1_score' url='./examples/pedestrian_tracking/multiedge_inference_bench/testenv/tracking/f1_score.py'
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/testenv.yaml
+      name='mota' url='./examples/pedestrian_tracking/multiedge_inference_bench/testenv/tracking/mota.py'
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/testenv.yaml
+      name='motp' url='./examples/pedestrian_tracking/multiedge_inference_bench/testenv/tracking/motp.py'
+   examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/testenv.yaml
+      name='idf1' url='./examples/pedestrian_tracking/multiedge_inference_bench/testenv/tracking/idf1.py'
+   examples/bdd/lifelong_learning_bench/curb-detection/testenv/testenv.yaml
+      name='map' url='./examples/bdd/lifelong_learning_bench/testenv/map.py'
+   examples/cityscapes/singletask_learning_bench/semantic-segmentation/testenv/testenv.yaml
+      name='map' url='./examples/cityscapes/singletask_learning_bench/testenv/map.py'
+   examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testenv/testenv.yaml
+      name='accuracy' url='./examples/curb-detection/lifelong_learning_bench/testenv/accuracy.py'
+   examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv-full.yaml
+      name='accuracy' url='./examples/semantic_segmentation/lifelong_learning_bench/testenv/accuracy.py'
+   examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv-small.yaml
+      name='accuracy' url='./examples/semantic_segmentation/lifelong_learning_bench/testenv/accuracy.py'
+   examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv-travel.yaml
+      name='accuracy' url='./examples/semantic_segmentation/lifelong_learning_bench/testenv/accuracy.py'
+   examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml
+      name='accuracy' url='./examples/semantic_segmentation/lifelong_learning_bench/testenv/accuracy.py'
+   examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testenv/testenv.yaml
+      name='accuracy' url='./examples/scene-based-unknown-task-recognition/lifelong_learning_bench/testenv/accuracy.py'
+   examples/industrialEI/single_task_learning_bench/deformable_component_manipulation/testenv/testenv.yaml
+      name='assembly_accuracy' url='./testenv/acc.py'
+   examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-all.yaml
+      name='accuracy' url='./examples/robot/lifelong_learning_bench/testenv/accuracy.py'
+   examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-city.yaml
+      name='accuracy' url='./examples/robot/lifelong_learning_bench/testenv/accuracy.py'
+   examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot-small.yaml
+      name='accuracy' url='./examples/robot/lifelong_learning_bench/testenv/accuracy.py'
+   examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot.yaml
+      name='accuracy' url='./examples/robot/lifelong_learning_bench/testenv/accuracy.py'
+   examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml
+      name='accuracy' url='./examples/robot/lifelong_learning_bench/testenv/accuracy.py'
+   examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml
+      name='accuracy' url='./examples/class_increment_semantic_segmentation/lifelong_learning_bench/testenv/accuracy.py'
+
+metric entries whose NAME IS NOT REGISTERED    : 0

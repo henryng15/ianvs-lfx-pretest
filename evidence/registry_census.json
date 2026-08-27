@@ -1,0 +1,2279 @@
+{
+ "registered": {
+  "EdgeCloudDispatcher": [
+   [
+    "examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/testalgorithms/cloud_edge_dispacher.py",
+    85,
+    true
+   ]
+  ],
+  "CloudModel": [
+   [
+    "examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/testalgorithms/cloud_model.py",
+    33,
+    true
+   ],
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/cloud_model.py",
+    28,
+    true
+   ]
+  ],
+  "EdgeModel": [
+   [
+    "examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/testalgorithms/edge_model.py",
+    34,
+    true
+   ],
+   [
+    "examples/TAB/cloud_edge_collaborative_inference_bench/test_algorithms/edge_model/edge_model.py",
+    37,
+    true
+   ],
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/edge_model.py",
+    28,
+    true
+   ]
+  ],
+  "PA": [
+   [
+    "examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/testenv/acc.py",
+    24,
+    true
+   ]
+  ],
+  "RFNet": [
+   [
+    "examples/Cloud_Robotics/singletask_learning_bench/Semantic_Segmentation/testalgorithms/basemodel.py",
+    47,
+    true
+   ],
+   [
+    "examples/cityscapes/singletask_learning_bench/semantic-segmentation/testalgorithms/rfnet/basemodel.py",
+    47,
+    true
+   ]
+  ],
+  "accuracy": [
+   [
+    "examples/Cloud_Robotics/singletask_learning_bench/Semantic_Segmentation/testenv/accuracy.py",
+    29,
+    true
+   ],
+   [
+    "examples/cifar100/fci_ssl/fed_ci_match/testenv/acc.py",
+    23,
+    true
+   ],
+   [
+    "examples/cifar100/fci_ssl/fed_ci_match_v2/testenv/acc.py",
+    23,
+    true
+   ],
+   [
+    "examples/cifar100/fci_ssl/fedavg/testenv/acc.py",
+    23,
+    true
+   ],
+   [
+    "examples/cifar100/fci_ssl/glfc/testenv/acc.py",
+    23,
+    true
+   ],
+   [
+    "examples/cifar100/federated_class_incremental_learning/fedavg/testenv/acc.py",
+    23,
+    true
+   ],
+   [
+    "examples/cifar100/federated_learning/fedavg/testenv/acc.py",
+    22,
+    true
+   ],
+   [
+    "examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testalgorithms/rfnet/RFNet/accuracy.py",
+    10,
+    false
+   ],
+   [
+    "examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testenv/accuracy.py",
+    27,
+    true
+   ],
+   [
+    "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/RFNet/accuracy.py",
+    10,
+    false
+   ],
+   [
+    "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py",
+    27,
+    true
+   ],
+   [
+    "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testalgorithms/rfnet/RFNet/accuracy.py",
+    10,
+    false
+   ],
+   [
+    "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testenv/accuracy.py",
+    27,
+    true
+   ],
+   [
+    "examples/cloud_VLA_finetune/singletask_learning_bench/testenv/test.py",
+    13,
+    true
+   ],
+   [
+    "examples/imagenet/multiedge_inference_bench/testenv/accuracy.py",
+    6,
+    true
+   ],
+   [
+    "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/RFNet/accuracy.py",
+    10,
+    false
+   ],
+   [
+    "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py",
+    27,
+    true
+   ],
+   [
+    "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/ERFNet/accuracy.py",
+    11,
+    false
+   ],
+   [
+    "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py",
+    27,
+    true
+   ]
+  ],
+  "NewGovernmentPosterAgent": [
+   [
+    "examples/GovDoc2Poster/singletask_learning_bench/testalgorithms/gen/basemodel.py",
+    34,
+    true
+   ]
+  ],
+  "score": [
+   [
+    "examples/GovDoc2Poster/singletask_learning_bench/testenv/acc.py",
+    40,
+    true
+   ]
+  ],
+  "M3L": [
+   [
+    "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testalgorithms/reid/m3l/basemodel.py",
+    43,
+    true
+   ]
+  ],
+  "ByteTrack": [
+   [
+    "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testalgorithms/tracking/byte_track/basemodel.py",
+    76,
+    true
+   ]
+  ],
+  "cmc": [
+   [
+    "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/reid/cmc.py",
+    56,
+    true
+   ]
+  ],
+  "mAP": [
+   [
+    "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/reid/mAP.py",
+    43,
+    true
+   ]
+  ],
+  "rank_1": [
+   [
+    "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/reid/rank_1.py",
+    38,
+    true
+   ]
+  ],
+  "rank_2": [
+   [
+    "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/reid/rank_2.py",
+    38,
+    true
+   ]
+  ],
+  "rank_5": [
+   [
+    "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/reid/rank_5.py",
+    38,
+    true
+   ]
+  ],
+  "f1_score": [
+   [
+    "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/f1_score.py",
+    39,
+    true
+   ],
+   [
+    "examples/pcb-aoi/incremental_learning_bench/fault_detection/testenv/f1_score.py",
+    24,
+    true
+   ],
+   [
+    "examples/pcb-aoi/singletask_learning_bench/fault_detection/testenv/f1_score.py",
+    24,
+    true
+   ]
+  ],
+  "idf1": [
+   [
+    "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/idf1.py",
+    39,
+    true
+   ]
+  ],
+  "mota": [
+   [
+    "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/mota.py",
+    39,
+    true
+   ]
+  ],
+  "motp": [
+   [
+    "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/motp.py",
+    39,
+    true
+   ]
+  ],
+  "precision": [
+   [
+    "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/precision.py",
+    39,
+    true
+   ]
+  ],
+  "recall": [
+   [
+    "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/recall.py",
+    39,
+    true
+   ]
+  ],
+  "PIIDetector": [
+   [
+    "examples/PIPL/edge-cloud_collaborative_learning_bench/test_algorithms/privacy_detection/pii_detector.py",
+    37,
+    true
+   ]
+  ],
+  "PIPLPrivacyDatasetProcessor": [
+   [
+    "examples/PIPL/edge-cloud_collaborative_learning_bench/test_algorithms/privacy_preserving_llm/privacy_preserving_llm.py",
+    53,
+    true
+   ]
+  ],
+  "PrivacyPreservingEdgeModel": [
+   [
+    "examples/PIPL/edge-cloud_collaborative_learning_bench/test_algorithms/privacy_preserving_llm/privacy_preserving_llm.py",
+    53,
+    true
+   ]
+  ],
+  "PrivacyPreservingCloudModel": [
+   [
+    "examples/PIPL/edge-cloud_collaborative_learning_bench/test_algorithms/privacy_preserving_llm/privacy_preserving_llm.py",
+    53,
+    true
+   ]
+  ],
+  "YOLOv8n": [
+   [
+    "examples/RoboDK Palletizing/singletask_learning_bench/testalgorithms/basemodel.py",
+    41,
+    true
+   ]
+  ],
+  "map50": [
+   [
+    "examples/RoboDK Palletizing/singletask_learning_bench/testenv/map50.py",
+    63,
+    true
+   ]
+  ],
+  "map90": [
+   [
+    "examples/RoboDK Palletizing/singletask_learning_bench/testenv/map90.py",
+    50,
+    true
+   ]
+  ],
+  "ECHRDataProcessor": [
+   [
+    "examples/TAB/cloud_edge_collaborative_inference_bench/data.py",
+    12,
+    true
+   ]
+  ],
+  "CloudModelAPI": [
+   [
+    "examples/TAB/cloud_edge_collaborative_inference_bench/test_algorithms/cloud_model/cloud_model.py",
+    116,
+    true
+   ]
+  ],
+  "OracleRouter": [
+   [
+    "examples/TAB/cloud_edge_collaborative_inference_bench/test_algorithms/hard_sample_mining/hard_sample_mining.py",
+    15,
+    true
+   ],
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/hard_sample_mining.py",
+    201,
+    true
+   ]
+  ],
+  "LatencyOverhead": [
+   [
+    "examples/TAB/cloud_edge_collaborative_inference_bench/test_env/performance_metrics.py",
+    58,
+    true
+   ]
+  ],
+  "AccuracyPreservationRate": [
+   [
+    "examples/TAB/cloud_edge_collaborative_inference_bench/test_env/performance_metrics.py",
+    70,
+    true
+   ]
+  ],
+  "PIIDetectionRate": [
+   [
+    "examples/TAB/cloud_edge_collaborative_inference_bench/test_env/privacy_metrics.py",
+    94,
+    true
+   ]
+  ],
+  "SensitiveEntityLeakageScore": [
+   [
+    "examples/TAB/cloud_edge_collaborative_inference_bench/test_env/privacy_metrics.py",
+    124,
+    true
+   ]
+  ],
+  "InferenceAttackResistance": [
+   [
+    "examples/TAB/cloud_edge_collaborative_inference_bench/test_env/privacy_metrics.py",
+    160,
+    true
+   ]
+  ],
+  "ContextualPrivacyPreservation": [
+   [
+    "examples/TAB/cloud_edge_collaborative_inference_bench/test_env/privacy_metrics.py",
+    182,
+    true
+   ]
+  ],
+  "BaseModel": [
+   [
+    "examples/bdd/lifelong_learning_bench/curb-detection/testalgorithms/yolo/basemodel.py",
+    12,
+    true
+   ],
+   [
+    "examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testalgorithms/rfnet/basemodel.py",
+    23,
+    true
+   ],
+   [
+    "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/basemodel.py",
+    24,
+    true
+   ],
+   [
+    "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testalgorithms/rfnet/basemodel.py",
+    23,
+    true
+   ],
+   [
+    "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/basemodel-sam.py",
+    26,
+    true
+   ],
+   [
+    "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/basemodel-simple.py",
+    26,
+    true
+   ],
+   [
+    "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/basemodel-vit-sam.py",
+    26,
+    true
+   ],
+   [
+    "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/basemodel-vit-simple.py",
+    26,
+    true
+   ],
+   [
+    "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/basemodel.py",
+    24,
+    true
+   ],
+   [
+    "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/basemodel.py",
+    27,
+    true
+   ]
+  ],
+  "InferenceIntegrate": [
+   [
+    "examples/bdd/lifelong_learning_bench/curb-detection/testalgorithms/yolo/inference_integrate.py",
+    41,
+    false
+   ]
+  ],
+  "TaskAllocationByOrigin": [
+   [
+    "examples/bdd/lifelong_learning_bench/curb-detection/testalgorithms/yolo/task_allocation_by_origin.py",
+    62,
+    true
+   ],
+   [
+    "examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testalgorithms/rfnet/task_allocation_by_origin.py",
+    8,
+    true
+   ],
+   [
+    "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/task_allocation_by_origin.py",
+    8,
+    true
+   ],
+   [
+    "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testalgorithms/rfnet/task_allocation_by_origin.py",
+    8,
+    true
+   ],
+   [
+    "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/task_allocation_by_origin-simple.py",
+    8,
+    true
+   ],
+   [
+    "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/task_allocation_by_origin.py",
+    8,
+    true
+   ]
+  ],
+  "TaskRemodeling": [
+   [
+    "examples/bdd/lifelong_learning_bench/curb-detection/testalgorithms/yolo/task_remodeling.py",
+    44,
+    false
+   ]
+  ],
+  "map": [
+   [
+    "examples/bdd/lifelong_learning_bench/curb-detection/testenv/map.py",
+    542,
+    true
+   ],
+   [
+    "examples/cityscapes/singletask_learning_bench/semantic-segmentation/testenv/map.py",
+    13,
+    true
+   ],
+   [
+    "examples/yaoba/singletask_learning_boost/testenv/map.py",
+    9,
+    true
+   ],
+   [
+    "examples/yaoba/singletask_learning_yolox_tta/testenv/map.py",
+    9,
+    true
+   ]
+  ],
+  "FedAvg": [
+   [
+    "examples/cifar100/fci_ssl/fed_ci_match/algorithm/aggregation.py",
+    22,
+    false
+   ],
+   [
+    "examples/cifar100/fci_ssl/fed_ci_match_v2/algorithm/aggregation.py",
+    24,
+    false
+   ],
+   [
+    "examples/cifar100/fci_ssl/fedavg/algorithm/aggregation.py",
+    25,
+    false
+   ],
+   [
+    "examples/cifar100/fci_ssl/glfc/algorithm/aggregation.py",
+    26,
+    false
+   ],
+   [
+    "examples/cifar100/federated_class_incremental_learning/fedavg/algorithm/aggregation.py",
+    25,
+    false
+   ],
+   [
+    "examples/cifar100/federated_learning/fedavg/algorithm/aggregation.py",
+    24,
+    false
+   ],
+   [
+    "examples/federated-llm/fedllm-peft/algorithm/FedAvg-PEFT.py",
+    27,
+    false
+   ]
+  ],
+  "FediCarl-Client": [
+   [
+    "examples/cifar100/fci_ssl/fed_ci_match/algorithm/basemodel.py",
+    29,
+    true
+   ]
+  ],
+  "fci_ssl": [
+   [
+    "examples/cifar100/fci_ssl/fed_ci_match_v2/algorithm/basemodel.py",
+    28,
+    true
+   ]
+  ],
+  "fedavg-client": [
+   [
+    "examples/cifar100/fci_ssl/fedavg/algorithm/basemodel.py",
+    29,
+    true
+   ]
+  ],
+  "GLFCMatch-Client": [
+   [
+    "examples/cifar100/fci_ssl/glfc/algorithm/basemodel.py",
+    30,
+    true
+   ]
+  ],
+  "fcil": [
+   [
+    "examples/cifar100/federated_class_incremental_learning/fedavg/algorithm/basemodel.py",
+    31,
+    true
+   ]
+  ],
+  "fedavg": [
+   [
+    "examples/cifar100/federated_learning/fedavg/algorithm/basemodel.py",
+    30,
+    true
+   ]
+  ],
+  "TaskDefinitionByOrigin": [
+   [
+    "examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testalgorithms/rfnet/task_definition_by_origin.py",
+    11,
+    true
+   ],
+   [
+    "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/task_definition_by_origin.py",
+    11,
+    true
+   ],
+   [
+    "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testalgorithms/rfnet/task_definition_by_origin.py",
+    11,
+    true
+   ],
+   [
+    "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/task_definition_by_origin-simple.py",
+    11,
+    true
+   ],
+   [
+    "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/task_definition_by_origin.py",
+    11,
+    true
+   ]
+  ],
+  "UnseenSampleRecognitionByScene": [
+   [
+    "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testalgorithms/rfnet/unseen_sample_recognition_by_scene.py",
+    17,
+    true
+   ]
+  ],
+  "OracleRouterDatasetProcessor": [
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/data_processor.py",
+    20,
+    true
+   ]
+  ],
+  "BERTRouter": [
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/hard_sample_mining.py",
+    58,
+    true
+   ]
+  ],
+  "EdgeOnly": [
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/hard_sample_mining.py",
+    167,
+    true
+   ]
+  ],
+  "CloudOnly": [
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/hard_sample_mining.py",
+    177,
+    true
+   ]
+  ],
+  "RandomRouter": [
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/hard_sample_mining.py",
+    187,
+    true
+   ]
+  ],
+  "ResourceSensitiveRouter": [
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/hard_sample_mining.py",
+    269,
+    true
+   ]
+  ],
+  "Accuracy": [
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testenv/accuracy.py",
+    32,
+    true
+   ]
+  ],
+  "Cloud Completion Tokens": [
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testenv/cloud_completion_tokens.py",
+    19,
+    true
+   ]
+  ],
+  "Cloud Prompt Tokens": [
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testenv/cloud_prompt_tokens.py",
+    19,
+    true
+   ]
+  ],
+  "Edge Completion Tokens": [
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testenv/edge_completion_tokens.py",
+    19,
+    true
+   ]
+  ],
+  "Edge Prompt Tokens": [
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testenv/edge_prompt_tokens.py",
+    19,
+    true
+   ]
+  ],
+  "Edge Ratio": [
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testenv/edge_ratio.py",
+    19,
+    true
+   ]
+  ],
+  "Internal Token Latency": [
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testenv/internal_token_latency.py",
+    19,
+    true
+   ],
+   [
+    "examples/cloud-edge-speculative-decoding-benchmark/testenv/internal_token_latency.py",
+    7,
+    true
+   ]
+  ],
+  "Throughput": [
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testenv/throughput.py",
+    19,
+    true
+   ],
+   [
+    "examples/cloud-edge-speculative-decoding-benchmark/testenv/throughput.py",
+    7,
+    true
+   ]
+  ],
+  "Time to First Token": [
+   [
+    "examples/cloud-edge-collaborative-inference-for-llm/testenv/time_to_first_token.py",
+    19,
+    true
+   ],
+   [
+    "examples/cloud-edge-speculative-decoding-benchmark/testenv/time_to_first_token.py",
+    7,
+    true
+   ]
+  ],
+  "SpeculativeDraftModel": [
+   [
+    "examples/cloud-edge-speculative-decoding-benchmark/testalgorithms/speculative-decoding/algorithms/ar/drafter.py",
+    45,
+    true
+   ]
+  ],
+  "SpeculativeVerifyModel": [
+   [
+    "examples/cloud-edge-speculative-decoding-benchmark/testalgorithms/speculative-decoding/algorithms/ar/verifier.py",
+    52,
+    true
+   ]
+  ],
+  "SpeculativeBlockDraftModel": [
+   [
+    "examples/cloud-edge-speculative-decoding-benchmark/testalgorithms/speculative-decoding/algorithms/block/drafter.py",
+    38,
+    true
+   ]
+  ],
+  "SpeculativeBlockVerifyModel": [
+   [
+    "examples/cloud-edge-speculative-decoding-benchmark/testalgorithms/speculative-decoding/algorithms/block/verifier.py",
+    81,
+    true
+   ]
+  ],
+  "TemplateDraftModel": [
+   [
+    "examples/cloud-edge-speculative-decoding-benchmark/testalgorithms/speculative-decoding/algorithms/template/drafter.py",
+    17,
+    true
+   ]
+  ],
+  "TemplateVerifyModel": [
+   [
+    "examples/cloud-edge-speculative-decoding-benchmark/testalgorithms/speculative-decoding/algorithms/template/verifier.py",
+    19,
+    true
+   ]
+  ],
+  "SpeculativeDecodingDatasetProcessor": [
+   [
+    "examples/cloud-edge-speculative-decoding-benchmark/testalgorithms/speculative-decoding/data_processor.py",
+    6,
+    true
+   ]
+  ],
+  "Acceptance Rate": [
+   [
+    "examples/cloud-edge-speculative-decoding-benchmark/testenv/acceptance_rate.py",
+    7,
+    true
+   ]
+  ],
+  "End-to-End Latency": [
+   [
+    "examples/cloud-edge-speculative-decoding-benchmark/testenv/end_to_end_latency.py",
+    7,
+    true
+   ]
+  ],
+  "OpenVLA_Finetune": [
+   [
+    "examples/cloud_VLA_finetune/singletask_learning_bench/testalgorithms/vla_dataselect/basemodel.py",
+    42,
+    true
+   ]
+  ],
+  "FedAvgM": [
+   [
+    "examples/federated-llm/fedllm-peft/algorithm/FedAvgM-PEFT.py",
+    26,
+    false
+   ]
+  ],
+  "fedllm-peft": [
+   [
+    "examples/federated-llm/fedllm-peft/algorithm/model.py",
+    75,
+    true
+   ]
+  ],
+  "bleu4_metric": [
+   [
+    "examples/federated-llm/fedllm-peft/testenv/bleu4_metric.py",
+    22,
+    true
+   ]
+  ],
+  "rouge1_metric": [
+   [
+    "examples/federated-llm/fedllm-peft/testenv/rouge1_metric.py",
+    22,
+    true
+   ]
+  ],
+  "rouge2_metric": [
+   [
+    "examples/federated-llm/fedllm-peft/testenv/rouge2_metric.py",
+    22,
+    true
+   ]
+  ],
+  "rougel_metric": [
+   [
+    "examples/federated-llm/fedllm-peft/testenv/rougel_metric.py",
+    22,
+    true
+   ]
+  ],
+  "gen": [
+   [
+    "examples/government/singletask_learning_bench/objective/testalgorithms/gen/basemodel.py",
+    43,
+    true
+   ],
+   [
+    "examples/government/singletask_learning_bench/subjective/testalgorithms/gen/basemodel.py",
+    43,
+    true
+   ],
+   [
+    "examples/government_rag/singletask_learning_bench/testalgorithms/basemodel.py",
+    49,
+    true
+   ],
+   [
+    "examples/llm_simple_qa/testalgorithms/gen/basemodel.py",
+    40,
+    true
+   ],
+   [
+    "examples/smart_coding/smart_coding_learning_bench/comment/testalgorithms/gen/basemodel.py",
+    43,
+    true
+   ],
+   [
+    "examples/smart_coding/smart_coding_learning_bench/issue/testalgorithms/gen/basemodel.py",
+    43,
+    true
+   ]
+  ],
+  "acc": [
+   [
+    "examples/government/singletask_learning_bench/objective/testenv/acc.py",
+    31,
+    true
+   ],
+   [
+    "examples/llm_simple_qa/testenv/acc.py",
+    31,
+    true
+   ]
+  ],
+  "llm_judgement": [
+   [
+    "examples/government/singletask_learning_bench/subjective/testenv/llm_judgement.py",
+    31,
+    true
+   ],
+   [
+    "examples/smart_coding/smart_coding_learning_bench/comment/testenv/llm_judgement.py",
+    34,
+    true
+   ],
+   [
+    "examples/smart_coding/smart_coding_learning_bench/issue/testenv/llm_judgement.py",
+    34,
+    true
+   ]
+  ],
+  "acc_model": [
+   [
+    "examples/government_rag/singletask_learning_bench/testenv/acc.py",
+    31,
+    true
+   ]
+  ],
+  "acc_global": [
+   [
+    "examples/government_rag/singletask_learning_bench/testenv/acc.py",
+    92,
+    true
+   ]
+  ],
+  "acc_local": [
+   [
+    "examples/government_rag/singletask_learning_bench/testenv/acc.py",
+    153,
+    true
+   ]
+  ],
+  "acc_other": [
+   [
+    "examples/government_rag/singletask_learning_bench/testenv/acc.py",
+    214,
+    true
+   ]
+  ],
+  "Classification": [
+   [
+    "examples/imagenet/multiedge_inference_bench/testalgorithms/automatic/basemodel.py",
+    65,
+    true
+   ],
+   [
+    "examples/imagenet/multiedge_inference_bench/testalgorithms/manual/basemodel.py",
+    62,
+    true
+   ]
+  ],
+  "fps": [
+   [
+    "examples/imagenet/multiedge_inference_bench/testenv/fps.py",
+    11,
+    true
+   ]
+  ],
+  "peak_memory": [
+   [
+    "examples/imagenet/multiedge_inference_bench/testenv/peak_memory.py",
+    11,
+    true
+   ]
+  ],
+  "peak_power": [
+   [
+    "examples/imagenet/multiedge_inference_bench/testenv/peak_power.py",
+    11,
+    true
+   ]
+  ],
+  "llio_fusion": [
+   [
+    "examples/industrialEI/pose-estimation-llio/testalgorithms/llio_fusion/basemodel.py",
+    72,
+    true
+   ]
+  ],
+  "orientation_error": [
+   [
+    "examples/industrialEI/pose-estimation-llio/testenv/orientation_error.py",
+    48,
+    true
+   ]
+  ],
+  "position_error": [
+   [
+    "examples/industrialEI/pose-estimation-llio/testenv/position_error.py",
+    22,
+    true
+   ]
+  ],
+  "trajectory_consistency": [
+   [
+    "examples/industrialEI/pose-estimation-llio/testenv/trajectory_consistency.py",
+    22,
+    true
+   ]
+  ],
+  "ManipulationModel": [
+   [
+    "examples/industrialEI/single_task_learning_bench/deformable_component_manipulation/testalgorithms/components/manipulation.py",
+    33,
+    true
+   ]
+  ],
+  "ForceController": [
+   [
+    "examples/industrialEI/single_task_learning_bench/deformable_component_manipulation/testalgorithms/components/manipulation.py",
+    604,
+    true
+   ]
+  ],
+  "assembly_pipeline": [
+   [
+    "examples/industrialEI/single_task_learning_bench/deformable_component_manipulation/testalgorithms/components/naive_assembly_process.py",
+    50,
+    true
+   ]
+  ],
+  "PerceptionModel": [
+   [
+    "examples/industrialEI/single_task_learning_bench/deformable_component_manipulation/testalgorithms/components/perception.py",
+    46,
+    true
+   ]
+  ],
+  "assembly_accuracy": [
+   [
+    "examples/industrialEI/single_task_learning_bench/deformable_component_manipulation/testenv/acc.py",
+    869,
+    true
+   ]
+  ],
+  "LLM_agent": [
+   [
+    "examples/llm-agent/singletask_learning_bench/testalgorithms/basemodel.py",
+    24,
+    true
+   ]
+  ],
+  "rouge1": [
+   [
+    "examples/llm-agent/singletask_learning_bench/testenv/rouge.py",
+    9,
+    true
+   ]
+  ],
+  "rouge2": [
+   [
+    "examples/llm-agent/singletask_learning_bench/testenv/rouge.py",
+    18,
+    true
+   ]
+  ],
+  "rougeL": [
+   [
+    "examples/llm-agent/singletask_learning_bench/testenv/rouge.py",
+    27,
+    true
+   ]
+  ],
+  "LlamaCppModel": [
+   [
+    "examples/llm-edge-benchmark-suite/single_task_bench/testalgorithms/basemodel.py",
+    14,
+    true
+   ],
+   [
+    "examples/llm-edge-benchmark-suite/single_task_bench_with_compression/testalgorithms/basemodel.py",
+    11,
+    true
+   ]
+  ],
+  "latency": [
+   [
+    "examples/llm-edge-benchmark-suite/single_task_bench/testenv/latency.py",
+    22,
+    true
+   ],
+   [
+    "examples/llm-edge-benchmark-suite/single_task_bench_with_compression/testenv/latency.py",
+    22,
+    true
+   ]
+  ],
+  "mem_usage": [
+   [
+    "examples/llm-edge-benchmark-suite/single_task_bench/testenv/mem_usage.py",
+    6,
+    true
+   ],
+   [
+    "examples/llm-edge-benchmark-suite/single_task_bench_with_compression/testenv/mem_usage.py",
+    6,
+    true
+   ]
+  ],
+  "prefill_latency": [
+   [
+    "examples/llm-edge-benchmark-suite/single_task_bench/testenv/prefill_latency.py",
+    6,
+    true
+   ],
+   [
+    "examples/llm-edge-benchmark-suite/single_task_bench_with_compression/testenv/prefill_latency.py",
+    6,
+    true
+   ]
+  ],
+  "throughput": [
+   [
+    "examples/llm-edge-benchmark-suite/single_task_bench/testenv/throughput.py",
+    22,
+    true
+   ],
+   [
+    "examples/llm-edge-benchmark-suite/single_task_bench_with_compression/testenv/throughput.py",
+    22,
+    true
+   ]
+  ],
+  "FPN": [
+   [
+    "examples/pcb-aoi/incremental_learning_bench/fault_detection/testalgorithms/fpn/basemodel.py",
+    62,
+    true
+   ],
+   [
+    "examples/pcb-aoi/singletask_learning_bench/fault_detection/testalgorithms/fpn/basemodel.py",
+    62,
+    true
+   ]
+  ],
+  "IBT": [
+   [
+    "examples/pcb-aoi/incremental_learning_bench/fault_detection/testalgorithms/fpn/hard_example_mining.py",
+    50,
+    true
+   ]
+  ],
+  "PhysSceneGen": [
+   [
+    "examples/phys_scene_gen/singletask_learning_bench/testalgorithms/ai2holodeck/phys_scene_generator.py",
+    39,
+    true
+   ]
+  ],
+  "navigation_validity": [
+   [
+    "examples/phys_scene_gen/singletask_learning_bench/testenv/metrics/navigation_validity.py",
+    65,
+    true
+   ]
+  ],
+  "semantic_conformance": [
+   [
+    "examples/phys_scene_gen/singletask_learning_bench/testenv/metrics/semantic_conformance.py",
+    24,
+    true
+   ]
+  ],
+  "HardSampleMining": [
+   [
+    "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/hard_sample_mining.py",
+    17,
+    true
+   ]
+  ],
+  "TaskAllocationByDomain": [
+   [
+    "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/task_allocation_by_domain.py",
+    8,
+    true
+   ]
+  ],
+  "TaskDefinitionByDomain": [
+   [
+    "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/task_definition_by_domain.py",
+    11,
+    true
+   ]
+  ],
+  "FPN_ac_boost": [
+   [
+    "examples/yaoba/singletask_learning_boost/testalgorithms/basemodel.py",
+    35,
+    true
+   ]
+  ],
+  "mmlab": [
+   [
+    "examples/yaoba/singletask_learning_yolox_tta/testalgorithms/basemodel.py",
+    33,
+    true
+   ]
+  ]
+ },
+ "wanted": {
+  "benchmarkingjob": [
+   "examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/benchmarkingjob.yaml",
+   "examples/Cloud_Robotics/singletask_learning_bench/Semantic_Segmentation/benchmarkingjob.yaml",
+   "examples/TAB/cloud_edge_collaborative_inference_bench/benchmarkingjob.yaml",
+   "examples/bdd/lifelong_learning_bench/curb-detection/benchmarkingjob.yaml",
+   "examples/cifar100/fci_ssl/fed_ci_match/benchmarkingjob.yaml",
+   "examples/cifar100/fci_ssl/fed_ci_match_v2/benchmarkingjob.yaml",
+   "examples/cifar100/fci_ssl/fedavg/benchmarkingjob.yaml",
+   "examples/cifar100/fci_ssl/glfc/benchmarkingjob.yaml",
+   "examples/cifar100/federated_class_incremental_learning/fedavg/benchmarkingjob.yaml",
+   "examples/cifar100/federated_learning/fedavg/benchmarkingjob.yaml",
+   "examples/cityscapes/singletask_learning_bench/semantic-segmentation/benchmarkingjob.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/benchmarkingjob.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-fulltest.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-smalltest.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-traveltest.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob.yaml",
+   "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/benchmarkingjob.yaml",
+   "examples/cloud-edge-collaborative-inference-for-llm/benchmarkingjob.yaml",
+   "examples/cloud-edge-speculative-decoding-benchmark/benchmarkingjob.yaml",
+   "examples/cloud_VLA_finetune/singletask_learning_bench/benchmarkingjob.yaml",
+   "examples/federated-llm/fedllm-peft/benchmarkingjob.yaml",
+   "examples/government/singletask_learning_bench/objective/benchmarkingjob.yaml",
+   "examples/government/singletask_learning_bench/subjective/benchmarkingjob.yaml",
+   "examples/government_rag/singletask_learning_bench/benchmarkingjob.yaml",
+   "examples/llm-agent/singletask_learning_bench/benchmarkingjob.yaml",
+   "examples/llm-edge-benchmark-suite/single_task_bench/benchmarkingjob.yaml",
+   "examples/llm-edge-benchmark-suite/single_task_bench_with_compression/benchmarkingjob.yaml",
+   "examples/llm_simple_qa/benchmarkingjob.yaml",
+   "examples/pcb-aoi/incremental_learning_bench/fault_detection/benchmarkingjob.yaml",
+   "examples/pcb-aoi/singletask_learning_bench/fault_detection/benchmarkingjob.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-sam.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-simple.yaml",
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob.yaml",
+   "examples/smart_coding/smart_coding_learning_bench/comment/benchmarkingjob.yaml",
+   "examples/smart_coding/smart_coding_learning_bench/issue/benchmarkingjob.yaml",
+   "examples/yaoba/singletask_learning_boost/benchmarkingjob.yaml",
+   "examples/yaoba/singletask_learning_yolox_tta/benchmarkingjob.yaml"
+  ],
+  "EdgeModel": [
+   "examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/testalgorithms/perception_reasoning.yaml",
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_algorithms/test_algorithms.yaml",
+   "examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/test_queryrouting.yaml"
+  ],
+  "CloudModel": [
+   "examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/testalgorithms/perception_reasoning.yaml",
+   "examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/test_queryrouting.yaml"
+  ],
+  "EdgeCloudDispatcher": [
+   "examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/testalgorithms/perception_reasoning.yaml"
+  ],
+  "PA": [
+   "examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/testenv/testenv.yaml"
+  ],
+  "rfnet_singletask_learning": [
+   "examples/Cloud_Robotics/singletask_learning_bench/Semantic_Segmentation/benchmarkingjob.yaml",
+   "examples/cityscapes/singletask_learning_bench/semantic-segmentation/benchmarkingjob.yaml"
+  ],
+  "RFNet": [
+   "examples/Cloud_Robotics/singletask_learning_bench/Semantic_Segmentation/testalgorithms/algorithm.yaml",
+   "examples/cityscapes/singletask_learning_bench/semantic-segmentation/testalgorithms/rfnet/rfnet_algorithm.yaml"
+  ],
+  "accuracy": [
+   "examples/Cloud_Robotics/singletask_learning_bench/Semantic_Segmentation/testenv/testenv.yaml",
+   "examples/Cloud_Robotics/singletask_learning_bench/Semantic_Segmentation/testenv/testenv.yaml",
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml",
+   "examples/bdd/lifelong_learning_bench/curb-detection/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/fed_ci_match/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/fed_ci_match_v2/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/fed_ci_match_v2/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/fedavg/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/fedavg/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/glfc/testenv/testenv.yaml",
+   "examples/cifar100/federated_class_incremental_learning/fedavg/testenv/testenv.yaml",
+   "examples/cifar100/federated_class_incremental_learning/fedavg/testenv/testenv.yaml",
+   "examples/cifar100/federated_learning/fedavg/testenv/testenv.yaml",
+   "examples/cifar100/federated_learning/fedavg/testenv/testenv.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testenv/testenv.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testenv/testenv.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv-full.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv-full.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv-small.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv-small.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv-travel.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv-travel.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml",
+   "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testenv/testenv.yaml",
+   "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testenv/testenv.yaml",
+   "examples/cloud_VLA_finetune/singletask_learning_bench/testenv/testenv.yaml",
+   "examples/imagenet/multiedge_inference_bench/testenv/testenv.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-all.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-all.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-city.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-city.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot-small.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot-small.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml",
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml",
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml"
+  ],
+  "samples_transfer_ratio": [
+   "examples/Cloud_Robotics/singletask_learning_bench/Semantic_Segmentation/testenv/testenv.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testenv/testenv.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv-full.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv-small.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv-travel.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml",
+   "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testenv/testenv.yaml",
+   "examples/pcb-aoi/incremental_learning_bench/fault_detection/testenv/testenv.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-all.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-city.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot-small.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml",
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml"
+  ],
+  "new_government_agent_benchmarkingjob": [
+   "examples/GovDoc2Poster/singletask_learning_bench/benchmarkingjob.yaml"
+  ],
+  "new_government_poster_agent": [
+   "examples/GovDoc2Poster/singletask_learning_bench/benchmarkingjob.yaml"
+  ],
+  "NewGovernmentPosterAgent": [
+   "examples/GovDoc2Poster/singletask_learning_bench/testalgorithms/gen/gen_algorithm.yaml"
+  ],
+  "score": [
+   "examples/GovDoc2Poster/singletask_learning_bench/testenv/testenv.yaml"
+  ],
+  "reid_job": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/reid_job.yaml"
+  ],
+  "M3L": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testalgorithms/reid/m3l/m3l_algorithm.yaml"
+  ],
+  "ByteTrack": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testalgorithms/tracking/byte_track/byte_track_algorithm.yaml"
+  ],
+  "mAP": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/reid/testenv.yaml"
+  ],
+  "rank_1": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/reid/testenv.yaml"
+  ],
+  "rank_2": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/reid/testenv.yaml"
+  ],
+  "rank_5": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/reid/testenv.yaml"
+  ],
+  "cmc": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/reid/testenv.yaml"
+  ],
+  "recall": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/testenv.yaml",
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "precision": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/testenv.yaml",
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "f1_score": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/testenv.yaml",
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml",
+   "examples/pcb-aoi/incremental_learning_bench/fault_detection/testenv/testenv.yaml",
+   "examples/pcb-aoi/incremental_learning_bench/fault_detection/testenv/testenv.yaml",
+   "examples/pcb-aoi/singletask_learning_bench/fault_detection/testenv/testenv.yaml"
+  ],
+  "mota": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/testenv.yaml"
+  ],
+  "motp": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/testenv.yaml"
+  ],
+  "idf1": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/testenv.yaml"
+  ],
+  "tracking_job": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/tracking_job.yaml"
+  ],
+  "tracking": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/tracking_job.yaml"
+  ],
+  "pipl-compliant-privacy-preserving-llm-bench": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/benchmarkingjob.yaml"
+  ],
+  "privacy-preserving-llm-collaboration": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/benchmarkingjob.yaml",
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/test_algorithms/algorithm.yaml"
+  ],
+  "gpt-4o-mini": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/test_algorithms/algorithm.yaml"
+  ],
+  "pipl-compliant-privacy-preserving-llm-collaboration": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "ChnSentiCorp-Lite": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "privacy_score": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "mia_attack_success_rate": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "neighbourhood_mia_auc": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "loss_attack_auc": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "lira_attack_auc": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "privacy_leakage_score": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "embedding_inversion_resistance": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "end_to_end_latency": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "throughput": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml",
+   "examples/llm-edge-benchmark-suite/single_task_bench/testenv/testenv.yaml",
+   "examples/llm-edge-benchmark-suite/single_task_bench_with_compression/testenv/testenv.yaml"
+  ],
+  "edge_processing_time": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "cloud_processing_time": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "network_overhead": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "memory_usage": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "pipl_compliance_score": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "minimal_necessity_check": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "budget_compliance_check": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "audit_integrity_check": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "cross_border_policy_compliance": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "consent_verification": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "palletizing_bench": [
+   "examples/RoboDK Palletizing/singletask_learning_bench/benchmarkingjob.yaml"
+  ],
+  "YOLOv8n": [
+   "examples/RoboDK Palletizing/singletask_learning_bench/benchmarkingjob.yaml",
+   "examples/RoboDK Palletizing/singletask_learning_bench/testalgorithms/algorithm.yaml"
+  ],
+  "map50": [
+   "examples/RoboDK Palletizing/singletask_learning_bench/testenv/testenv.yaml"
+  ],
+  "map90": [
+   "examples/RoboDK Palletizing/singletask_learning_bench/testenv/testenv.yaml"
+  ],
+  "privacy-aware-query-routing": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/benchmarkingjob.yaml",
+   "examples/TAB/cloud_edge_collaborative_inference_bench/benchmarkingjob.yaml"
+  ],
+  "privacy_metrics": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/benchmarkingjob.yaml"
+  ],
+  "performance_metrics": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/benchmarkingjob.yaml"
+  ],
+  "ECHRDataProcessor": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_algorithms/test_algorithms.yaml",
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_env/test_env.yaml"
+  ],
+  "CloudModelAPI": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_algorithms/test_algorithms.yaml"
+  ],
+  "OracleRouter": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_algorithms/test_algorithms.yaml",
+   "examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/test_queryrouting.yaml"
+  ],
+  "regex_pseudonymization": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_algorithms/test_algorithms.yaml"
+  ],
+  "ner_masking": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_algorithms/test_algorithms.yaml"
+  ],
+  "differential_privacy": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_algorithms/test_algorithms.yaml"
+  ],
+  "PIIDetectionRate": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_env/test_env.yaml"
+  ],
+  "SensitiveEntityLeakageScore": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_env/test_env.yaml"
+  ],
+  "InferenceAttackResistance": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_env/test_env.yaml"
+  ],
+  "ContextualPrivacyPreservation": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_env/test_env.yaml"
+  ],
+  "AccuracyPreservationRate": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_env/test_env.yaml",
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_env/test_env.yaml"
+  ],
+  "LatencyOverhead": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_env/test_env.yaml",
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_env/test_env.yaml"
+  ],
+  "yolo_lifelong_learning_five_model_750data": [
+   "examples/bdd/lifelong_learning_bench/curb-detection/benchmarkingjob.yaml"
+  ],
+  "BaseModel": [
+   "examples/bdd/lifelong_learning_bench/curb-detection/testalgorithms/yolo/yolo_algorithm.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testalgorithms/rfnet/rfnet_algorithm.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/rfnet_algorithm-new-split.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/rfnet_algorithm.yaml",
+   "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testalgorithms/rfnet/rfnet_algorithm.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/rfnet_algorithm-simple.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/rfnet_algorithm.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/sam_algorithm.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/sam_vit_algorithm.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/vit_algorithm.yaml",
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/test_algorithm.yaml"
+  ],
+  "TaskAllocationByOrigin": [
+   "examples/bdd/lifelong_learning_bench/curb-detection/testalgorithms/yolo/yolo_algorithm.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testalgorithms/rfnet/rfnet_algorithm.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/rfnet_algorithm-new-split.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/rfnet_algorithm.yaml",
+   "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testalgorithms/rfnet/rfnet_algorithm.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/rfnet_algorithm-simple.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/rfnet_algorithm.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/sam_algorithm.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/sam_vit_algorithm.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/vit_algorithm.yaml"
+  ],
+  "TaskRemodeling": [
+   "examples/bdd/lifelong_learning_bench/curb-detection/testalgorithms/yolo/yolo_algorithm.yaml"
+  ],
+  "InferenceIntegrate": [
+   "examples/bdd/lifelong_learning_bench/curb-detection/testalgorithms/yolo/yolo_algorithm.yaml"
+  ],
+  "map": [
+   "examples/bdd/lifelong_learning_bench/curb-detection/testenv/testenv.yaml",
+   "examples/cityscapes/singletask_learning_bench/semantic-segmentation/testenv/testenv.yaml",
+   "examples/yaoba/singletask_learning_boost/testenv/testenv.yaml",
+   "examples/yaoba/singletask_learning_yolox_tta/testenv/testenv.yaml"
+  ],
+  "FediCarl-Client": [
+   "examples/cifar100/fci_ssl/fed_ci_match/algorithm/algorithm.yaml"
+  ],
+  "FedAvg": [
+   "examples/cifar100/fci_ssl/fed_ci_match/algorithm/algorithm.yaml",
+   "examples/cifar100/fci_ssl/fed_ci_match_v2/algorithm/algorithm.yaml",
+   "examples/cifar100/fci_ssl/fedavg/algorithm/algorithm.yaml",
+   "examples/cifar100/fci_ssl/glfc/algorithm/algorithm.yaml",
+   "examples/cifar100/federated_class_incremental_learning/fedavg/algorithm/algorithm.yaml",
+   "examples/cifar100/federated_learning/fedavg/algorithm/algorithm.yaml"
+  ],
+  "FediCarl": [
+   "examples/cifar100/fci_ssl/fed_ci_match/benchmarkingjob.yaml"
+  ],
+  "cifar100": [
+   "examples/cifar100/fci_ssl/fed_ci_match/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/fed_ci_match_v2/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/fedavg/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/glfc/testenv/testenv.yaml",
+   "examples/cifar100/federated_class_incremental_learning/fedavg/testenv/testenv.yaml",
+   "examples/cifar100/federated_learning/fedavg/testenv/testenv.yaml"
+  ],
+  "forget_rate": [
+   "examples/cifar100/fci_ssl/fed_ci_match/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/fed_ci_match_v2/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/fedavg/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/glfc/testenv/testenv.yaml"
+  ],
+  "task_avg_acc": [
+   "examples/cifar100/fci_ssl/fed_ci_match/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/fedavg/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/glfc/testenv/testenv.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot-small.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot.yaml",
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml"
+  ],
+  "fci_ssl": [
+   "examples/cifar100/fci_ssl/fed_ci_match_v2/algorithm/algorithm.yaml"
+  ],
+  "fci_ssl_test": [
+   "examples/cifar100/fci_ssl/fed_ci_match_v2/benchmarkingjob.yaml"
+  ],
+  "fedavg-client": [
+   "examples/cifar100/fci_ssl/fedavg/algorithm/algorithm.yaml"
+  ],
+  "basic-fedavg": [
+   "examples/cifar100/fci_ssl/fedavg/benchmarkingjob.yaml"
+  ],
+  "GLFCMatch-Client": [
+   "examples/cifar100/fci_ssl/glfc/algorithm/algorithm.yaml"
+  ],
+  "GLFCMatch": [
+   "examples/cifar100/fci_ssl/glfc/benchmarkingjob.yaml"
+  ],
+  "fcil": [
+   "examples/cifar100/federated_class_incremental_learning/fedavg/algorithm/algorithm.yaml"
+  ],
+  "fcil_test": [
+   "examples/cifar100/federated_class_incremental_learning/fedavg/benchmarkingjob.yaml"
+  ],
+  "fedavg": [
+   "examples/cifar100/federated_learning/fedavg/algorithm/algorithm.yaml"
+  ],
+  "fedavg_test": [
+   "examples/cifar100/federated_learning/fedavg/benchmarkingjob.yaml"
+  ],
+  "test2": [
+   "examples/cityscapes/lifelong_learning_bench/unseen_task_processing-GANwithSelfTaughtLearning/config.yaml"
+  ],
+  "encoder_models": [
+   "examples/cityscapes/lifelong_learning_bench/unseen_task_processing-GANwithSelfTaughtLearning/config.yaml"
+  ],
+  "rfnet_lifelong_learning": [
+   "examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/benchmarkingjob.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob.yaml",
+   "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/benchmarkingjob.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-simple.yaml"
+  ],
+  "TaskDefinitionByOrigin": [
+   "examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testalgorithms/rfnet/rfnet_algorithm.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/rfnet_algorithm-new-split.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/rfnet_algorithm.yaml",
+   "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testalgorithms/rfnet/rfnet_algorithm.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/rfnet_algorithm-simple.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/rfnet_algorithm.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/sam_algorithm.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/sam_vit_algorithm.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/vit_algorithm.yaml"
+  ],
+  "UnseenSampleRecognitionByScene": [
+   "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testalgorithms/rfnet/rfnet_algorithm.yaml"
+  ],
+  "query-routing": [
+   "examples/cloud-edge-collaborative-inference-for-llm/benchmarkingjob.yaml"
+  ],
+  "OracleRouterDatasetProcessor": [
+   "examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/test_queryrouting.yaml"
+  ],
+  "Accuracy": [
+   "examples/cloud-edge-collaborative-inference-for-llm/testenv/testenv.yaml"
+  ],
+  "Throughput": [
+   "examples/cloud-edge-collaborative-inference-for-llm/testenv/testenv.yaml",
+   "examples/cloud-edge-speculative-decoding-benchmark/testenv/testenv.yaml"
+  ],
+  "speculative-decoding": [
+   "examples/cloud-edge-speculative-decoding-benchmark/benchmarkingjob.yaml"
+  ],
+  "benchmarkingjob-block": [
+   "examples/cloud-edge-speculative-decoding-benchmark/benchmarkingjob_block.yaml"
+  ],
+  "speculative-decoding-block": [
+   "examples/cloud-edge-speculative-decoding-benchmark/benchmarkingjob_block.yaml"
+  ],
+  "SpeculativeDecodingDatasetProcessor": [
+   "examples/cloud-edge-speculative-decoding-benchmark/testalgorithms/speculative-decoding/test_speculative_decoding.yaml",
+   "examples/cloud-edge-speculative-decoding-benchmark/testalgorithms/speculative-decoding/test_speculative_decoding_block.yaml"
+  ],
+  "SpeculativeDraftModel": [
+   "examples/cloud-edge-speculative-decoding-benchmark/testalgorithms/speculative-decoding/test_speculative_decoding.yaml"
+  ],
+  "SpeculativeVerifyModel": [
+   "examples/cloud-edge-speculative-decoding-benchmark/testalgorithms/speculative-decoding/test_speculative_decoding.yaml"
+  ],
+  "SpeculativeBlockDraftModel": [
+   "examples/cloud-edge-speculative-decoding-benchmark/testalgorithms/speculative-decoding/test_speculative_decoding_block.yaml"
+  ],
+  "SpeculativeBlockVerifyModel": [
+   "examples/cloud-edge-speculative-decoding-benchmark/testalgorithms/speculative-decoding/test_speculative_decoding_block.yaml"
+  ],
+  "vla_dataselect": [
+   "examples/cloud_VLA_finetune/singletask_learning_bench/benchmarkingjob.yaml"
+  ],
+  "OpenVLA_Finetune": [
+   "examples/cloud_VLA_finetune/singletask_learning_bench/testalgorithms/vla_dataselect/vla_algorithm.yaml"
+  ],
+  "fedllm-peft": [
+   "examples/federated-llm/fedllm-peft/algorithm/algorithm.yaml"
+  ],
+  "FedAvg-PEFT": [
+   "examples/federated-llm/fedllm-peft/algorithm/algorithm.yaml"
+  ],
+  "fedavgm-peft": [
+   "examples/federated-llm/fedllm-peft/benchmarkingjob.yaml"
+  ],
+  "medicalQA": [
+   "examples/federated-llm/fedllm-peft/testenv/testenv.yaml"
+  ],
+  "rouge1_metric": [
+   "examples/federated-llm/fedllm-peft/testenv/testenv.yaml",
+   "examples/federated-llm/fedllm-peft/testenv/testenv.yaml"
+  ],
+  "rouge2_metric": [
+   "examples/federated-llm/fedllm-peft/testenv/testenv.yaml"
+  ],
+  "rougel_metric": [
+   "examples/federated-llm/fedllm-peft/testenv/testenv.yaml"
+  ],
+  "bleu4_metric": [
+   "examples/federated-llm/fedllm-peft/testenv/testenv.yaml"
+  ],
+  "politic_bench_singletask_learning": [
+   "examples/government/singletask_learning_bench/objective/benchmarkingjob.yaml",
+   "examples/government/singletask_learning_bench/subjective/benchmarkingjob.yaml",
+   "examples/smart_coding/smart_coding_learning_bench/issue/benchmarkingjob.yaml"
+  ],
+  "gen": [
+   "examples/government/singletask_learning_bench/objective/testalgorithms/gen/gen_algorithm.yaml",
+   "examples/government/singletask_learning_bench/subjective/testalgorithms/gen/gen_algorithm.yaml",
+   "examples/government_rag/singletask_learning_bench/testalgorithms/gen_algorithm.yaml",
+   "examples/llm_simple_qa/testalgorithms/gen/gen_algorithm.yaml",
+   "examples/smart_coding/smart_coding_learning_bench/comment/testalgorithms/gen/gen_algorithm.yaml",
+   "examples/smart_coding/smart_coding_learning_bench/issue/testalgorithms/gen/gen_algorithm.yaml"
+  ],
+  "acc": [
+   "examples/government/singletask_learning_bench/objective/testenv/testenv.yaml",
+   "examples/llm_simple_qa/testenv/testenv.yaml"
+  ],
+  "llm_judgement": [
+   "examples/government/singletask_learning_bench/subjective/testenv/testenv.yaml",
+   "examples/smart_coding/smart_coding_learning_bench/comment/testenv/testenv.yaml",
+   "examples/smart_coding/smart_coding_learning_bench/issue/testenv/testenv.yaml"
+  ],
+  "singletask_learning": [
+   "examples/government_rag/singletask_learning_bench/benchmarkingjob.yaml"
+  ],
+  "acc_model": [
+   "examples/government_rag/singletask_learning_bench/testenv/testenv.yaml"
+  ],
+  "acc_global": [
+   "examples/government_rag/singletask_learning_bench/testenv/testenv.yaml"
+  ],
+  "acc_local": [
+   "examples/government_rag/singletask_learning_bench/testenv/testenv.yaml"
+  ],
+  "acc_other": [
+   "examples/government_rag/singletask_learning_bench/testenv/testenv.yaml"
+  ],
+  "classification_job": [
+   "examples/imagenet/multiedge_inference_bench/classification_job_automatic.yaml",
+   "examples/imagenet/multiedge_inference_bench/classification_job_manual.yaml"
+  ],
+  "classification": [
+   "examples/imagenet/multiedge_inference_bench/classification_job_automatic.yaml",
+   "examples/imagenet/multiedge_inference_bench/classification_job_manual.yaml"
+  ],
+  "Classification": [
+   "examples/imagenet/multiedge_inference_bench/testalgorithms/automatic/classification_algorithm.yaml",
+   "examples/imagenet/multiedge_inference_bench/testalgorithms/manual/classification_algorithm.yaml"
+  ],
+  "gpu-0": [
+   "examples/imagenet/multiedge_inference_bench/testalgorithms/automatic/devices.yaml"
+  ],
+  "gpu-1": [
+   "examples/imagenet/multiedge_inference_bench/testalgorithms/automatic/devices.yaml",
+   "examples/imagenet/multiedge_inference_bench/testalgorithms/manual/devices.yaml",
+   "examples/imagenet/multiedge_inference_bench/testalgorithms/manual/devices_one.yaml"
+  ],
+  "gpu-2": [
+   "examples/imagenet/multiedge_inference_bench/testalgorithms/automatic/devices.yaml",
+   "examples/imagenet/multiedge_inference_bench/testalgorithms/manual/devices.yaml"
+  ],
+  "gpu": [
+   "examples/imagenet/multiedge_inference_bench/testalgorithms/manual/devices.yaml"
+  ],
+  "fps": [
+   "examples/imagenet/multiedge_inference_bench/testenv/testenv.yaml"
+  ],
+  "peak_memory": [
+   "examples/imagenet/multiedge_inference_bench/testenv/testenv.yaml"
+  ],
+  "peak_power": [
+   "examples/imagenet/multiedge_inference_bench/testenv/testenv.yaml"
+  ],
+  "llio_pose_estimation_benchmark": [
+   "examples/industrialEI/pose-estimation-llio/benchmarkingjob.yaml"
+  ],
+  "llio_fusion": [
+   "examples/industrialEI/pose-estimation-llio/benchmarkingjob.yaml",
+   "examples/industrialEI/pose-estimation-llio/testalgorithms/llio_fusion/llio_algorithm.yaml"
+  ],
+  "position_error": [
+   "examples/industrialEI/pose-estimation-llio/testenv/testenv.yaml"
+  ],
+  "orientation_error": [
+   "examples/industrialEI/pose-estimation-llio/testenv/testenv.yaml"
+  ],
+  "trajectory_consistency": [
+   "examples/industrialEI/pose-estimation-llio/testenv/testenv.yaml"
+  ],
+  "Deformable_Assembly_Job": [
+   "examples/industrialEI/single_task_learning_bench/deformable_component_manipulation/benchmarkingjob.yaml"
+  ],
+  "assembly_alg": [
+   "examples/industrialEI/single_task_learning_bench/deformable_component_manipulation/benchmarkingjob.yaml"
+  ],
+  "assembly_alg_naive": [
+   "examples/industrialEI/single_task_learning_bench/deformable_component_manipulation/testalgorithms/deformable_alg.yaml"
+  ],
+  "assembly_pipeline": [
+   "examples/industrialEI/single_task_learning_bench/deformable_component_manipulation/testalgorithms/deformable_alg.yaml"
+  ],
+  "assembly_accuracy": [
+   "examples/industrialEI/single_task_learning_bench/deformable_component_manipulation/testenv/testenv.yaml"
+  ],
+  "LLM_agent": [
+   "examples/llm-agent/singletask_learning_bench/benchmarkingjob.yaml",
+   "examples/llm-agent/singletask_learning_bench/testalgorithms/test_algorithm.yaml"
+  ],
+  "rouge1": [
+   "examples/llm-agent/singletask_learning_bench/testenv/testenv.yaml"
+  ],
+  "rouge2": [
+   "examples/llm-agent/singletask_learning_bench/testenv/testenv.yaml"
+  ],
+  "rougeL": [
+   "examples/llm-agent/singletask_learning_bench/testenv/testenv.yaml"
+  ],
+  "llama-cpp": [
+   "examples/llm-edge-benchmark-suite/single_task_bench/benchmarkingjob.yaml",
+   "examples/llm-edge-benchmark-suite/single_task_bench_with_compression/benchmarkingjob.yaml"
+  ],
+  "LlamaCppModel": [
+   "examples/llm-edge-benchmark-suite/single_task_bench/testalgorithms/algorithm.yaml",
+   "examples/llm-edge-benchmark-suite/single_task_bench_with_compression/testalgorithms/algorithm.yaml"
+  ],
+  "latency": [
+   "examples/llm-edge-benchmark-suite/single_task_bench/testenv/testenv.yaml",
+   "examples/llm-edge-benchmark-suite/single_task_bench_with_compression/testenv/testenv.yaml"
+  ],
+  "prefill_latency": [
+   "examples/llm-edge-benchmark-suite/single_task_bench/testenv/testenv.yaml",
+   "examples/llm-edge-benchmark-suite/single_task_bench_with_compression/testenv/testenv.yaml"
+  ],
+  "mem_usage": [
+   "examples/llm-edge-benchmark-suite/single_task_bench/testenv/testenv.yaml",
+   "examples/llm-edge-benchmark-suite/single_task_bench_with_compression/testenv/testenv.yaml"
+  ],
+  "simple_qa_singletask_learning": [
+   "examples/llm_simple_qa/benchmarkingjob.yaml"
+  ],
+  "fpn_incremental_learning": [
+   "examples/pcb-aoi/incremental_learning_bench/fault_detection/benchmarkingjob.yaml"
+  ],
+  "FPN": [
+   "examples/pcb-aoi/incremental_learning_bench/fault_detection/testalgorithms/fpn/fpn_algorithm.yaml",
+   "examples/pcb-aoi/singletask_learning_bench/fault_detection/testalgorithms/fpn/fpn_algorithm.yaml"
+  ],
+  "IBT": [
+   "examples/pcb-aoi/incremental_learning_bench/fault_detection/testalgorithms/fpn/fpn_algorithm.yaml"
+  ],
+  "fpn_singletask_learning": [
+   "examples/pcb-aoi/singletask_learning_bench/fault_detection/benchmarkingjob.yaml"
+  ],
+  "phys-scene-gen-benchmark": [
+   "examples/phys_scene_gen/singletask_learning_bench/benchmarkingjob.yaml"
+  ],
+  "PhysSceneGenAlgorithm": [
+   "examples/phys_scene_gen/singletask_learning_bench/benchmarkingjob.yaml"
+  ],
+  "PhysSceneGen": [
+   "examples/phys_scene_gen/singletask_learning_bench/testalgorithms/ai2holodeck/algorithmenv.yaml"
+  ],
+  "semantic_conformance": [
+   "examples/phys_scene_gen/singletask_learning_bench/testenv/testenv.yaml"
+  ],
+  "navigation_validity": [
+   "examples/phys_scene_gen/singletask_learning_bench/testenv/testenv.yaml"
+  ],
+  "sam_rfnet_lifelong_learning": [
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-sam.yaml"
+  ],
+  "HardSampleMining": [
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/rfnet_algorithm.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/sam_algorithm.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/sam_vit_algorithm.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/vit_algorithm.yaml"
+  ],
+  "BWT": [
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot-small.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot.yaml",
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml"
+  ],
+  "FWT": [
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot-small.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot.yaml",
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml"
+  ],
+  "MATRIX": [
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot-small.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot.yaml",
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml"
+  ],
+  "erfnet_lifelong_learning": [
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob.yaml"
+  ],
+  "TaskDefinitionByDomain": [
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/test_algorithm.yaml"
+  ],
+  "TaskAllocationByDomain": [
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/test_algorithm.yaml"
+  ],
+  "code_comment_bench_singletask_learning": [
+   "examples/smart_coding/smart_coding_learning_bench/comment/benchmarkingjob.yaml"
+  ],
+  "mmlab-model": [
+   "examples/yaoba/singletask_learning_boost/benchmarkingjob.yaml",
+   "examples/yaoba/singletask_learning_yolox_tta/benchmarkingjob.yaml"
+  ],
+  "FPN_ac_boost": [
+   "examples/yaoba/singletask_learning_boost/testalgorithms/algorithm.yaml"
+  ],
+  "mmlab": [
+   "examples/yaoba/singletask_learning_yolox_tta/testalgorithms/algorithm.yaml"
+  ]
+ },
+ "unresolved": {
+  "benchmarkingjob": [
+   "examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/benchmarkingjob.yaml",
+   "examples/Cloud_Robotics/singletask_learning_bench/Semantic_Segmentation/benchmarkingjob.yaml",
+   "examples/TAB/cloud_edge_collaborative_inference_bench/benchmarkingjob.yaml",
+   "examples/bdd/lifelong_learning_bench/curb-detection/benchmarkingjob.yaml",
+   "examples/cifar100/fci_ssl/fed_ci_match/benchmarkingjob.yaml",
+   "examples/cifar100/fci_ssl/fed_ci_match_v2/benchmarkingjob.yaml",
+   "examples/cifar100/fci_ssl/fedavg/benchmarkingjob.yaml",
+   "examples/cifar100/fci_ssl/glfc/benchmarkingjob.yaml",
+   "examples/cifar100/federated_class_incremental_learning/fedavg/benchmarkingjob.yaml",
+   "examples/cifar100/federated_learning/fedavg/benchmarkingjob.yaml",
+   "examples/cityscapes/singletask_learning_bench/semantic-segmentation/benchmarkingjob.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/benchmarkingjob.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-fulltest.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-smalltest.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-traveltest.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob.yaml",
+   "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/benchmarkingjob.yaml",
+   "examples/cloud-edge-collaborative-inference-for-llm/benchmarkingjob.yaml",
+   "examples/cloud-edge-speculative-decoding-benchmark/benchmarkingjob.yaml",
+   "examples/cloud_VLA_finetune/singletask_learning_bench/benchmarkingjob.yaml",
+   "examples/federated-llm/fedllm-peft/benchmarkingjob.yaml",
+   "examples/government/singletask_learning_bench/objective/benchmarkingjob.yaml",
+   "examples/government/singletask_learning_bench/subjective/benchmarkingjob.yaml",
+   "examples/government_rag/singletask_learning_bench/benchmarkingjob.yaml",
+   "examples/llm-agent/singletask_learning_bench/benchmarkingjob.yaml",
+   "examples/llm-edge-benchmark-suite/single_task_bench/benchmarkingjob.yaml",
+   "examples/llm-edge-benchmark-suite/single_task_bench_with_compression/benchmarkingjob.yaml",
+   "examples/llm_simple_qa/benchmarkingjob.yaml",
+   "examples/pcb-aoi/incremental_learning_bench/fault_detection/benchmarkingjob.yaml",
+   "examples/pcb-aoi/singletask_learning_bench/fault_detection/benchmarkingjob.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-sam.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-simple.yaml",
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob.yaml",
+   "examples/smart_coding/smart_coding_learning_bench/comment/benchmarkingjob.yaml",
+   "examples/smart_coding/smart_coding_learning_bench/issue/benchmarkingjob.yaml",
+   "examples/yaoba/singletask_learning_boost/benchmarkingjob.yaml",
+   "examples/yaoba/singletask_learning_yolox_tta/benchmarkingjob.yaml"
+  ],
+  "rfnet_singletask_learning": [
+   "examples/Cloud_Robotics/singletask_learning_bench/Semantic_Segmentation/benchmarkingjob.yaml",
+   "examples/cityscapes/singletask_learning_bench/semantic-segmentation/benchmarkingjob.yaml"
+  ],
+  "samples_transfer_ratio": [
+   "examples/Cloud_Robotics/singletask_learning_bench/Semantic_Segmentation/testenv/testenv.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testenv/testenv.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv-full.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv-small.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv-travel.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml",
+   "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testenv/testenv.yaml",
+   "examples/pcb-aoi/incremental_learning_bench/fault_detection/testenv/testenv.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-all.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-city.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot-small.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml",
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml"
+  ],
+  "new_government_agent_benchmarkingjob": [
+   "examples/GovDoc2Poster/singletask_learning_bench/benchmarkingjob.yaml"
+  ],
+  "new_government_poster_agent": [
+   "examples/GovDoc2Poster/singletask_learning_bench/benchmarkingjob.yaml"
+  ],
+  "reid_job": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/reid_job.yaml"
+  ],
+  "tracking_job": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/tracking_job.yaml"
+  ],
+  "tracking": [
+   "examples/MOT17/multiedge_inference_bench/pedestrian_tracking/tracking_job.yaml"
+  ],
+  "pipl-compliant-privacy-preserving-llm-bench": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/benchmarkingjob.yaml"
+  ],
+  "privacy-preserving-llm-collaboration": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/benchmarkingjob.yaml",
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/test_algorithms/algorithm.yaml"
+  ],
+  "gpt-4o-mini": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/test_algorithms/algorithm.yaml"
+  ],
+  "pipl-compliant-privacy-preserving-llm-collaboration": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "ChnSentiCorp-Lite": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "privacy_score": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "mia_attack_success_rate": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "neighbourhood_mia_auc": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "loss_attack_auc": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "lira_attack_auc": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "privacy_leakage_score": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "embedding_inversion_resistance": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "end_to_end_latency": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "edge_processing_time": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "cloud_processing_time": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "network_overhead": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "memory_usage": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "pipl_compliance_score": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "minimal_necessity_check": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "budget_compliance_check": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "audit_integrity_check": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "cross_border_policy_compliance": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "consent_verification": [
+   "examples/PIPL/edge-cloud_collaborative_learning_bench/testenv/testenv.yaml"
+  ],
+  "palletizing_bench": [
+   "examples/RoboDK Palletizing/singletask_learning_bench/benchmarkingjob.yaml"
+  ],
+  "privacy-aware-query-routing": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/benchmarkingjob.yaml",
+   "examples/TAB/cloud_edge_collaborative_inference_bench/benchmarkingjob.yaml"
+  ],
+  "privacy_metrics": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/benchmarkingjob.yaml"
+  ],
+  "performance_metrics": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/benchmarkingjob.yaml"
+  ],
+  "regex_pseudonymization": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_algorithms/test_algorithms.yaml"
+  ],
+  "ner_masking": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_algorithms/test_algorithms.yaml"
+  ],
+  "differential_privacy": [
+   "examples/TAB/cloud_edge_collaborative_inference_bench/test_algorithms/test_algorithms.yaml"
+  ],
+  "yolo_lifelong_learning_five_model_750data": [
+   "examples/bdd/lifelong_learning_bench/curb-detection/benchmarkingjob.yaml"
+  ],
+  "FediCarl": [
+   "examples/cifar100/fci_ssl/fed_ci_match/benchmarkingjob.yaml"
+  ],
+  "cifar100": [
+   "examples/cifar100/fci_ssl/fed_ci_match/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/fed_ci_match_v2/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/fedavg/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/glfc/testenv/testenv.yaml",
+   "examples/cifar100/federated_class_incremental_learning/fedavg/testenv/testenv.yaml",
+   "examples/cifar100/federated_learning/fedavg/testenv/testenv.yaml"
+  ],
+  "forget_rate": [
+   "examples/cifar100/fci_ssl/fed_ci_match/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/fed_ci_match_v2/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/fedavg/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/glfc/testenv/testenv.yaml"
+  ],
+  "task_avg_acc": [
+   "examples/cifar100/fci_ssl/fed_ci_match/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/fedavg/testenv/testenv.yaml",
+   "examples/cifar100/fci_ssl/glfc/testenv/testenv.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot-small.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot.yaml",
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml"
+  ],
+  "fci_ssl_test": [
+   "examples/cifar100/fci_ssl/fed_ci_match_v2/benchmarkingjob.yaml"
+  ],
+  "basic-fedavg": [
+   "examples/cifar100/fci_ssl/fedavg/benchmarkingjob.yaml"
+  ],
+  "GLFCMatch": [
+   "examples/cifar100/fci_ssl/glfc/benchmarkingjob.yaml"
+  ],
+  "fcil_test": [
+   "examples/cifar100/federated_class_incremental_learning/fedavg/benchmarkingjob.yaml"
+  ],
+  "fedavg_test": [
+   "examples/cifar100/federated_learning/fedavg/benchmarkingjob.yaml"
+  ],
+  "test2": [
+   "examples/cityscapes/lifelong_learning_bench/unseen_task_processing-GANwithSelfTaughtLearning/config.yaml"
+  ],
+  "encoder_models": [
+   "examples/cityscapes/lifelong_learning_bench/unseen_task_processing-GANwithSelfTaughtLearning/config.yaml"
+  ],
+  "rfnet_lifelong_learning": [
+   "examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/benchmarkingjob.yaml",
+   "examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob.yaml",
+   "examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/benchmarkingjob.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-simple.yaml"
+  ],
+  "query-routing": [
+   "examples/cloud-edge-collaborative-inference-for-llm/benchmarkingjob.yaml"
+  ],
+  "speculative-decoding": [
+   "examples/cloud-edge-speculative-decoding-benchmark/benchmarkingjob.yaml"
+  ],
+  "benchmarkingjob-block": [
+   "examples/cloud-edge-speculative-decoding-benchmark/benchmarkingjob_block.yaml"
+  ],
+  "speculative-decoding-block": [
+   "examples/cloud-edge-speculative-decoding-benchmark/benchmarkingjob_block.yaml"
+  ],
+  "vla_dataselect": [
+   "examples/cloud_VLA_finetune/singletask_learning_bench/benchmarkingjob.yaml"
+  ],
+  "FedAvg-PEFT": [
+   "examples/federated-llm/fedllm-peft/algorithm/algorithm.yaml"
+  ],
+  "fedavgm-peft": [
+   "examples/federated-llm/fedllm-peft/benchmarkingjob.yaml"
+  ],
+  "medicalQA": [
+   "examples/federated-llm/fedllm-peft/testenv/testenv.yaml"
+  ],
+  "politic_bench_singletask_learning": [
+   "examples/government/singletask_learning_bench/objective/benchmarkingjob.yaml",
+   "examples/government/singletask_learning_bench/subjective/benchmarkingjob.yaml",
+   "examples/smart_coding/smart_coding_learning_bench/issue/benchmarkingjob.yaml"
+  ],
+  "singletask_learning": [
+   "examples/government_rag/singletask_learning_bench/benchmarkingjob.yaml"
+  ],
+  "classification_job": [
+   "examples/imagenet/multiedge_inference_bench/classification_job_automatic.yaml",
+   "examples/imagenet/multiedge_inference_bench/classification_job_manual.yaml"
+  ],
+  "classification": [
+   "examples/imagenet/multiedge_inference_bench/classification_job_automatic.yaml",
+   "examples/imagenet/multiedge_inference_bench/classification_job_manual.yaml"
+  ],
+  "gpu-0": [
+   "examples/imagenet/multiedge_inference_bench/testalgorithms/automatic/devices.yaml"
+  ],
+  "gpu-1": [
+   "examples/imagenet/multiedge_inference_bench/testalgorithms/automatic/devices.yaml",
+   "examples/imagenet/multiedge_inference_bench/testalgorithms/manual/devices.yaml",
+   "examples/imagenet/multiedge_inference_bench/testalgorithms/manual/devices_one.yaml"
+  ],
+  "gpu-2": [
+   "examples/imagenet/multiedge_inference_bench/testalgorithms/automatic/devices.yaml",
+   "examples/imagenet/multiedge_inference_bench/testalgorithms/manual/devices.yaml"
+  ],
+  "gpu": [
+   "examples/imagenet/multiedge_inference_bench/testalgorithms/manual/devices.yaml"
+  ],
+  "llio_pose_estimation_benchmark": [
+   "examples/industrialEI/pose-estimation-llio/benchmarkingjob.yaml"
+  ],
+  "Deformable_Assembly_Job": [
+   "examples/industrialEI/single_task_learning_bench/deformable_component_manipulation/benchmarkingjob.yaml"
+  ],
+  "assembly_alg": [
+   "examples/industrialEI/single_task_learning_bench/deformable_component_manipulation/benchmarkingjob.yaml"
+  ],
+  "assembly_alg_naive": [
+   "examples/industrialEI/single_task_learning_bench/deformable_component_manipulation/testalgorithms/deformable_alg.yaml"
+  ],
+  "llama-cpp": [
+   "examples/llm-edge-benchmark-suite/single_task_bench/benchmarkingjob.yaml",
+   "examples/llm-edge-benchmark-suite/single_task_bench_with_compression/benchmarkingjob.yaml"
+  ],
+  "simple_qa_singletask_learning": [
+   "examples/llm_simple_qa/benchmarkingjob.yaml"
+  ],
+  "fpn_incremental_learning": [
+   "examples/pcb-aoi/incremental_learning_bench/fault_detection/benchmarkingjob.yaml"
+  ],
+  "fpn_singletask_learning": [
+   "examples/pcb-aoi/singletask_learning_bench/fault_detection/benchmarkingjob.yaml"
+  ],
+  "phys-scene-gen-benchmark": [
+   "examples/phys_scene_gen/singletask_learning_bench/benchmarkingjob.yaml"
+  ],
+  "PhysSceneGenAlgorithm": [
+   "examples/phys_scene_gen/singletask_learning_bench/benchmarkingjob.yaml"
+  ],
+  "sam_rfnet_lifelong_learning": [
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-sam.yaml"
+  ],
+  "BWT": [
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot-small.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot.yaml",
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml"
+  ],
+  "FWT": [
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot-small.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot.yaml",
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml"
+  ],
+  "MATRIX": [
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot-small.yaml",
+   "examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/testenv-robot.yaml",
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/testenv.yaml"
+  ],
+  "erfnet_lifelong_learning": [
+   "examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob.yaml"
+  ],
+  "code_comment_bench_singletask_learning": [
+   "examples/smart_coding/smart_coding_learning_bench/comment/benchmarkingjob.yaml"
+  ],
+  "mmlab-model": [
+   "examples/yaoba/singletask_learning_boost/benchmarkingjob.yaml",
+   "examples/yaoba/singletask_learning_yolox_tta/benchmarkingjob.yaml"
+  ]
+ }
+}

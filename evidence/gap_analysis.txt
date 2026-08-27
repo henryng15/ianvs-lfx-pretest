@@ -1,0 +1,138 @@
+
+==============================================================================
+OPEN ISSUES (#348-846): 195 open in range | UNCLAIMED=86 | claimed-once=44
+==============================================================================
+  #845  rivals=0  [Proposal] Phase IV: Add pytest suite and schema validation to core/
+  #778  rivals=0  [BUG] GovDoc2Poster README contains outdated file paths and instructions
+  #757  rivals=0  phys_scene_gen: algorithmenv.yaml module url is an invalid dotted-import path, not a fil
+  #751  rivals=0  [PHASE IV][llm-agent]: Model Persistence Contract Broken (save()/load() No-Ops) and Rela
+  #749  rivals=0  PCB-AoI fault_detection example fails: `tensorflow.contrib.slim` removed in TF2.x
+  #732  rivals=0  [PHASE IV][RoboDK Palletizing]: Outdated Execution Instructions and Paths in README
+  #722  rivals=0  [PHASE IV][GovDoc2Poster]: README Documentation Drift,Broken Quick Start Command, Stale 
+  #720  rivals=0  [PHASE IV][GovDoc2Poster]: Silent Result Exclusion in average_scores Calculation (Missin
+  #699  rivals=0  [PHASE IV][GovDoc2Poster]: Dataset Directory Missing, Missing 'answer' Schema Key, and H
+  #695  rivals=0  [Bug] RoboDK Palletizing example fails with the published Kaggle dataset because the dat
+  #693  rivals=0  [Enhancement] CI tests only Python 3.7–3.9; should include 3.10+ and drop EOL versions
+  #684  rivals=0  [PHASE IV] TAB: dataset filename mismatch (data.json vs data.jsonl) blocks benchmark exe
+  #671  rivals=0  [Bug] Duplicate benchmarking.py at repository root is an exact copy of core/cmd/benchmar
+  #668  rivals=0  Fix "detetion" typo in README and docs
+  #646  rivals=0  BLEU-4 metric receives predictions and ground truth in reversed order (federated-llm/fed
+  #641  rivals=0  `__all__` in `cloud_model.py` references non-existent name `QwenSemanticSegmentation`
+  #633  rivals=0  Quadratic O(n^2) leaderboard construction in Rank._get_all due to row-by-row DataFrame.l
+  #621  rivals=0  [Bug] Infinite loop vulnerability in TestCase._get_output_dir if directory already exist
+  #616  rivals=0  Bug Report about: Report a bug encountered while operating Ianvs labels
+  #615  rivals=0  [Bug] README missing instructions to generate profiler_results.yml's required .npz weigh
+  #614  rivals=0  [Bug] profiler.py requires a missing bert_input.npz file with no way to generate it in m
+  #613  rivals=0  [Bug] model_name is not configurable via classification_algorithm.yaml hyperparameters i
+  #612  rivals=0  [Bug] requirements.txt pins torch==1.13.1 and other unavailable versions in multiedge_in
+  #609  rivals=0  [Bug] devices_one.yaml has malformed type field in multiedge_inference_bench
+  #608  rivals=0  [Bug] DeiTLayerShard.forward() missing explicit kwargs causes TypeError with transformer
+  #606  rivals=0  [Bug] dataset.py __main__ strips /dataset from image paths producing broken train.txt en
+  #605  rivals=0  [Bug] dataset.py __main__ uses os.popen('cp') which is Unix-only in multiedge_inference_
+  #603  rivals=0  [Bug] torchvision ImageNet class requires ILSVRC2012_devkit_t12.tar.gz archive even when
+  #602  rivals=0  [Bug] parents[2] produces wrong dataset root path causing FileNotFoundError in multiedge
+  #599  rivals=0  [Bug] pynvml hard import crashes on non-NVIDIA systems in multiedge_inference_bench
+  #597  rivals=0  [Bug] parse_kwargs() in core/common/utils.py filters out valid keyword-only parameters
+  #568  rivals=0  EdgeModel fails to import — `LadeSpecDecLLM` is undefined in cloud-edge-collaborative-in
+  #533  rivals=0  llm-agent example: inference crashes on MPS, and half_lora is silently ignored (masking 
+  #530  rivals=0  [Bug] GovDoc2Poster: basemodel.py ignores DASHSCOPE_API_KEY environment variable and use
+  #509  rivals=0  bug: vit.py and deit.py fail with ImportError on transformers >= 5.0 due to removed clas
+  #495  rivals=0  [Audit] Core Framework Stability & Local Benchmark Runtime Validation
+  #494  rivals=0  [Bug] Local benchmarks experience massive idle delays due to unmocked Sedna HTTP retries
+  #492  rivals=0  Issue summarization for example of federated-llm/fedllm-peft
+  #491  rivals=0  Issue summarization for example of imagenet/multiedge_inference_bench
+  #490  rivals=0  Issue summarization for example of MOT17/multiedge_inference_bench.
+  #487  rivals=0  imagenet/multiedge_inference_bench: ViTSelfAttention API breaks on transformers >= 4.30 
+  #483  rivals=0  Issue summarization for example of pcb-aoi
+  #482  rivals=0  [Pre-Test: LFX Term 2 2026] Issue Summarization for imagenet/multiedge_inference_bench
+  #481  rivals=0  Issue Summarization for Example of `cityscapes-synthia/lifelong_learning_bench/semantic-
+  #480  rivals=0  imagenet/multiedge_inference_bench: BertEmbeddings.forward() signature mismatch in bert.
+  #479  rivals=0  imagenet/multiedge_inference_bench: BertSelfAttention API breaks on transformers >= 4.30
+  #478  rivals=0  imagenet/multiedge_inference_bench: save_weights() stores PyTorch tensors instead of num
+  #476  rivals=0  Issue summarization for example of bdd/lifelong_learning_bench/curb-detection
+  #475  rivals=0  Issue summarization for example of pipeline
+  #474  rivals=0  Issue summarization for example of pipeline
+  #473  rivals=0  [Bug] task_allocation_by_domain.py and cityscapes.py crash at runtime due to Sedna inter
+  #472  rivals=0  [Bug] ERFNet training fails with deprecated torchvision API and DataLoader worker import
+  #469  rivals=0  Issue summarization for example of industrialEI/single_task_learning_bench
+  #464  rivals=0  [robot-cityscapes-synthia] Missing requirements.txt — ERFNet dependencies undeclared, bl
+  #463  rivals=0  [robot-cityscapes-synthia] sedna_evaluate.py and sedna_train.py use stale 2-domain API i
+  #458  rivals=0  Issue summarization for example of aoa
+  #455  rivals=0  Issue summarization for example of GovDoc2Poster
+  #454  rivals=0  [Pre-Test : LFX-Term 2 2026] Issue Summarization Cifar100
+  #453  rivals=0  Issue summarization for example of cloud-edge-collaborative-inference-for-llm
+  #449  rivals=0  [MOT17] Missing `requirements.txt` and Docker-specific workspace path block bare-metal s
+  #448  rivals=0  [MOT17] NaN propagation from upstream tracking metrics corrupts leaderboard CSV
+  #447  rivals=0  [MOT17] ReID metric evaluation crashes on edge cases: `IndexError` in rank metrics; unha
+  #446  rivals=0  Issue summarization for example of `yaoba`
+  #445  rivals=0  [MOT17] M3L basemodel.py: unguarded regex crashes on non-standard checkpoints; deprecate
+  #443  rivals=0  [MOT17] ByteTrack basemodel.py crashes on multi-GPU: `DDP` and `dist` never imported
+  #442  rivals=0  Issue summarization for example of MOT17/multiedge_inference_bench
+  #436  rivals=0  Issue summarization for example of government (singletask_learning_bench + government_ra
+  #435  rivals=0  Issue summarization for example of llm-edge-benchmark-suite
+  #434  rivals=0  [Bug] phys_scene_gen blocked on macOS ARM64 due to wheel resolution cascades and C++ com
+  #431  rivals=0  Issue summarization for example of PIPL
+
+==============================================================================
+OPEN NON-DRAFT PRs (#133-851): 265 | UNCLAIMED=71
+==============================================================================
+  #807  rivals=0  fix(cloud-edge-llm): add GPQA-diamond dataset setup without Kaggle/HF auth
+  #804  rivals=0  fix: correct 'detetion' to 'detection' typo in docs and rename file
+  #795  rivals=0  Fix invalid YAML indentation in yaoba README documentation
+  #782  rivals=0  fix(examples/llm_simple_qa): restore llm_simple_qa example benchmark and fix path corrup
+  #779  rivals=0  docs(govdoc2poster): fix README paths and instructions
+  #772  rivals=0  fix: handle quasi identifiers in hard sample mining
+  #762  rivals=0  fix(cifar100): remove hardcoded developer paths
+  #761  rivals=0  docs: document GPU access for Docker quick start
+  #756  rivals=0  fix(core): correct filename in Data Info File error message
+  #754  rivals=0  chore: fix meeting link in examples contributing guide
+  #750  rivals=0  Fix typo in README.md (detetion → detection)
+  #739  rivals=0  fix(examples): remove protobuf<=3.20.3 pin conflicting with core onnx
+  #737  rivals=0  [PHASE IV] fix(RoboDK Palletizing): Correct broken Quick Start run commands in README
+  #726  rivals=0  fix: correct dashscope requirement specifier
+  #725  rivals=0  [PHASE IV] fix(GovDoc2Poster): correct broken Quick Start command, stale folder name, an
+  #714  rivals=0  docs: fix typos in LLM inference README
+  #691  rivals=0  fix(robot): restore environment configuration and add dataset validation for robot examp
+  #689  rivals=0  [PHASE IV] fix(phys_scene_gen): migrate langchain to langchain-core/langchain-openai for
+  #679  rivals=0  fix(examples): enable Windows support and backend fallbacks in cloud-edge LLM benchmark
+  #663  rivals=0  fix(profiler): auto-generate bert_input.npz for BERT models if missing
+  #658  rivals=0  fix(llm): prevent keyerror and zero division in collaborative inference metrics
+  #655  rivals=0  feat(llm): enable model quantization support in vllm backend
+  #654  rivals=0  fix(examples): resolve speculative decoding, cache warnings, and config/doc inconsistenc
+  #653  rivals=0  fix(examples/TAB): api_key_env should hold env var name, not a litera…
+  #651  rivals=0  fix(examples): declare __all__ as a list instead of a parenthesised string
+  #650  rivals=0  fix(examples): resolve KeyError and ZeroDivisionError in cloud-edge LLM testenv
+  #642  rivals=0  fix: correct __all__ mismatch in Cloud_Robotics cloud_model.py
+  #632  rivals=0  cleanup: remove dead code in JointInference.set_config()
+  #617  rivals=0  cleanup(core): remove unused paradigm files tightly coupled to examples
+  #594  rivals=0  fix(examples/robot-cityscapes-synthia): add missing requirements.txt for ERFNet semantic
+  #587  rivals=0  docs: add edge-cloud collaboration with large foundation models 
+  #583  rivals=0  fix: add requirements.txt and replace hardcoded paths in government example
+  #576  rivals=0  fix: add missing requirements.txt for federated-llm example
+  #570  rivals=0  fix: use elif in _write_data_file and _read_data_file to avoid redundant checks
+  #569  rivals=0  fix: remove undefined LadeSpecDecLLM import from edge_model --  issue#568
+  #564  rivals=0  fix: replace JsonlDataParse with JSONDataParse to match Sedna API
+  #562  rivals=0  fix 502: portable paths and zero-division guard in llm_simple_qa example
+  #556  rivals=0  fix: prevent NaN propagation in MOT17 tracking metrics
+  #551  rivals=0  fix: add None guard for regex in load() and update addmm_() for PyTorch >= 2.0 compatibi
+  #548  rivals=0  fix: resolve TypeError by properly instantiating model before loading state_dict in unse
+  #547  rivals=0  fix: add guards against ZeroDivisionError across cloud-edge LLM metrics and backends
+  #546  rivals=0  fix(aoa/TForest) : add requirements.txt and harden hardcoded paths in tools.py
+  #542  rivals=0  fix: resolve missing dataset and config issues in compression benchmark.
+  #540  rivals=0  fix(examples): add backwards-compatible fallback for transformers>=5.0 in ViT/DeiT model
+  #534  rivals=0  fix(llm-agent): device placement crash on MPS and silently ignored half_lora flag
+  #518  rivals=0   create requirements.txt file
+  #513  rivals=0  fix: update stale 2-domain config to 3-domain in robot-cityscapes-synthia
+  #497  rivals=0  fix(engine): standardize workspace path portability
+  #484  rivals=0  examples: fix compression requirements filename
+  #433  rivals=0  fix(phys_scene_gen): comprehensive dependency modernization for modern Python architectu
+  #428  rivals=0  fix(cloud_VLA_finetune): rename requirement.txt to requirements.txt a…
+  #419  rivals=0  docs(proposals): enhance parallel processing proposal
+  #417  rivals=0  ci: add codespell spell-check workflow
+  #404  rivals=0  fix(PIPL): replace mocked static float metrics with dynamic runtime e…
+  #388  rivals=0  fix(llm_simple_qa): replace hardcoded paths and fix basemodel compatibility
+  #386  rivals=0  Refactor: Use IANVS_EVAL_WORKSPACE for evaluating metric artifact paths
+  #378  rivals=0  fix: tolerate recoverable cloud API failures in APIBasedLLM
+  #377  rivals=0  docs: clarify dataset format configuration for testenv
+  #359  rivals=0  fix: add missing retry dependency to LLM example requirements
+  #355  rivals=0  update maintainer email and format description

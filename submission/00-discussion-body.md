@@ -76,3 +76,75 @@ claimed. `robot-cityscapes-synthia` cannot be run at all — its `testenv.yaml:5
 `/home/QXY/dataset/mdil-ss/...` and the repository publishes no download URL for
 `mdil-ss.zip`. Where a claim is static, it is labelled static. No unexecuted check is
 described as passed.
+
+---
+
+## Appendix — self-contained reproductions
+
+Full tooling, raw output and progress notes:
+[`github.com/henryng15/ianvs-lfx-pretest`](https://github.com/henryng15/ianvs-lfx-pretest).
+The two checks below are inlined so nothing in this submission depends on that link.
+Both need only a clone of Ianvs at `37a9c60` and a Python 3 with `PyYAML`.
+
+### A1 — `__all__` is not read by Ianvs (Task 1 E1, Task 2 R2)
+
+```bash
+cd /path/to/ianvs && git rev-parse --short HEAD     # expect 37a9c60
+grep -rn "__all__" core/            | wc -l         # expect 0
+grep -rnE "^\s*from .* import \*" core/ | wc -l     # expect 0
+grep -rn "ClassFactory.get_cls" core/               # the real resolution path
+```
+
+```python
+# how many Example modules with a malformed __all__ are ever star-imported
+import ast, pathlib, re
+EX = pathlib.Path("examples")
+star = {m.group(1).split(".")[-1]
+        for f in EX.rglob("*.py")
+        for m in re.finditer(r"^\s*from\s+([\w\.]+)\s+import\s+\*",
+                             f.read_text(errors="replace"), re.M)}
+bad = []
+for f in EX.rglob("*.py"):
+    try: t = ast.parse(f.read_text(errors="replace"))
+    except SyntaxError: continue
+    for n in t.body:
+        if isinstance(n, ast.Assign) and any(
+                getattr(x, "id", None) == "__all__" for x in n.targets):
+            if isinstance(n.value, ast.Constant):        # a string, not a sequence
+                bad.append(f)
+print("malformed __all__:", len(bad),
+      "| of those star-imported:", sum(f.stem in star for f in bad))
+```
+
+### A2 — PR #558 removes pickle recoverability (Task 2 R4b)
+
+```bash
+cd /path/to/ianvs
+git fetch --depth=1 origin pull/558/head:pr-558
+```
+
+```python
+# run once per ref; `ref` selects which load_module implementation is exercised
+import pickle, subprocess, sys, tempfile, pathlib, textwrap
+ref = sys.argv[1]                                    # "main" or "pr-558"
+wd = pathlib.Path(tempfile.mkdtemp())
+subprocess.run(["git", "worktree", "add", "-q", "--detach", str(wd/"t"), ref], check=True)
+src = wd/"ex"; src.mkdir()
+(src/"taskdef.py").write_text(
+    "class TaskDefinitionByDomain:\n"
+    "    def __init__(self, d): self.d = d\n")
+sys.path.insert(0, str(wd/"t"))
+from core.common.utils import load_module
+load_module(str(src/"taskdef.py"))
+mod = next(m for n, m in sys.modules.items() if n.startswith("taskdef"))
+print("__module__ recorded by pickle:", mod.TaskDefinitionByDomain.__module__)
+pickle.dump(mod.TaskDefinitionByDomain("Cityscapes"), open(wd/"ti.pkl", "wb"))
+# now, in a FRESH interpreter, with the source dir on sys.path:
+#   sys.path.insert(0, "<wd>/ex"); pickle.load(open("<wd>/ti.pkl","rb"))
+#   main    -> loads
+#   pr-558  -> ModuleNotFoundError: No module named 'taskdef_<md5>'
+```
+
+Observed: `main` records `taskdef` and reloads; `pr-558` records
+`taskdef_<md5 of the absolute path>`, which names no file on disk, so no `sys.path`
+manipulation recovers it. The md5 also changes with the checkout directory.

@@ -1,0 +1,34 @@
+diff --git a/examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/edge_model.py b/examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/edge_model.py
+index d62b49732..24aa1b562 100644
+--- a/examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/edge_model.py
++++ b/examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/edge_model.py
+@@ -18,7 +18,7 @@
+ 
+ from core.common.log import LOGGER
+ from sedna.common.class_factory import ClassType, ClassFactory
+-from models import HuggingfaceLLM, APIBasedLLM, VllmLLM, EagleSpecDecModel, LadeSpecDecLLM
++from models import HuggingfaceLLM, APIBasedLLM, VllmLLM, EagleSpecDecModel
+ 
+ os.environ['BACKEND_TYPE'] = 'TORCH'
+ 
+@@ -73,8 +73,6 @@ def load(self, **kwargs):
+                 self.model = APIBasedLLM(**self.kwargs)
+             elif self.backend == "EagleSpecDec":
+                 self.model = EagleSpecDecModel(**self.kwargs)
+-            elif self.backend == "LadeSpecDec":
+-                self.model = LadeSpecDecLLM(**self.kwargs)
+         except Exception as e:
+             LOGGER.error(f"Failed to initialize model backend `{self.backend}`: {str(e)}")
+             raise RuntimeError(f"Model loading failed for backend `{self.backend}`.") from e
+diff --git a/examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/test_queryrouting.yaml b/examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/test_queryrouting.yaml
+index 650f3a01b..d0afd8361 100644
+--- a/examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/test_queryrouting.yaml
++++ b/examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/test_queryrouting.yaml
+@@ -29,7 +29,6 @@ algorithm:
+             #  2> "vllm": vLLM backend;
+             #  3> "api": OpenAI API backend;
+             #  4> "EagleSpecDec": EAGLE Speculative Decoding framework;
+-            #  5> "LadeSepcDec": Lookahead Decoding framework;
+             values:
+               - "huggingface"
+               - "vllm"

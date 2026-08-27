@@ -46,7 +46,7 @@ Both are readability improvements, not bug fixes. Neither PR has a single review
 So **#598** and **#702** are two PRs for one issue (#597), correcting a genuine
 defect in code nothing reaches. Neither has a review.
 
-### F3 — PR #558 makes lifelong-learning knowledge bases unrecoverable  ← headline
+### F3 — PR #558: transitive-import collision (active) and lost pickle recoverability (latent)
 
 `evidence/probe_pr558_pickle.txt`
 
@@ -68,10 +68,14 @@ on disk**, and the md5 changes with the absolute path — so the artifact does n
 survive a move between checkout directories, containers, or the edge/cloud
 knowledge-base transfer lifelong learning performs by design.
 
-**Not raised by any existing review.** The three rival reviewers on #558 tested
-basename collision, `sys.path` restoration and repeat-load. @Aryansingh-ai listed
-"modules that import other modules internally" as a compatibility *concern* and
-explicitly stated it was not demonstrated. Persistence was not examined at all.
+**Scope, verified:** no shipped Example puts an Example-defined class into the pickled
+`task_index` (all four `task_definition` modules return a plain dict; `Task.model` is a
+path string before dump), so this is a **latent** regression, reported as such.
+
+**Also found and demonstrated:** #558 fixes identity only for the file it opens. Sibling
+imports still collide — example_B's `basemodel` binds example_A's `utils`, returning 1
+instead of 100. @Aryansingh-ai raised this as an undemonstrated concern; it is now
+demonstrated (`evidence/probe_pr558_transitive.txt`).
 
 ## Mandatory target set
 

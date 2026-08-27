@@ -1,0 +1,15 @@
+--- main @ 37a9c60 ------------------------------------------
+  load  resolved sys.modules key                      its code    its utils   predict(1)  #keys
+  A     basemodel                                     example_A   example_A   1           1
+  B     basemodel                                     example_A   example_A   1           1
+
+  sys.modules keys for utils: utils
+
+--- pr-558 @ b99161f ----------------------------------------
+  load  resolved sys.modules key                      its code    its utils   predict(1)  #keys
+  A     basemodel_07ba5995dc08339e8a522eb9f550edc0    example_A   example_A   1           1
+  B     basemodel_9d30c22363ad2e9366408846345ef483    example_B   example_A   1           2
+
+  sys.modules keys for utils: utils
+
+Expected if the fix were complete: example_B.predict(1) == 100.

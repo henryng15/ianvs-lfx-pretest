@@ -1,0 +1,10 @@
+ParadigmType admits 7 values: ['federatedclassincrementallearning', 'federatedlearning', 'incrementallearning', 'jointinference', 'lifelonglearning', 'multiedgeinference', 'singletasklearning']
+
+distinct paradigm_type values declared by Examples : 9
+of those, NOT admitted by ParadigmType             : 2
+
+  'singletasklearning_acboost' -> dispatch falls through, returns None
+      examples/yaoba/singletask_learning_boost/testalgorithms/algorithm.yaml
+
+  'singletasklearning_tta' -> dispatch falls through, returns None
+      examples/yaoba/singletask_learning_yolox_tta/testalgorithms/algorithm.yaml

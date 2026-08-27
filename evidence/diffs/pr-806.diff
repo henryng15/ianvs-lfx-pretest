@@ -1,0 +1,108 @@
+diff --git a/core/common/utils.py b/core/common/utils.py
+index e7ad65226..abeaf6c57 100644
+--- a/core/common/utils.py
++++ b/core/common/utils.py
+@@ -63,17 +63,19 @@ def py2dict(url):
+     if url.endswith('.py'):
+         module_name = os.path.basename(url)[:-3]
+         config_dir = os.path.dirname(url)
++        old_sys_path = sys.path.copy()
+         sys.path.insert(0, config_dir)
+-        mod = import_module(module_name)
+-        sys.path.pop(0)
+-        raw_dict = {
+-            name: value
+-            for name, value in mod.__dict__.items()
+-            if not name.startswith('__')
+-        }
+-        sys.modules.pop(module_name)
+-
+-        return raw_dict
++        try:
++            mod = import_module(module_name)
++            raw_dict = {
++                name: value
++                for name, value in mod.__dict__.items()
++                if not name.startswith('__')
++            }
++            return raw_dict
++        finally:
++            sys.modules.pop(module_name, None)
++            sys.path[:] = old_sys_path
+ 
+     raise RuntimeError('config file must be the py format')
+ 
+@@ -95,9 +97,11 @@ def load_module(url):
+     if os.path.isfile(url):
+         module_name = module_name.split(".")[0]
+ 
++    old_sys_path = sys.path.copy()
+     sys.path.insert(0, module_path)
+     try:
+         importlib.import_module(module_name)
+-        sys.path.pop(0)
+     except Exception as err:
+         raise RuntimeError(f"load module(url={url}) failed, error: {err}") from err
++    finally:
++        sys.path[:] = old_sys_path
+diff --git a/pytest.ini b/pytest.ini
+new file mode 100644
+index 000000000..5ee647716
+--- /dev/null
++++ b/pytest.ini
+@@ -0,0 +1,2 @@
++[pytest]
++testpaths = tests
+diff --git a/tests/test_utils.py b/tests/test_utils.py
+new file mode 100644
+index 000000000..bc0c796e9
+--- /dev/null
++++ b/tests/test_utils.py
+@@ -0,0 +1,47 @@
++import sys
++import pytest
++
++from core.common import utils
++
++def test_py2dict_success(tmp_path):
++    test_file = tmp_path / "good_module.py"
++    test_file.write_text("TEST_VAR = 'value'")
++
++    initial_sys_path = list(sys.path)
++
++    result = utils.py2dict(str(test_file))
++
++    assert result.get("TEST_VAR") == "value"
++    assert sys.path == initial_sys_path
++
++def test_py2dict_failure(tmp_path):
++    test_file = tmp_path / "bad_module.py"
++    test_file.write_text("1 / 0")
++
++    initial_sys_path = list(sys.path)
++
++    with pytest.raises(ZeroDivisionError):
++        utils.py2dict(str(test_file))
++
++    assert sys.path == initial_sys_path
++
++def test_load_module_success(tmp_path):
++    test_file = tmp_path / "good_load.py"
++    test_file.write_text("LOADED = True")
++
++    initial_sys_path = list(sys.path)
++
++    utils.load_module(str(test_file))
++
++    assert sys.path == initial_sys_path
++
++def test_load_module_failure(tmp_path):
++    test_file = tmp_path / "bad_load.py"
++    test_file.write_text("import missing_package_non_existent")
++
++    initial_sys_path = list(sys.path)
++
++    with pytest.raises(RuntimeError):
++        utils.load_module(str(test_file))
++
++    assert sys.path == initial_sys_path

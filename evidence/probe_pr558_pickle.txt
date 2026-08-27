@@ -1,0 +1,15 @@
+main    @ 37a9c60
+pr-558  @ b99161f
+
+--- main ----------------------------------------------------------
+  MODULE_NAME   taskdef
+  CLASS_MODULE  taskdef
+  UNPICKLE (no sys.path help)  LOAD-FAIL ModuleNotFoundError: No module named 'taskdef'
+  UNPICKLE (source dir on sys.path) LOAD-OK TaskDefinitionByDomain('Cityscapes')
+
+--- pr-558 --------------------------------------------------------
+  MODULE_NAME   taskdef_ac3cfc87aaac3df0bbe2a804c0808eb1
+  CLASS_MODULE  taskdef_ac3cfc87aaac3df0bbe2a804c0808eb1
+  UNPICKLE (no sys.path help)  LOAD-FAIL ModuleNotFoundError: No module named 'taskdef_ac3cfc87aaac3df0bbe2a804c0808eb1'
+  UNPICKLE (source dir on sys.path) LOAD-FAIL ModuleNotFoundError: No module named 'taskdef_ac3cfc87aaac3df0bbe2a804c0808eb1'
+

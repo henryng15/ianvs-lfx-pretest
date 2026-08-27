@@ -1,0 +1,23 @@
+ianvs commit under test: 37a9c60
+
+[1] Call sites of core.common.utils.parse_kwargs
+    definitions : ['core/common/utils.py:46']
+    invocations : NONE
+    imports of the helper: NONE
+
+[2] Sedna wheel (resources/third_party/sedna-0.6.0.1-py3-none-any.whl)
+    Sedna defines its own parse_kwargs at : ['sedna/backend/base.py:47']
+    Sedna call sites                      : ['sedna/backend/base.py:58', 'sedna/backend/base.py:61', 'sedna/backend/base.py:67', 'sedna/backend/base.py:70', 'sedna/backend/base.py:75', 'sedna/backend/base.py:80', 'sedna/backend/base.py:85', 'sedna/backend/base.py:117', 'sedna/backend/mindspore/__init__.py:47', 'sedna/backend/mindspore/__init__.py:55', 'sedna/backend/mindspore/__init__.py:61', 'sedna/backend/tensorflow/__init__.py:72', 'sedna/backend/tensorflow/__init__.py:83', 'sedna/backend/tensorflow/__init__.py:90']
+    Sedna imports from core.common.utils  : NO
+
+[3] Reported behaviour of the Ianvs helper (issue #597)
+    parse_kwargs(positional, threshold=0.9) -> {'threshold': 0.9}
+    parse_kwargs(kwonly,     threshold=0.9) -> {}
+    -> the drop is real; getfullargspec().kwonlyargs is ignored.
+
+========================================================================
+  Ianvs core defines parse_kwargs and never calls it.
+  Sedna ships and calls its OWN parse_kwargs; it does not import Ianvs's.
+  #598 and #702 therefore correct a real defect in unreachable code,
+  and they are two PRs for one issue.
+========================================================================

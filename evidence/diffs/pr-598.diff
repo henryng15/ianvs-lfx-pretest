@@ -1,0 +1,65 @@
+diff --git a/core/common/utils.py b/core/common/utils.py
+index e7ad65226..041147aba 100644
+--- a/core/common/utils.py
++++ b/core/common/utils.py
+@@ -48,9 +48,10 @@ def parse_kwargs(func, **kwargs):
+     if not callable(func):
+         return kwargs
+     need_kw = getfullargspec(func)
+-    if need_kw.varkw == 'kwargs':
++    if need_kw.varkw:
+         return kwargs
+-    return {k: v for k, v in kwargs.items() if k in need_kw.args}
++    valid_args = set(need_kw.args) | set(need_kw.kwonlyargs or [])
++    return {k: v for k, v in kwargs.items() if k in valid_args}
+ 
+ 
+ def get_local_time():
+diff --git a/tests/test_utils.py b/tests/test_utils.py
+new file mode 100644
+index 000000000..8fbce180f
+--- /dev/null
++++ b/tests/test_utils.py
+@@ -0,0 +1,42 @@
++# Copyright 2024 The KubeEdge Authors.
++#
++# Licensed under the Apache License, Version 2.0 (the "License");
++# you may not use this file except in compliance with the License.
++# You may obtain a copy of the License at
++#
++#     http://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing, software
++# distributed under the License is distributed on an "AS IS" BASIS,
++# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++# See the License for the specific language governing permissions and
++# limitations under the License.
++
++from core.common.utils import parse_kwargs
++
++
++def test_parse_kwargs_positional_and_kwonlyargs():
++    def sample_func(a, b=1, *, c=2, d=3):
++        return a + b + c + d
++
++    kwargs = {"a": 10, "b": 20, "c": 30, "d": 40, "extra": 50}
++    filtered = parse_kwargs(sample_func, **kwargs)
++
++    assert filtered == {"a": 10, "b": 20, "c": 30, "d": 40}
++    assert "extra" not in filtered
++
++
++def test_parse_kwargs_varkw():
++    def sample_func_with_kwargs(a, **kwargs):
++        pass
++
++    def sample_func_with_opts(a, **opts):
++        pass
++
++    kwargs = {"a": 1, "b": 2, "c": 3}
++    assert parse_kwargs(sample_func_with_kwargs, **kwargs) == kwargs
++    assert parse_kwargs(sample_func_with_opts, **kwargs) == kwargs
++
++
++def test_parse_kwargs_non_callable():
++    assert parse_kwargs("not_a_func", x=1, y=2) == {"x": 1, "y": 2}

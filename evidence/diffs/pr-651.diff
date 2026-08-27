@@ -1,0 +1,233 @@
+diff --git a/examples/RoboDK Palletizing/singletask_learning_bench/testenv/map50.py b/examples/RoboDK Palletizing/singletask_learning_bench/testenv/map50.py
+index 0f7163fc3..a94fe2cf2 100644
+--- a/examples/RoboDK Palletizing/singletask_learning_bench/testenv/map50.py	
++++ b/examples/RoboDK Palletizing/singletask_learning_bench/testenv/map50.py	
+@@ -7,7 +7,7 @@
+ from sedna.common.class_factory import ClassType, ClassFactory
+ 
+ logger = logging.getLogger(__name__)
+-__all__ = ('map50')
++__all__ = ["map50"]
+ 
+ def xywh2xyxy_rel(xywh):
+     """
+diff --git a/examples/RoboDK Palletizing/singletask_learning_bench/testenv/map90.py b/examples/RoboDK Palletizing/singletask_learning_bench/testenv/map90.py
+index e9a4ab39a..a403bcd25 100644
+--- a/examples/RoboDK Palletizing/singletask_learning_bench/testenv/map90.py	
++++ b/examples/RoboDK Palletizing/singletask_learning_bench/testenv/map90.py	
+@@ -7,7 +7,7 @@
+ from sedna.common.class_factory import ClassType, ClassFactory
+ 
+ logger = logging.getLogger(__name__)
+-__all__ = ('map90')
++__all__ = ["map90"]
+ 
+ def xywh2xyxy_rel(xywh):
+     """
+diff --git a/examples/bdd/lifelong_learning_bench/curb-detection/testenv/map.py b/examples/bdd/lifelong_learning_bench/curb-detection/testenv/map.py
+index a5d3642e3..57803e384 100644
+--- a/examples/bdd/lifelong_learning_bench/curb-detection/testenv/map.py
++++ b/examples/bdd/lifelong_learning_bench/curb-detection/testenv/map.py
+@@ -18,7 +18,7 @@
+ from sedna.common.class_factory import ClassType, ClassFactory
+ 
+ 
+-__all__ = ('map')
++__all__ = ["map"]
+ 
+ import sys
+ import torch
+diff --git a/examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testalgorithms/rfnet/RFNet/accuracy.py b/examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testalgorithms/rfnet/RFNet/accuracy.py
+index 8d356fed1..80a9acf9f 100644
+--- a/examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testalgorithms/rfnet/RFNet/accuracy.py
++++ b/examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testalgorithms/rfnet/RFNet/accuracy.py
+@@ -4,7 +4,7 @@
+ from dataloaders import make_data_loader
+ from sedna.common.class_factory import ClassType, ClassFactory
+ 
+-__all__ = ('accuracy')
++__all__ = ["accuracy"]
+ 
+ @ClassFactory.register(ClassType.GENERAL)
+ def accuracy(y_true, y_pred, **kwargs):
+diff --git a/examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testenv/accuracy.py b/examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testenv/accuracy.py
+index 7826d897f..00afb2711 100644
+--- a/examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testenv/accuracy.py
++++ b/examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testenv/accuracy.py
+@@ -20,7 +20,7 @@
+ from RFNet.utils.metrics import Evaluator
+ from RFNet.utils.args import ValArgs
+ 
+-__all__ = ('accuracy')
++__all__ = ["accuracy"]
+ 
+ 
+ @ClassFactory.register(ClassType.GENERAL, alias="accuracy")
+diff --git a/examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/RFNet/accuracy.py b/examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/RFNet/accuracy.py
+index 8d356fed1..80a9acf9f 100644
+--- a/examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/RFNet/accuracy.py
++++ b/examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/RFNet/accuracy.py
+@@ -4,7 +4,7 @@
+ from dataloaders import make_data_loader
+ from sedna.common.class_factory import ClassType, ClassFactory
+ 
+-__all__ = ('accuracy')
++__all__ = ["accuracy"]
+ 
+ @ClassFactory.register(ClassType.GENERAL)
+ def accuracy(y_true, y_pred, **kwargs):
+diff --git a/examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py b/examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py
+index 45db88f20..c0e048be2 100644
+--- a/examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py
++++ b/examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py
+@@ -20,7 +20,7 @@
+ from RFNet.utils.metrics import Evaluator
+ from RFNet.utils.args import ValArgs
+ 
+-__all__ = ('accuracy')
++__all__ = ["accuracy"]
+ 
+ 
+ @ClassFactory.register(ClassType.GENERAL, alias="accuracy")
+diff --git a/examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testalgorithms/rfnet/RFNet/accuracy.py b/examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testalgorithms/rfnet/RFNet/accuracy.py
+index 8d356fed1..80a9acf9f 100644
+--- a/examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testalgorithms/rfnet/RFNet/accuracy.py
++++ b/examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testalgorithms/rfnet/RFNet/accuracy.py
+@@ -4,7 +4,7 @@
+ from dataloaders import make_data_loader
+ from sedna.common.class_factory import ClassType, ClassFactory
+ 
+-__all__ = ('accuracy')
++__all__ = ["accuracy"]
+ 
+ @ClassFactory.register(ClassType.GENERAL)
+ def accuracy(y_true, y_pred, **kwargs):
+diff --git a/examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testenv/accuracy.py b/examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testenv/accuracy.py
+index 7826d897f..00afb2711 100644
+--- a/examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testenv/accuracy.py
++++ b/examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testenv/accuracy.py
+@@ -20,7 +20,7 @@
+ from RFNet.utils.metrics import Evaluator
+ from RFNet.utils.args import ValArgs
+ 
+-__all__ = ('accuracy')
++__all__ = ["accuracy"]
+ 
+ 
+ @ClassFactory.register(ClassType.GENERAL, alias="accuracy")
+diff --git a/examples/cityscapes/singletask_learning_bench/semantic-segmentation/testenv/map.py b/examples/cityscapes/singletask_learning_bench/semantic-segmentation/testenv/map.py
+index 531f840bf..33d00451f 100644
+--- a/examples/cityscapes/singletask_learning_bench/semantic-segmentation/testenv/map.py
++++ b/examples/cityscapes/singletask_learning_bench/semantic-segmentation/testenv/map.py
+@@ -6,7 +6,7 @@
+ import RFNet.eval_config as valid_cfgs
+ from RFNet.utils.metrics import Evaluator
+ 
+-__all__ = ('accuracy')
++__all__ = ["accuracy"]
+ 
+ 
+ @ClassFactory.register(ClassType.GENERAL, alias="map")
+diff --git a/examples/imagenet/multiedge_inference_bench/testenv/accuracy.py b/examples/imagenet/multiedge_inference_bench/testenv/accuracy.py
+index 86f78d699..8fdd95d4d 100644
+--- a/examples/imagenet/multiedge_inference_bench/testenv/accuracy.py
++++ b/examples/imagenet/multiedge_inference_bench/testenv/accuracy.py
+@@ -1,6 +1,6 @@
+ from sedna.common.class_factory import ClassType, ClassFactory
+ 
+-__all__ = ('accuracy')
++__all__ = ["accuracy"]
+ 
+ @ClassFactory.register(ClassType.GENERAL, alias="accuracy")
+ def accuracy(y_true, y_pred, **kwargs):
+diff --git a/examples/imagenet/multiedge_inference_bench/testenv/fps.py b/examples/imagenet/multiedge_inference_bench/testenv/fps.py
+index 810e72f67..e9bafb2f8 100644
+--- a/examples/imagenet/multiedge_inference_bench/testenv/fps.py
++++ b/examples/imagenet/multiedge_inference_bench/testenv/fps.py
+@@ -5,7 +5,7 @@
+ 
+ import matplotlib.pyplot as plt
+ 
+-__all__ = ('fps')
++__all__ = ["fps"]
+ 
+ @ClassFactory.register(ClassType.GENERAL, alias="fps")
+ def fps(y_true, y_pred, **kwargs):
+diff --git a/examples/imagenet/multiedge_inference_bench/testenv/peak_power.py b/examples/imagenet/multiedge_inference_bench/testenv/peak_power.py
+index 7618e714a..3b592991f 100644
+--- a/examples/imagenet/multiedge_inference_bench/testenv/peak_power.py
++++ b/examples/imagenet/multiedge_inference_bench/testenv/peak_power.py
+@@ -5,7 +5,7 @@
+ 
+ import matplotlib.pyplot as plt
+ 
+-__all__ = ('peak_power')
++__all__ = ["peak_power"]
+ 
+ @ClassFactory.register(ClassType.GENERAL, alias="peak_power")
+ def peak_power(y_true, y_pred, **kwargs):
+diff --git a/examples/pcb-aoi/incremental_learning_bench/fault_detection/testalgorithms/fpn/hard_example_mining.py b/examples/pcb-aoi/incremental_learning_bench/fault_detection/testalgorithms/fpn/hard_example_mining.py
+index 1b45eb7aa..17a35137c 100644
+--- a/examples/pcb-aoi/incremental_learning_bench/fault_detection/testalgorithms/fpn/hard_example_mining.py
++++ b/examples/pcb-aoi/incremental_learning_bench/fault_detection/testalgorithms/fpn/hard_example_mining.py
+@@ -18,7 +18,7 @@
+ 
+ from sedna.common.class_factory import ClassFactory, ClassType
+ 
+-__all__ = ('IBTFilter')
++__all__ = ["IBTFilter"]
+ 
+ 
+ class BaseFilter(metaclass=abc.ABCMeta):
+diff --git a/examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/ERFNet/accuracy.py b/examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/ERFNet/accuracy.py
+index 5a0205d24..f465d5e4b 100644
+--- a/examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/ERFNet/accuracy.py
++++ b/examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/ERFNet/accuracy.py
+@@ -4,7 +4,7 @@
+ from dataloaders import make_data_loader
+ from sedna.common.class_factory import ClassType, ClassFactory
+ 
+-__all__ = ('accuracy')
++__all__ = ["accuracy"]
+ 
+ 
+ @ClassFactory.register(ClassType.GENERAL)
+diff --git a/examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py b/examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py
+index 4dd636136..bfe83eefd 100644
+--- a/examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py
++++ b/examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py
+@@ -20,7 +20,7 @@
+ from ERFNet.utils.metrics import Evaluator
+ from ERFNet.utils.args import ValArgs
+ 
+-__all__ = ('accuracy')
++__all__ = ["accuracy"]
+ 
+ 
+ @ClassFactory.register(ClassType.GENERAL, alias="accuracy")
+diff --git a/examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/RFNet/accuracy.py b/examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/RFNet/accuracy.py
+index 4fb068f11..2a9188f95 100644
+--- a/examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/RFNet/accuracy.py
++++ b/examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/RFNet/accuracy.py
+@@ -4,7 +4,7 @@
+ from dataloaders import make_data_loader
+ from sedna.common.class_factory import ClassType, ClassFactory
+ 
+-__all__ = ('accuracy')
++__all__ = ["accuracy"]
+ 
+ @ClassFactory.register(ClassType.GENERAL)
+ def accuracy(y_true, y_pred, **kwargs):
+diff --git a/examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py b/examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py
+index 7e6fcb2a2..f2a0b4241 100644
+--- a/examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py
++++ b/examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py
+@@ -20,7 +20,7 @@
+ from RFNet.utils.metrics import Evaluator
+ from RFNet.utils.args import ValArgs
+ 
+-__all__ = ('accuracy')
++__all__ = ["accuracy"]
+ 
+ 
+ @ClassFactory.register(ClassType.GENERAL, alias="accuracy")

@@ -1,0 +1,50 @@
+ianvs commit under test: 37a9c60
+
+[1] star-imports in core/ : 0  -> none, as expected
+
+[2] Core resolution sites using ClassFactory.get_cls: 3
+    core/testcasecontroller/metrics/metrics.py:173:            metric_func = ClassFactory.get_cls(
+    core/testcasecontroller/algorithm/module/module.py:116:                    agg = ClassFactory.get_cls(
+    core/testcasecontroller/algorithm/module/module.py:130:                    func = ClassFactory.get_cls(
+    Core references to __all__: NONE
+
+[3] Example modules with a malformed __all__: 30
+    never star-imported examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/testalgorithms/cloud_model.py:23  (names ['QwenSemanticSegmentation'] not defined in module)
+    never star-imported examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/f1_score.py:22  (names ['f1_score'] not defined in module)
+    never star-imported examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/idf1.py:22  (names ['idf1'] not defined in module)
+    never star-imported examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/mota.py:22  (names ['mota'] not defined in module)
+    never star-imported examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/motp.py:22  (names ['motp'] not defined in module)
+    never star-imported examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/precision.py:22  (names ['precision'] not defined in module)
+    never star-imported examples/MOT17/multiedge_inference_bench/pedestrian_tracking/testenv/tracking/recall.py:22  (names ['recall'] not defined in module)
+    never star-imported examples/RoboDK Palletizing/singletask_learning_bench/testenv/map50.py:10  (string 'map50', not a sequence)
+    never star-imported examples/RoboDK Palletizing/singletask_learning_bench/testenv/map90.py:10  (string 'map90', not a sequence)
+    never star-imported examples/bdd/lifelong_learning_bench/curb-detection/testenv/map.py:21  (string 'map', not a sequence)
+    never star-imported examples/cityscapes/singletask_learning_bench/semantic-segmentation/testenv/map.py:9  (string 'accuracy', not a sequence)
+    never star-imported examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testalgorithms/rfnet/RFNet/accuracy.py:7  (string 'accuracy', not a sequence)
+    never star-imported examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/testenv/accuracy.py:23  (string 'accuracy', not a sequence)
+    never star-imported examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/RFNet/accuracy.py:7  (string 'accuracy', not a sequence)
+    never star-imported examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py:23  (string 'accuracy', not a sequence)
+    never star-imported examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testalgorithms/rfnet/RFNet/accuracy.py:7  (string 'accuracy', not a sequence)
+    never star-imported examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/testenv/accuracy.py:23  (string 'accuracy', not a sequence)
+    never star-imported examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/cloud_model.py:25  (names ['BaseModel'] not defined in module)
+    never star-imported examples/cloud-edge-collaborative-inference-for-llm/testalgorithms/query-routing/edge_model.py:25  (names ['BaseModel'] not defined in module)
+    never star-imported examples/imagenet/multiedge_inference_bench/testenv/accuracy.py:3  (string 'accuracy', not a sequence)
+    never star-imported examples/imagenet/multiedge_inference_bench/testenv/fps.py:8  (string 'fps', not a sequence)
+    never star-imported examples/imagenet/multiedge_inference_bench/testenv/peak_memory.py:8  (string 'peak_memory', not a sequence)
+    never star-imported examples/imagenet/multiedge_inference_bench/testenv/peak_power.py:8  (string 'peak_power', not a sequence)
+    never star-imported examples/pcb-aoi/incremental_learning_bench/fault_detection/testalgorithms/fpn/hard_example_mining.py:21  (string 'IBTFilter', not a sequence)
+    never star-imported examples/robot/lifelong_learning_bench/semantic-segmentation/testalgorithms/rfnet/RFNet/accuracy.py:7  (string 'accuracy', not a sequence)
+    never star-imported examples/robot/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py:23  (string 'accuracy', not a sequence)
+    never star-imported examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/ERFNet/accuracy.py:7  (string 'accuracy', not a sequence)
+    never star-imported examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/task_allocation_by_domain.py:4  (names ['TaskAllocationByDomain'] not defined in module)
+    never star-imported examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testalgorithms/erfnet/task_definition_by_domain.py:7  (names ['TaskDefinitionByDomain'] not defined in module)
+    never star-imported examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/testenv/accuracy.py:23  (string 'accuracy', not a sequence)
+
+========================================================================
+  malformed __all__ declarations                 : 30
+  of those, ever consumed by a star-import       : 0
+  Core code paths that read __all__              : 0
+========================================================================
+
+CONCLUSION: on this commit, no malformed __all__ is load-bearing.
+A PR that only corrects __all__ changes no runtime behaviour.

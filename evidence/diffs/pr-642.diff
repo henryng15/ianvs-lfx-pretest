@@ -1,0 +1,14 @@
+diff --git a/examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/testalgorithms/cloud_model.py b/examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/testalgorithms/cloud_model.py
+index a37e5384b..2338b1c3d 100644
+--- a/examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/testalgorithms/cloud_model.py
++++ b/examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/testalgorithms/cloud_model.py
+@@ -20,8 +20,7 @@
+ from sedna.common.class_factory import ClassFactory, ClassType
+ 
+ os.environ['BACKEND_TYPE'] = 'TORCH'
+-__all__ = ["QwenSemanticSegmentation"]
+-
++__all__ = ["CloudModel"]
+ # Image resolution settings based on risk levels
+ RISK_LEVELS = {
+     "low": "640x480",

@@ -1,0 +1,81 @@
+diff --git a/core/common/utils.py b/core/common/utils.py
+index e7ad65226..1190ef1ae 100644
+--- a/core/common/utils.py
++++ b/core/common/utils.py
+@@ -48,9 +48,10 @@ def parse_kwargs(func, **kwargs):
+     if not callable(func):
+         return kwargs
+     need_kw = getfullargspec(func)
+-    if need_kw.varkw == 'kwargs':
++    if need_kw.varkw is not None:
+         return kwargs
+-    return {k: v for k, v in kwargs.items() if k in need_kw.args}
++    valid_args = set(need_kw.args or []) | set(need_kw.kwonlyargs or [])
++    return {k: v for k, v in kwargs.items() if k in valid_args}
+ 
+ 
+ def get_local_time():
+diff --git a/tests/test_utils.py b/tests/test_utils.py
+new file mode 100644
+index 000000000..6bc0ac700
+--- /dev/null
++++ b/tests/test_utils.py
+@@ -0,0 +1,58 @@
++# Copyright 2026 The KubeEdge Authors.
++#
++# Licensed under the Apache License, Version 2.0 (the "License");
++# you may not use this file except in compliance with the License.
++# You may obtain a copy of the License at
++#
++#     http://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing, software
++# distributed under the License is distributed on an "AS IS" BASIS,
++# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++# See the License for the specific language governing permissions and
++# limitations under the License.
++
++"""Unit tests for parse_kwargs keyword-only parameter handling (Issue #597)."""
++
++import unittest
++from core.common.utils import parse_kwargs
++
++
++class TestUtils(unittest.TestCase):
++    """Test suite for Issue #597 utils.parse_kwargs defects."""
++
++    def test_parse_kwargs_positional_and_kwonly(self):
++        """Test parse_kwargs preserves both positional and keyword-only arguments."""
++        def dummy_fn(a, b=1, *, metric_name="accuracy", threshold=0.8):
++            pass
++
++        kwargs = {
++            "a": 10,
++            "b": 20,
++            "metric_name": "f1",
++            "threshold": 0.9,
++            "invalid_extra_param": "discard"
++        }
++
++        filtered = parse_kwargs(dummy_fn, **kwargs)
++        expected = {"a": 10, "b": 20, "metric_name": "f1", "threshold": 0.9}
++        self.assertEqual(filtered, expected)
++
++    def test_parse_kwargs_with_varkw(self):
++        """Test parse_kwargs returns all kwargs when function accepts **kwargs."""
++        def varkw_fn(a, **kwargs):
++            pass
++
++        kwargs = {"a": 1, "extra1": "val1", "extra2": "val2"}
++        filtered = parse_kwargs(varkw_fn, **kwargs)
++        self.assertEqual(filtered, kwargs)
++
++    def test_parse_kwargs_non_callable(self):
++        """Test parse_kwargs returns kwargs unchanged if func is not callable."""
++        kwargs = {"a": 1, "b": 2}
++        filtered = parse_kwargs(None, **kwargs)
++        self.assertEqual(filtered, kwargs)
++
++
++if __name__ == "__main__":
++    unittest.main()

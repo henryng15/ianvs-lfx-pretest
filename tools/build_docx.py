@@ -48,6 +48,7 @@ def rich(par, text):
         else:
             r = par.add_run(m.group(3)); r.font.color.rgb = RGBColor(0x15, 0x5a, 0xb0)
             r.underline = True
+            par.add_run(f" <{m.group(4)}>")
         pos = m.end()
     if pos < len(text):
         par.add_run(text[pos:])

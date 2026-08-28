@@ -1,0 +1,442 @@
+diff --git a/.github/workflows/main.yaml b/.github/workflows/main.yaml
+index c77547d1a..696fc50f5 100644
+--- a/.github/workflows/main.yaml
++++ b/.github/workflows/main.yaml
+@@ -39,3 +39,19 @@ jobs:
+           else
+             pylint '${{github.workspace}}/core'
+           fi
++
++  check-example-paths:
++    runs-on: ubuntu-22.04
++    name: check-example-paths
++    steps:
++      - uses: actions/checkout@v3
++      - name: Set up Python 3.9
++        uses: actions/setup-python@v3
++        with:
++          python-version: "3.9"
++      - name: Install PyYAML
++        run: pip install pyyaml
++      - name: Check example config paths
++        run: |
++          python scripts/check_example_paths.py \
++            --allowlist scripts/known_broken_paths.txt
+diff --git a/scripts/check_example_paths.py b/scripts/check_example_paths.py
+new file mode 100644
+index 000000000..a34ff3454
+--- /dev/null
++++ b/scripts/check_example_paths.py
+@@ -0,0 +1,204 @@
++import argparse
++import os
++import sys
++from pathlib import Path
++import yaml
++def find_benchmarkingjob_files(examples_dir):
++    results = []
++    for root, _dirs, files in os.walk(examples_dir):
++        for filename in files:
++            if (filename.startswith("benchmarkingjob")
++                    and (filename.endswith(".yaml")
++                         or filename.endswith(".yml"))):
++                results.append(Path(root) / filename)
++    return sorted(results)
++def parse_yaml_safe(filepath):
++    try:
++        with open(filepath, "r", encoding="utf-8") as fh:
++            return yaml.safe_load(fh)
++    except Exception as exc:  
++        print(f"  [WARN] Could not parse {filepath}: {exc}", file=sys.stderr)
++        return None
++def resolve_path(raw_path, repo_root):
++    if raw_path.startswith("./"):
++        return repo_root / raw_path[2:]
++    if os.path.isabs(raw_path):
++        return Path(raw_path)
++    return repo_root / raw_path
++def check_path_exists(raw_path, repo_root, source_file, field_name,
++                      broken_paths, verbose=False):
++    if not raw_path or not isinstance(raw_path, str):
++        return
++    resolved = resolve_path(raw_path, repo_root)
++    rel_source = source_file.relative_to(repo_root)
++    if resolved.exists():
++        if verbose:
++            print(f"  [OK]     {rel_source}: {field_name} -> {raw_path}")
++    else:
++        record = {
++            "source": str(rel_source),
++            "field": field_name,
++            "path": raw_path,
++        }
++        broken_paths.append(record)
++        print(f"  [BROKEN] {rel_source}: {field_name} -> {raw_path}")
++def check_testenv(testenv_path, repo_root, broken_paths, verbose=False):
++    data = parse_yaml_safe(testenv_path)
++    if not data:
++        return
++    testenv = data.get("testenv", data)
++    metrics = testenv.get("metrics")
++    if isinstance(metrics, list):
++        for idx, metric in enumerate(metrics):
++            if isinstance(metric, dict):
++                url = metric.get("url")
++                if url:
++                    check_path_exists(
++                        url, repo_root, testenv_path,
++                        f"metrics[{idx}].url", broken_paths, verbose
++                    )
++    model_eval = testenv.get("model_eval")
++    if isinstance(model_eval, dict):
++        model_metric = model_eval.get("model_metric")
++        if isinstance(model_metric, dict):
++            url = model_metric.get("url")
++            if url:
++                check_path_exists(
++                    url, repo_root, testenv_path,
++                    "model_eval.model_metric.url", broken_paths, verbose
++                )
++def check_algorithm(algorithm_path, repo_root, broken_paths, verbose=False):
++    data = parse_yaml_safe(algorithm_path)
++    if not data:
++        return
++    algorithm = data.get("algorithm", data)
++    modules = algorithm.get("modules")
++    if isinstance(modules, list):
++        for idx, module in enumerate(modules):
++            if isinstance(module, dict):
++                url = module.get("url")
++                if url:
++                    check_path_exists(
++                        url, repo_root, algorithm_path,
++                        f"modules[{idx}].url", broken_paths, verbose
++                    )
++def check_benchmarkingjob(filepath, repo_root, broken_paths, verbose=False):
++    data = parse_yaml_safe(filepath)
++    if not data:
++        return
++    job = data.get("benchmarkingjob", data)
++    testenv_raw = job.get("testenv")
++    if testenv_raw:
++        testenv_resolved = resolve_path(testenv_raw, repo_root)
++        check_path_exists(
++            testenv_raw, repo_root, filepath,
++            "testenv", broken_paths, verbose
++        )
++        if testenv_resolved.exists():
++            check_testenv(testenv_resolved, repo_root, broken_paths, verbose)
++    test_object = job.get("test_object", {})
++    algorithms = test_object.get("algorithms", [])
++    if isinstance(algorithms, list):
++        for idx, algo in enumerate(algorithms):
++            if not isinstance(algo, dict):
++                continue
++            url = algo.get("url")
++            if url:
++                algo_resolved = resolve_path(url, repo_root)
++                check_path_exists(
++                    url, repo_root, filepath,
++                    f"algorithms[{idx}].url", broken_paths, verbose
++                )
++                if algo_resolved.exists():
++                    check_algorithm(
++                        algo_resolved, repo_root, broken_paths, verbose
++                    )
++def load_allowlist(filepath):
++    entries = set()
++    path = Path(filepath)
++    if not path.exists():
++        print(f"[WARN] Allowlist file not found: {filepath}", file=sys.stderr)
++        return entries
++    with open(path, "r", encoding="utf-8") as fh:
++        for line in fh:
++            stripped = line.strip()
++            if stripped and not stripped.startswith("#"):
++                entries.add(stripped)
++    return entries
++def record_to_allowlist_key(record):
++    source = record["source"].replace("\\", "/")
++    return f"{source}:{record['field']}:{record['path']}"
++def main():
++    parser = argparse.ArgumentParser(
++        description="Validate example config paths in the Ianvs repository."
++    )
++    parser.add_argument(
++        "--allowlist",
++        help="Path to a file listing known broken paths to skip.",
++        default=None,
++    )
++    parser.add_argument(
++        "--verbose", "-v",
++        action="store_true",
++        help="Print all checked paths, not just broken ones.",
++    )
++    parser.add_argument(
++        "--repo-root",
++        help="Repository root directory (auto-detected if not specified).",
++        default=None,
++    )
++    args = parser.parse_args()
++    if args.repo_root:
++        repo_root = Path(args.repo_root).resolve()
++    else:
++        repo_root = Path(__file__).resolve().parent.parent
++    examples_dir = repo_root / "examples"
++    if not examples_dir.is_dir():
++        print(f"[ERROR] examples/ directory not found at {examples_dir}",
++              file=sys.stderr)
++        sys.exit(2)
++    allowlist = set()
++    if args.allowlist:
++        allowlist = load_allowlist(args.allowlist)
++        if allowlist:
++            print(f"Loaded {len(allowlist)} known broken path(s) "
++                  f"from allowlist.\n")
++    job_files = find_benchmarkingjob_files(examples_dir)
++    print(f"Found {len(job_files)} benchmarkingjob file(s) to check.\n")
++    all_broken = []
++    for job_file in job_files:
++        rel_path = job_file.relative_to(repo_root)
++        if args.verbose:
++            print(f"Checking {rel_path} ...")
++        check_benchmarkingjob(job_file, repo_root, all_broken, args.verbose)
++    new_broken = []
++    known_broken = []
++    for record in all_broken:
++        key = record_to_allowlist_key(record)
++        if key in allowlist:
++            known_broken.append(record)
++        else:
++            new_broken.append(record)
++    print(f"\n{'=' * 60}")
++    print("Config Path Validation Summary")
++    print(f"{'=' * 60}")
++    print(f"Files checked:        {len(job_files)}")
++    print(f"Total broken paths:   {len(all_broken)}")
++    print(f"Known (allowlisted):  {len(known_broken)}")
++    print(f"NEW broken paths:     {len(new_broken)}")
++    print(f"{'=' * 60}")
++    if new_broken:
++        print("\nNEW broken paths (not in allowlist):\n")
++        for record in new_broken:
++            source = record["source"].replace("\\", "/")
++            print(f"  {source}:{record['field']}:{record['path']}")
++        print("\nTo allowlist these, add the lines above to your "
++              "allowlist file.")
++        sys.exit(1)
++    if all_broken and not new_broken:
++        print("\nAll broken paths are in the allowlist. CI passes.")
++    if not all_broken:
++        print("\nNo broken paths found. All config references are valid!")
++    sys.exit(0)
++if __name__ == "__main__":
++    main()
+diff --git a/scripts/known_broken_paths.txt b/scripts/known_broken_paths.txt
+new file mode 100644
+index 000000000..51c85e35c
+--- /dev/null
++++ b/scripts/known_broken_paths.txt
+@@ -0,0 +1,51 @@
++# Known broken paths in example configs
++# Format: <benchmarkingjob_path>:<field>:<broken_path>
++# Lines starting with # are comments
++
++examples/bdd/lifelong_learning_bench/curb-detection/benchmarkingjob.yaml:testenv:./examples/bdd/lifelong_learning_bench/testenv/testenv.yaml
++examples/bdd/lifelong_learning_bench/curb-detection/benchmarkingjob.yaml:algorithms[0].url:./examples/bdd/lifelong_learning_bench/testalgorithms/yolo/yolo_algorithm.yaml
++examples/cifar100/fci_ssl/fed_ci_match/testenv/testenv.yaml:model_eval.model_metric.url:/home/wyd/ianvs/project/ianvs/examples/cifar100/fci_ssl/fed_ci_match/testenv/acc.py
++examples/cifar100/fci_ssl/fed_ci_match_v2/testenv/testenv.yaml:metrics[0].url:/home/wyd/ianvs/project/ianvs/examples/cifar100/fci_ssl/fed_ci_match_v2/testenv/acc.py
++examples/cifar100/fci_ssl/fed_ci_match_v2/testenv/testenv.yaml:model_eval.model_metric.url:/home/wyd/ianvs/project/ianvs/examples/cifar100/fci_ssl/fed_ci_match_v2/testenv/acc.py
++examples/cifar100/fci_ssl/glfc/testenv/testenv.yaml:model_eval.model_metric.url:/home/wyd/ianvs/project/ianvs/examples/cifar100/fci_ssl/glfc/testenv/acc.py
++examples/cifar100/federated_class_incremental_learning/fedavg/testenv/testenv.yaml:metrics[0].url:/home/wyd/ianvs/project/ianvs/examples/cifar100/federated_class_incremental_learning/fedavg/testenv/acc.py
++examples/cifar100/federated_class_incremental_learning/fedavg/testenv/testenv.yaml:model_eval.model_metric.url:/home/wyd/ianvs/project/ianvs/examples/cifar100/federated_class_incremental_learning/fedavg/testenv/acc.py
++examples/cifar100/federated_learning/fedavg/testenv/testenv.yaml:metrics[0].url:/home/wyd/ianvs/project/ianvs/examples/cifar100/federated_learning/fedavg/testenv/acc.py
++examples/cifar100/federated_learning/fedavg/testenv/testenv.yaml:model_eval.model_metric.url:/home/wyd/ianvs/project/ianvs/examples/cifar100/federated_learning/fedavg/testenv/acc.py
++examples/cityscapes/singletask_learning_bench/semantic-segmentation/benchmarkingjob.yaml:testenv:./examples/cityscapes/singletask_learning_bench/testenv/testenv.yaml
++examples/cityscapes/singletask_learning_bench/semantic-segmentation/benchmarkingjob.yaml:algorithms[0].url:./examples/cityscapes/singletask_learning_bench/testalgorithms/rfnet/rfnet_algorithm.yaml
++examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/benchmarkingjob.yaml:testenv:./examples/curb-detection/lifelong_learning_bench/testenv/testenv.yaml
++examples/cityscapes-synthia/lifelong_learning_bench/curb-detection/benchmarkingjob.yaml:algorithms[0].url:./examples/curb-detection/lifelong_learning_bench/testalgorithms/rfnet/rfnet_algorithm.yaml
++examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-fulltest.yaml:testenv:./examples/semantic_segmentation/lifelong_learning_bench/testenv/testenv-full.yaml
++examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-fulltest.yaml:algorithms[0].url:./examples/semantic_segmentation/lifelong_learning_bench/testalgorithms/rfnet/rfnet_algorithm.yaml
++examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-smalltest.yaml:testenv:./examples/semantic_segmentation/lifelong_learning_bench/testenv/testenv-small.yaml
++examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-smalltest.yaml:algorithms[0].url:./examples/semantic_segmentation/lifelong_learning_bench/testalgorithms/rfnet/rfnet_algorithm.yaml
++examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-traveltest.yaml:testenv:./examples/semantic_segmentation/lifelong_learning_bench/testenv/testenv-travel.yaml
++examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-traveltest.yaml:algorithms[0].url:./examples/semantic_segmentation/lifelong_learning_bench/testalgorithms/rfnet/rfnet_algorithm-new-split.yaml
++examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob.yaml:testenv:./examples/semantic_segmentation/lifelong_learning_bench/testenv/testenv.yaml
++examples/cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob.yaml:algorithms[0].url:./examples/semantic_segmentation/lifelong_learning_bench/testalgorithms/rfnet/rfnet_algorithm.yaml
++examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/benchmarkingjob.yaml:testenv:./examples/scene-based-unknown-task-recognition//lifelong_learning_bench/testenv/testenv.yaml
++examples/cityscapes-synthia/scene-based-unknown-task-recognition/curb-detection/benchmarkingjob.yaml:algorithms[0].url:./examples/scene-based-unknown-task-recognition//lifelong_learning_bench/testalgorithms/rfnet/rfnet_algorithm.yaml
++examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/benchmarkingjob.yaml:testenv:./examples/Cloud_Robotics/cloud-edge-collaborative-inference-bench/perception-reasoning/testenv/testenv.yaml
++examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning/benchmarkingjob.yaml:algorithms[0].url:./examples/Cloud_Robotics/cloud-edge-collaborative-inference-bench/perception-reasoning/testalgorithms/perception_reasoning.yaml
++examples/Cloud_Robotics/singletask_learning_bench/Semantic_Segmentation/benchmarkingjob.yaml:testenv:./examples/cloud_robot/single_task_learning/testenv/testenv.yaml
++examples/Cloud_Robotics/singletask_learning_bench/Semantic_Segmentation/benchmarkingjob.yaml:algorithms[0].url:./examples/cloud-robotics/single_task_learning/testalgorithm/rfnet/algorithm.yaml
++examples/cloud_VLA_finetune/singletask_learning_bench/benchmarkingjob.yaml:testenv:/inspire/hdd/global_user/chaimingxu-240108540141/jwq-test/ianvs/examples/cloud_VLA_finetune/singletask_learning_bench/testenv/testenv.yaml
++examples/cloud_VLA_finetune/singletask_learning_bench/benchmarkingjob.yaml:algorithms[0].url:/inspire/hdd/global_user/chaimingxu-240108540141/jwq-test/ianvs/examples/cloud_VLA_finetune/singletask_learning_bench/testalgorithms/vla_dataselect/vla_algorithm.yaml
++examples/industrialEI/single_task_learning_bench/deformable_component_manipulation/benchmarkingjob.yaml:testenv:./testenv/testenv.yaml
++examples/industrialEI/single_task_learning_bench/deformable_component_manipulation/benchmarkingjob.yaml:algorithms[0].url:testalgorithms/deformable_alg.yaml
++examples/llm_simple_qa/benchmarkingjob.yaml:testenv:./examples/llm/singletask_learning_bench/simple_qa/testenv/testenv.yaml
++examples/llm_simple_qa/benchmarkingjob.yaml:algorithms[0].url:./examples/llm/singletask_learning_bench/simple_qa/testalgorithms/gen/gen_algorithm.yaml
++examples/phys_scene_gen/singletask_learning_bench/testalgorithms/ai2holodeck/algorithmenv.yaml:modules[0].url:examples.phys_scene_gen.singletask_learning_bench.testalgorithms.ai2holodeck.phys_scene_generator
++examples/PIPL/edge-cloud_collaborative_learning_bench/benchmarkingjob.yaml:testenv:./testenv/testenv.yaml
++examples/PIPL/edge-cloud_collaborative_learning_bench/benchmarkingjob.yaml:algorithms[0].url:./test_algorithms/algorithm.yaml
++examples/RoboDK Palletizing/singletask_learning_bench/benchmarkingjob.yaml:testenv:/root/ianvs/project/ianvs-0.3.0/examples/Palletizing/singletask_learning_bench/testenv/testenv.yaml
++examples/RoboDK Palletizing/singletask_learning_bench/benchmarkingjob.yaml:algorithms[0].url:/root/ianvs/project/ianvs-0.3.0/examples/Palletizing/singletask_learning_bench/testalgorithms/algorithm.yaml
++examples/robot/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-sam.yaml:testenv:./examples/robot/lifelong_learning_bench/testenv/testenv-robot-small.yaml
++examples/robot/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-sam.yaml:algorithms[0].url:./examples/robot/lifelong_learning_bench/testalgorithms/rfnet/sam_algorithm.yaml
++examples/robot/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-simple.yaml:testenv:./examples/robot/lifelong_learning_bench/testenv/testenv-robot.yaml
++examples/robot/lifelong_learning_bench/semantic-segmentation/benchmarkingjob-simple.yaml:algorithms[0].url:./examples/robot/lifelong_learning_bench/testalgorithms/rfnet/rfnet_algorithm-simple.yaml
++examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob.yaml:testenv:./examples/class_increment_semantic_segmentation/lifelong_learning_bench/testenv/testenv.yaml
++examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation/benchmarkingjob.yaml:algorithms[0].url:./examples/class_increment_semantic_segmentation/lifelong_learning_bench/testalgorithms/erfnet/test_algorithm.yaml
++examples/smart_coding/smart_coding_learning_bench/comment/benchmarkingjob.yaml:testenv:/home/xiebo/ianvs/examples/smart_coding/smart_coding_learning_bench/comment/testenv/testenv.yaml
++examples/smart_coding/smart_coding_learning_bench/comment/benchmarkingjob.yaml:algorithms[0].url:/home/xiebo/ianvs/examples/smart_coding/smart_coding_learning_bench/comment/testalgorithms/gen/gen_algorithm.yaml
+diff --git a/tests/test_check_example_paths.py b/tests/test_check_example_paths.py
+new file mode 100644
+index 000000000..8bb8cc541
+--- /dev/null
++++ b/tests/test_check_example_paths.py
+@@ -0,0 +1,145 @@
++import os
++import sys
++from pathlib import Path
++import yaml
++REPO_ROOT_DIR = Path(__file__).resolve().parent.parent
++sys.path.insert(0, str(REPO_ROOT_DIR / "scripts"))
++from check_example_paths import (
++    resolve_path,
++    check_benchmarkingjob,
++    load_allowlist
++)
++def test_resolve_path():
++    repo_root = Path("/fake/repo")
++    assert resolve_path("./test/path.yaml", repo_root) == repo_root / "test/path.yaml"
++    assert resolve_path("test/path.yaml", repo_root) == repo_root / "test/path.yaml"
++    if os.name == 'nt':
++        assert resolve_path("C:\\absolute\\path", repo_root) == Path("C:\\absolute\\path")
++    else:
++        assert resolve_path("/absolute/path", repo_root) == Path("/absolute/path")
++def create_yaml_file(path, data):
++    path.parent.mkdir(parents=True, exist_ok=True)
++    with open(path, "w", encoding="utf-8") as file_handle:
++        yaml.dump(data, file_handle)
++def test_valid_config_chain(tmp_path):
++    repo_root = tmp_path
++    job_file = repo_root / "examples" / "benchmarkingjob.yaml"
++    job_data = {
++        "benchmarkingjob": {
++            "testenv": "./examples/testenv.yaml",
++            "test_object": {
++                "algorithms": [
++                    {"url": "./examples/algorithm.yaml"}
++                ]
++            }
++        }
++    }
++    create_yaml_file(job_file, job_data)
++    testenv_file = repo_root / "examples" / "testenv.yaml"
++    testenv_data = {
++        "testenv": {
++            "metrics": [{"url": "./examples/metric.py"}],
++            "model_eval": {"model_metric": {"url": "./examples/model_metric.py"}}
++        }
++    }
++    create_yaml_file(testenv_file, testenv_data)
++    algorithm_file = repo_root / "examples" / "algorithm.yaml"
++    algorithm_data = {
++        "algorithm": {
++            "modules": [{"url": "./examples/module.py"}]
++        }
++    }
++    create_yaml_file(algorithm_file, algorithm_data)
++    (repo_root / "examples" / "metric.py").touch()
++    (repo_root / "examples" / "model_metric.py").touch()
++    (repo_root / "examples" / "module.py").touch()
++    broken_paths = []
++    check_benchmarkingjob(job_file, repo_root, broken_paths)
++    assert len(broken_paths) == 0
++def test_broken_testenv_path(tmp_path):
++    repo_root = tmp_path
++    job_file = repo_root / "examples" / "benchmarkingjob.yaml"
++    job_data = {
++        "benchmarkingjob": {
++            "testenv": "./examples/missing_testenv.yaml",
++        }
++    }
++    create_yaml_file(job_file, job_data)
++    broken_paths = []
++    check_benchmarkingjob(job_file, repo_root, broken_paths)
++    assert len(broken_paths) == 1
++    assert broken_paths[0]["field"] == "testenv"
++    assert broken_paths[0]["path"] == "./examples/missing_testenv.yaml"
++def test_broken_module_url(tmp_path):
++    repo_root = tmp_path
++    job_file = repo_root / "examples" / "benchmarkingjob.yaml"
++    job_data = {
++        "benchmarkingjob": {
++            "test_object": {
++                "algorithms": [
++                    {"url": "./examples/algorithm.yaml"}
++                ]
++            }
++        }
++    }
++    create_yaml_file(job_file, job_data)
++    algorithm_file = repo_root / "examples" / "algorithm.yaml"
++    algorithm_data = {
++        "algorithm": {
++            "modules": [{"url": "./examples/missing_module.py"}]
++        }
++    }
++    create_yaml_file(algorithm_file, algorithm_data)
++    broken_paths = []
++    check_benchmarkingjob(job_file, repo_root, broken_paths)
++    assert len(broken_paths) == 1
++    assert broken_paths[0]["field"] == "modules[0].url"
++    assert broken_paths[0]["path"] == "./examples/missing_module.py"
++def test_absolute_path_detected(tmp_path):
++    repo_root = tmp_path
++    job_file = repo_root / "examples" / "benchmarkingjob.yaml"
++    if os.name == 'nt':
++        abs_path = "C:\\missing_testenv.yaml"
++    else:
++        abs_path = "/missing_testenv.yaml"
++    job_data = {
++        "benchmarkingjob": {
++            "testenv": abs_path,
++        }
++    }
++    create_yaml_file(job_file, job_data)
++    broken_paths = []
++    check_benchmarkingjob(job_file, repo_root, broken_paths)
++    assert len(broken_paths) == 1
++    assert broken_paths[0]["field"] == "testenv"
++    assert broken_paths[0]["path"] == abs_path
++def test_missing_optional_model_eval(tmp_path):
++    repo_root = tmp_path
++    job_file = repo_root / "examples" / "benchmarkingjob.yaml"
++    job_data = {
++        "benchmarkingjob": {
++            "testenv": "./examples/testenv_no_modeleval.yaml",
++        }
++    }
++    create_yaml_file(job_file, job_data)
++    testenv_file = repo_root / "examples" / "testenv_no_modeleval.yaml"
++    testenv_data = {
++        "testenv": {
++            "metrics": []
++        }
++    }
++    create_yaml_file(testenv_file, testenv_data)
++    broken_paths = []
++    check_benchmarkingjob(job_file, repo_root, broken_paths)
++    assert len(broken_paths) == 0
++def test_load_allowlist(tmp_path):
++    allowlist_file = tmp_path / "known_broken_paths.txt"
++    with open(allowlist_file, "w", encoding="utf-8") as file_handle:
++        file_handle.write("# comment\n")
++        file_handle.write("examples/job.yaml:testenv:./broken.yaml\n")
++        file_handle.write("\n")
++        file_handle.write("examples/job2.yaml:testenv:./broken2.yaml\n")
++    entries = load_allowlist(allowlist_file)
++    assert len(entries) == 2
++    assert "examples/job.yaml:testenv:./broken.yaml" in entries
++    assert "examples/job2.yaml:testenv:./broken2.yaml" in entries

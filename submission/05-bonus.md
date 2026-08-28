@@ -186,3 +186,35 @@ was executed end-to-end.** #540's fallback in particular is reviewed by reading 
 not install `transformers>=5.0` and run `imagenet/multiedge_inference_bench`, which
 additionally needs a registration-gated 6.3 GB dataset and an NVIDIA CUDA/ONNX-Runtime
 stack. Nothing above is described as passing a test that was not run.
+
+---
+
+## Update — 2026-08-28: the `paradigm_type` gap, now executed
+
+The cross-target finding above was static. It is now backed by running the validator that
+**already ships on `main`** at `37a9c60` (`.github/workflows/validator/`, merged via #771,
+wired into `static_code_requirement_cicd.yaml` for `examples/**`):
+
+```text
+  [PASS] examples/yaoba/singletask_learning_boost        ERROR checks: none  WARNING: 1
+  [PASS] examples/yaoba/singletask_learning_yolox_tta    ERROR checks: none  WARNING: 2
+  [FAIL] examples/robot-cityscapes-synthia/...           ERROR: Repository path references exist
+  [FAIL] examples/MOT17/.../pedestrian_tracking (x2)     ERROR: Repository path references exist
+  [FAIL] examples/Cloud_Robotics/.../perception-reasoning ERROR: Repository path references exist
+```
+
+Reproduce: `python3 tools/run_shipped_validator.py ianvs`.
+
+Both Examples that PR #617 retires **pass every check the project runs**, and neither can
+execute: their `paradigm_type` values (`singletasklearning_acboost`,
+`singletasklearning_tta`) are absent from `ParadigmType`, and dispatch in `base.py:95-152`
+and `algorithm.py:109-127` has no `else`, so the call returns `None`.
+
+The validator has zero references to `ClassFactory`, `register`, `alias` or
+`paradigm_type`. It resolves paths, not identifiers. That is the precise shape of the gap,
+and it is why #617's deletion should be described as retiring two Examples rather than as
+removing unused files — nothing in CI will ever report their absence.
+
+*(This update also corrects a claim in my Task 3 and Task 4 comments, where I wrote that no
+static config validation existed. It does, it is merged, and it works for paths. See the
+Correction sections there.)*

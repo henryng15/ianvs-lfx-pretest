@@ -1,0 +1,27 @@
+validator: /home/hoan/VSCode/projects/KubeEdge/ianvs/.github/workflows/validator/validation_runner.py
+commit   : 37a9c60
+
+  [PASS] examples/yaoba/singletask_learning_boost
+         inventory name : mmlab_model_boost
+         ERROR checks   : none
+         WARNING checks : 1
+  [PASS] examples/yaoba/singletask_learning_yolox_tta
+         inventory name : mmlab_model_yolox_tta
+         ERROR checks   : none
+         WARNING checks : 2
+  [FAIL] examples/robot-cityscapes-synthia/lifelong_learning_bench/semantic-segmentation
+         inventory name : erfnet_lifelong_learning
+         ERROR checks   : ['Repository path references exist']
+         WARNING checks : 3
+  [FAIL] examples/MOT17/multiedge_inference_bench/pedestrian_tracking
+         inventory name : feature_extraction
+         ERROR checks   : ['Repository path references exist']
+         WARNING checks : 3
+  [FAIL] examples/MOT17/multiedge_inference_bench/pedestrian_tracking
+         inventory name : tracking
+         ERROR checks   : ['Repository path references exist']
+         WARNING checks : 3
+  [FAIL] examples/Cloud_Robotics/cloud-edge-collaborative-inference_bench/perception-reasoning
+         inventory name : perception_reasoning_test
+         ERROR checks   : ['Repository path references exist']
+         WARNING checks : 0

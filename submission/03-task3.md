@@ -168,3 +168,53 @@ check lint and file presence; none resolves the config→registration contract.
 
 **Not claimed:** that CI validation is generally desirable, or that #851/#744 exist —
 both are well covered by other candidates.
+
+---
+
+## Correction — posted 2026-08-28
+
+**I made a factual error above and am correcting it rather than leaving it standing.**
+
+§3.4 Step 2 proposes adding "a static CI job over `examples/**`", and §4 contrasts this
+submission with "existing CI proposals … [that] check lint and file presence". Both
+understate what the analysed commit already contains.
+
+`.github/workflows/validator/` **already ships on `main` at `37a9c60`**. It landed with
+PR #771 — the merge commit I have been analysing throughout — and is wired into
+`static_code_requirement_cicd.yaml` on `pull_request` for `examples/**`. It implements
+`_check_yaml_syntax`, `_check_repo_path_references`, `_check_hardcoded_paths`,
+`_check_local_model_paths`, `_check_cuda_only_assumptions` and
+`_check_metric_empty_pair_guard` over a 48-entry example inventory. I should have found
+it before writing §3.4. Credit to @Prachi194agrawal, whose review on PR #835 pointed at it.
+
+**What changes.** Step 2 is not a job to create; it is an extension to a job that exists.
+The boundary conclusion is unchanged — and is now better supported than my own argument
+made it, because the project has already placed validation at exactly this layer.
+
+**What survives, sharper than what I first wrote.** The shipped validator resolves whether
+config strings point at files that **exist**. It does not resolve whether config
+**identifier** strings match anything the code **registers**: there are zero references to
+`ClassFactory`, `register`, `alias` or `paradigm_type` anywhere under
+`.github/workflows/validator/`.
+
+That gap is demonstrable. Running the shipped validator unmodified at `37a9c60`
+(`python3 tools/run_shipped_validator.py ianvs`):
+
+| Example | Shipped validator verdict | Actually runnable? |
+|---|---|---|
+| `yaoba/singletask_learning_boost` | **PASS** (0 errors) | **No** — `paradigm_type: "singletasklearning_acboost"` is not in `ParadigmType` |
+| `yaoba/singletask_learning_yolox_tta` | **PASS** (0 errors) | **No** — `paradigm_type: "singletasklearning_tta"` is not in `ParadigmType` |
+| `robot-cityscapes-synthia/…/semantic-segmentation` | FAIL — `Repository path references exist` | no |
+| `MOT17/…/pedestrian_tracking` (×2 entries) | FAIL — `Repository path references exist` | no |
+| `Cloud_Robotics/…/perception-reasoning` | FAIL — `Repository path references exist` | no |
+
+The path half of the contract is checked, and correctly reports four of the Examples I
+discuss. **The identifier half is unchecked, and two Examples pass every check the project
+runs while being unable to execute at all.** Dispatch in `base.py:95-152` and
+`algorithm.py:109-127` has no `else`, so an unknown `paradigm_type` returns `None`
+silently.
+
+So the revised boundary claim is narrower and stands on executed evidence: **Core should
+expose what it *would* resolve — the registration keys and the paradigm dispatch table —
+so the existing validator can check identifiers as well as paths.** That is Step 1 of §3.4
+unchanged; only Step 2's framing was wrong.

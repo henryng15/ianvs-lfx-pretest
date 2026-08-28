@@ -273,3 +273,54 @@ patch, and it is the only item in the path with no existing PR.
 **Not claimed:** that #558 fixes the collision (established by @Omkeswani27, @Yash4616,
 @Aryansingh-ai); that #729/#759/#806 duplicate each other (@Omkeswani27); that CI
 validation is broadly desirable (#851, #744 and their Discussions).
+
+---
+
+## Correction — posted 2026-08-28
+
+**§2.2 contains a factual error, which I am correcting rather than leaving to stand.**
+
+That table says of "Static contract validation": *"existing work: **none** … No open PR in
+`#133`–`#851` resolves a config `url:`/`name:` against the code."* The second half is
+right; the first half is wrong, and the row was wrong to be there at all.
+
+Corrected row:
+
+| Need | Existing work | Status | Gap |
+|---|---|---|---|
+| Static **path** validation | `.github/workflows/validator/` **merged on `main`** via #771; also proposed again by open PRs **#835** and **#744** | shipped + duplicated | none — this is covered, and covered three times |
+| Static **identifier** validation (`name:` → ClassFactory alias, `paradigm_type` → `ParadigmType`) | **none** | — | **this is the missing fix** |
+
+The shipped validator is wired into `static_code_requirement_cicd.yaml` for `examples/**`
+and implements `_check_repo_path_references` among five other checks. Run unmodified at
+`37a9c60` it correctly fails `robot-cityscapes-synthia`, both `MOT17` inventory entries and
+`Cloud_Robotics/…/perception-reasoning` on `Repository path references exist` — the same
+breakage my §2.1 census counted. Credit to @Prachi194agrawal for surfacing it in the PR
+#835 thread; I should have found it myself before writing §2.2.
+
+**What this does to the path.** S2 becomes *extend the existing validator*, not *add a
+job*. The dependency order is unchanged: S1 (a Core inspector that reports what would be
+resolved) must still precede it, because the existing validator has no way to know what
+the code registers.
+
+**What this does to the "missing fix" claim.** It narrows it, and puts it on executed
+evidence. Running the shipped validator:
+
+```text
+  [PASS] examples/yaoba/singletask_learning_boost        ERROR checks: none
+  [PASS] examples/yaoba/singletask_learning_yolox_tta    ERROR checks: none
+  [FAIL] examples/robot-cityscapes-synthia/...           ERROR: Repository path references exist
+  [FAIL] examples/MOT17/.../pedestrian_tracking          ERROR: Repository path references exist
+  [FAIL] examples/Cloud_Robotics/.../perception-reasoning ERROR: Repository path references exist
+```
+
+Both `yaoba` Examples pass every check the project currently runs, and neither can
+execute — their `paradigm_type` matches no `ParadigmType` member, and dispatch has no
+`else` clause. There are zero references to `ClassFactory`, `register`, `alias` or
+`paradigm_type` under `.github/workflows/validator/`.
+
+**A note on my own method.** I built a prior-art map over 86 Discussions and every open
+target, and still missed a validator sitting in the tree I had checked out. The failure is
+instructive for this submission's own thesis: I searched for *proposals* in the PR queue
+and did not check what had already *merged*. Recording it here because a verification
+boundary is worth nothing if it only covers the checks that happened to be run.

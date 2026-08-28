@@ -131,9 +131,11 @@ doc.add_heading("PR reviews (target-specific)", 3)
 for k in ("pr-558", "pr-651", "pr-642", "pr-598", "pr-702"):
     p = doc.add_paragraph(style="List Bullet")
     rich(p, f"**Mandatory #{k[3:]}:** {targets[k]}")
-for k in ("pr-617", "pr-569", "pr-739", "pr-632", "pr-540"):
+for k in ("pr-598-followup", "pr-617", "pr-617-followup", "pr-569",
+          "pr-739", "pr-632", "pr-540"):
     p = doc.add_paragraph(style="List Bullet")
-    rich(p, f"**Bonus #{k[3:]}:** {targets[k]}")
+    label = k[3:].replace("-followup", " (follow-up)")
+    rich(p, f"**{'Mandatory' if k.startswith('pr-598') else 'Bonus'} #{label}:** {targets[k]}")
 
 doc.add_heading("Issue comments (target-specific)", 3)
 for k in ("issue-557", "issue-597", "issue-641", "issue-568"):
@@ -159,11 +161,15 @@ for path in [
     doc.add_page_break()
 
 doc.add_heading("Appendix — target-specific comments as posted", 1)
-order = [("PR", p) for p in (558, 651, 642, 598, 702, 617, 569, 739, 632, 540)] + \
-        [("Issue", i) for i in (557, 597, 641, 568)]
+order = [("PR", "558"), ("PR", "651"), ("PR", "642"), ("PR", "598"),
+         ("PR", "598-followup"), ("PR", "702"), ("PR", "617"),
+         ("PR", "617-followup"), ("PR", "569"), ("PR", "739"), ("PR", "632"),
+         ("PR", "540")] + \
+        [("Issue", str(i)) for i in (557, 597, 641, 568)]
 for kind, num in order:
     key = f"{'pr' if kind == 'PR' else 'issue'}-{num}"
-    doc.add_heading(f"{kind} #{num}", 2)
+    label = num.replace("-followup", " (follow-up)")
+    doc.add_heading(f"{kind} #{label}", 2)
     p = doc.add_paragraph(); rich(p, targets[key])
     render(pathlib.Path(f"submission/reviews/{key}.md").read_text())
 

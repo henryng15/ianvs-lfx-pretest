@@ -1,6 +1,6 @@
 # Handover — what is done, and what only you can do
 
-**Written:** 2026-08-27 ~06:30 UTC · **Deadline:** 2026-08-28 23:59 UTC
+**Written:** 2026-08-27 ~06:30 UTC · **Updated:** 2026-08-28 ~03:00 UTC · **Deadline:** 2026-08-28 23:59 UTC
 (= 2026-08-29 06:59 in Vietnam, UTC+7 · **~41 hours left** as of writing)
 
 Everything below marked ✅ is already live on GitHub. The 5 items marked **TODO** are the
@@ -18,8 +18,9 @@ the video.
 | 3 | 10 PR reviews posted (5 mandatory + 5 bonus) | ditto |
 | 4 | 4 issue comments posted | ditto |
 | 5 | All 20 links verified HTTP 200 | `python3 tools/verify_links.py` |
-| 6 | `.docx` for the email built | `submission/LFX-2026-Term3-Ianvs-Pretest-henryng15.docx` (89 KB) |
-| 7 | Working repo committed and pushed | https://github.com/henryng15/ianvs-lfx-pretest |
+| 6 | Corrections + 2 follow-up reviews posted (see `docs/progress/05-...`) | #598, #617, and Task 3/4/Bonus edited in place |
+| 7 | `.docx` for the email built | `submission/LFX-2026-Term3-Ianvs-Pretest-henryng15.docx` (89 KB) |
+| 8 | Working repo committed and pushed | https://github.com/henryng15/ianvs-lfx-pretest |
 
 **RunPod was not used.** Every finding runs on CPU with no dataset, model or network, so
 there was nothing to rent. Your balance is untouched at **$6.93**.
@@ -156,8 +157,11 @@ Mandatory PR reviews (Task 2)
   #598  https://github.com/kubeedge/ianvs/pull/598#pullrequestreview-5037526231
   #702  https://github.com/kubeedge/ianvs/pull/702#pullrequestreview-5037527196
 
+  #598 follow-up  https://github.com/kubeedge/ianvs/pull/598#pullrequestreview-5047338395
+
 Bonus PR reviews
   #617  https://github.com/kubeedge/ianvs/pull/617#pullrequestreview-5037528102
+  #617 follow-up  https://github.com/kubeedge/ianvs/pull/617#pullrequestreview-5047339798
   #569  https://github.com/kubeedge/ianvs/pull/569#pullrequestreview-5037529132
   #739  https://github.com/kubeedge/ianvs/pull/739#pullrequestreview-5037529977
   #632  https://github.com/kubeedge/ianvs/pull/632#pullrequestreview-5037530827
@@ -186,7 +190,7 @@ Henry Nguyen (GitHub: henryng15)
 cd ~/VSCode/projects/KubeEdge && python3 tools/verify_links.py
 ```
 
-Expect `20 links checked, 0 broken`. Then open two or three in a **logged-out** browser
+Expect `22 links checked, 0 broken`. Then open two or three in a **logged-out** browser
 window, including the `henryng15/ianvs-lfx-pretest` link from TODO 1.
 
 ---
@@ -228,3 +232,38 @@ python3 tools/build_docx.py        # rebuild the attachment
 Both posting scripts are idempotent — they read `evidence/posted*.json` and will not
 create a second Discussion or double-post a review. To **edit** an already-posted comment,
 do it in the GitHub web UI; the permalink does not change.
+
+
+---
+
+## Update — 2026-08-28
+
+Three things happened after the first handover was written.
+
+**1. The author of PR #598 replied to my review and updated the PR.** They added unit
+tests and moved the head from `69470dd` to `6b39813`. Another candidate (@31groot) then
+found that positional-only parameters are still wrongly accepted. I re-reviewed at the new
+head, independently confirmed their finding, added two cases neither of them had
+(`getfullargspec` raises `TypeError` on callables it cannot introspect; builtins silently
+return `{}`), and **revised my verdict from minor to major revision**.
+
+**2. I found and corrected a factual error in my own submission.** Task 4 said no static
+config validation existed and Task 3 proposed adding it. Wrong: `.github/workflows/validator/`
+already ships on `main` at the exact commit I analysed, merged via #771, wired into CI.
+Corrections are now appended in place to the Task 3, Task 4 and Bonus comments — permalinks
+unchanged, nothing silently rewritten.
+
+The correction ended up **strengthening** the submission. Running the shipped validator
+shows it checks paths but not identifiers, so both `yaoba` Examples **pass every check the
+project runs and still cannot execute**. The "missing fix" is now demonstrated against the
+project's own validation rather than asserted.
+
+**3. Uniqueness re-verified.** 86 Discussions now (was 70). My three core claims —
+`__all__` is inert, `parse_kwargs` is unreachable, #558 breaks pickle recoverability —
+are still asserted by **nobody else**.
+
+**Nothing changes in your TODO list.** Same five steps. Two notes:
+
+- The link count in TODO 5 is now **22**, not 20.
+- Rebuild the `.docx` after your screenshots/video as before — it already includes the two
+  follow-up reviews and the corrections.

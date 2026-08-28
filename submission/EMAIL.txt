@@ -1,0 +1,66 @@
+To:      zimu.zheng@huawei.com, content@kaiwei.dev
+Subject: LFX Mentorship 2026 Term 3 Pre-test Submission - KubeEdge Ianvs Example Restoration (henryng15)
+Attach:  submission/henryng15-lfx-ianvs-pretest.docx
+
+---------------------------------------------------------------------------
+
+Dear Zimu Zheng and the KubeEdge Ianvs team,
+
+Please find my pre-test submission for LFX Mentorship 2026 Term 3, "Comprehensive
+Example Restoration for KubeEdge Ianvs: Phase IV", attached as a .docx containing the
+full content of Task 1-4 and the Bonus task. All analysis is measured against
+kubeedge/ianvs@37a9c60.
+
+Pre-test Discussion
+  https://github.com/kubeedge/ianvs/discussions/948
+
+Task comments
+  Task 1  https://github.com/kubeedge/ianvs/discussions/948#discussioncomment-18171140
+  Task 2  https://github.com/kubeedge/ianvs/discussions/948#discussioncomment-18171142
+  Task 3  https://github.com/kubeedge/ianvs/discussions/948#discussioncomment-18171145
+  Task 4  https://github.com/kubeedge/ianvs/discussions/948#discussioncomment-18171147
+  Bonus   https://github.com/kubeedge/ianvs/discussions/948#discussioncomment-18171151
+
+Mandatory PR reviews (Task 2)
+  #558  https://github.com/kubeedge/ianvs/pull/558#pullrequestreview-5037520746
+  #651  https://github.com/kubeedge/ianvs/pull/651#pullrequestreview-5037524481
+  #642  https://github.com/kubeedge/ianvs/pull/642#pullrequestreview-5037525342
+  #598  https://github.com/kubeedge/ianvs/pull/598#pullrequestreview-5037526231
+  #702  https://github.com/kubeedge/ianvs/pull/702#pullrequestreview-5037527196
+
+  #598 follow-up (re-review at head 6b39813, verdict revised to major revision)
+        https://github.com/kubeedge/ianvs/pull/598#pullrequestreview-5047338395
+
+Bonus PR reviews
+  #617  https://github.com/kubeedge/ianvs/pull/617#pullrequestreview-5037528102
+  #569  https://github.com/kubeedge/ianvs/pull/569#pullrequestreview-5037529132
+  #739  https://github.com/kubeedge/ianvs/pull/739#pullrequestreview-5037529977
+  #632  https://github.com/kubeedge/ianvs/pull/632#pullrequestreview-5037530827
+  #540  https://github.com/kubeedge/ianvs/pull/540#pullrequestreview-5037531623
+
+  #617 follow-up   https://github.com/kubeedge/ianvs/pull/617#pullrequestreview-5047339798
+  #617 correction  https://github.com/kubeedge/ianvs/pull/617#pullrequestreview-5047393734
+
+Issue comments
+  #557  https://github.com/kubeedge/ianvs/issues/557#issuecomment-5434805900
+  #597  https://github.com/kubeedge/ianvs/issues/597#issuecomment-5434807109
+  #641  https://github.com/kubeedge/ianvs/issues/641#issuecomment-5434808390
+  #568  https://github.com/kubeedge/ianvs/issues/568#issuecomment-5434809726
+
+Two notes on how the submission handles verification and correction:
+
+- Every finding is reproducible on CPU with no dataset, model weights, API key or
+  network access. The probe scripts, their captured output, the terminal screenshots
+  embedded in Task 1 and Task 2, and the Task 2 reproduction video are all in a public
+  repository: https://github.com/henryng15/ianvs-lfx-pretest
+- Where my own earlier claims turned out to be wrong, I retracted them publicly and in
+  place rather than silently rewriting them. Two such corrections are labelled in the
+  Task 3, Task 4 and Bonus comments: a static config validator does already ship on main
+  (.github/workflows/validator/, merged via #771), and Ianvs Core does raise ValueError
+  on an unknown paradigm_type rather than failing silently. Both corrections narrowed the
+  finding and are supported by executed output.
+
+Thank you for your time and for organising this pre-test.
+
+Best regards,
+Henry Nguyen (GitHub: henryng15)

@@ -22,14 +22,17 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUT = ROOT / "evidence/videos/task2-reproduction.mp4"
 FPS = 24
 WIDTH, HEIGHT = 1280, 800
-MARGIN = 42
-HEADER = 44
+TITLEBAR = 32
+ACTIVITY_WIDTH = 48
+SIDEBAR_WIDTH = 230
+EDITOR_BOTTOM = 392
+TERMINAL_TOP = 400
+TERMINAL_HEADER = 34
 FONT_SIZE = 18
 LINE_HEIGHT = 24
-# 100 monospace glyphs fit inside the terminal body at 1280 px without clipping
-# the long exception lines in the pickle probe.
-COLS = 100
-ROWS = (HEIGHT - 2 * MARGIN - HEADER - 34) // LINE_HEIGHT
+# 86 monospace glyphs fit in the VS Code-style integrated terminal pane.
+COLS = 86
+ROWS = (HEIGHT - TERMINAL_TOP - TERMINAL_HEADER - 24) // LINE_HEIGHT
 
 
 def font(size: int) -> ImageFont.FreeTypeFont:
@@ -71,18 +74,79 @@ class Terminal:
         return rendered[-ROWS:]
 
     def draw(self) -> None:
-        image = Image.new("RGB", (WIDTH, HEIGHT), "#111827")
+        image = Image.new("RGB", (WIDTH, HEIGHT), "#1e1e1e")
         draw = ImageDraw.Draw(image)
-        left, top = MARGIN, MARGIN
-        right, bottom = WIDTH - MARGIN, HEIGHT - MARGIN
-        draw.rounded_rectangle((left, top, right, bottom), radius=14, fill="#0b1220", outline="#334155", width=2)
-        draw.rounded_rectangle((left, top, right, top + HEADER), radius=14, fill="#172033")
-        draw.rectangle((left, top + 25, right, top + HEADER), fill="#172033")
-        for x, colour in ((left + 22, "#fb7185"), (left + 46, "#fbbf24"), (left + 70, "#4ade80")):
-            draw.ellipse((x - 7, top + 15, x + 7, top + 29), fill=colour)
-        draw.text((left + 100, top + 13), "ianvs evidence — continuous terminal walkthrough", font=SMALL, fill="#cbd5e1")
+        # A compact VS Code-style frame: title bar, activity strip, Explorer,
+        # source editor and the integrated terminal panel below it.
+        draw.rectangle((0, 0, WIDTH, TITLEBAR), fill="#181818")
+        draw.text((16, 8), "ianvs-lfx-pretest — Visual Studio Code", font=SMALL, fill="#cccccc")
+        draw.text((WIDTH - 176, 8), "◻  —  □  ×", font=SMALL, fill="#a8a8a8")
 
-        y = top + HEADER + 18
+        draw.rectangle((0, TITLEBAR, ACTIVITY_WIDTH, HEIGHT), fill="#333333")
+        for y_icon, glyph, active in ((58, "▣", True), (108, "⌕", False), (158, "⑂", False), (208, "▷", False), (258, "▧", False)):
+            if active:
+                draw.rectangle((0, y_icon - 8, 2, y_icon + 24), fill="#007acc")
+            draw.text((14, y_icon), glyph, font=font(22), fill="#f0f0f0" if active else "#b5b5b5")
+
+        side_left, side_right = ACTIVITY_WIDTH, ACTIVITY_WIDTH + SIDEBAR_WIDTH
+        draw.rectangle((side_left, TITLEBAR, side_right, HEIGHT), fill="#252526")
+        draw.text((side_left + 16, TITLEBAR + 16), "EXPLORER", font=SMALL, fill="#cccccc")
+        tree = [
+            ("⌄  KUBEEDGE", "#e7e7e7"),
+            ("   ⌄  ianvs", "#cfcfcf"),
+            ("      core", "#bcbcbc"),
+            ("      examples", "#bcbcbc"),
+            ("   ⌄  tools", "#cfcfcf"),
+            ("      probe_pr558_transitive.py", "#9cdcfe"),
+            ("      probe_pr558_pickle.py", "#9cdcfe"),
+            ("      probe_paradigm_runtime.py", "#9cdcfe"),
+            ("   ⌄  evidence", "#cfcfcf"),
+            ("      videos", "#bcbcbc"),
+            ("   submission", "#bcbcbc"),
+        ]
+        for index, (label, colour) in enumerate(tree):
+            y_tree = TITLEBAR + 48 + index * 24
+            if "probe_pr558_transitive.py" in label:
+                draw.rectangle((side_left, y_tree - 2, side_right, y_tree + 21), fill="#37373d")
+            draw.text((side_left + 12, y_tree), label, font=SMALL, fill=colour)
+
+        main_left = side_right
+        draw.rectangle((main_left, TITLEBAR, WIDTH, EDITOR_BOTTOM), fill="#1e1e1e")
+        draw.rectangle((main_left, TITLEBAR, WIDTH, TITLEBAR + 34), fill="#2d2d2d")
+        draw.rectangle((main_left + 1, TITLEBAR, main_left + 258, TITLEBAR + 34), fill="#1e1e1e")
+        draw.text((main_left + 15, TITLEBAR + 10), "◉  probe_pr558_transitive.py   ×", font=SMALL, fill="#eeeeee")
+        editor = [
+            "from importlib import util",
+            "from pathlib import Path",
+            "",
+            "def load_example(example_dir: Path):",
+            "    spec = util.spec_from_file_location(",
+            "        'basemodel', example_dir / 'basemodel.py'",
+            "    )",
+            "    module = util.module_from_spec(spec)",
+            "    spec.loader.exec_module(module)",
+            "    return module.BaseModel",
+            "",
+            "# compare main @ 37a9c60 with pr-558",
+        ]
+        for number, code in enumerate(editor, start=1):
+            y_code = TITLEBAR + 52 + (number - 1) * 22
+            draw.text((main_left + 18, y_code), f"{number:>2}", font=SMALL, fill="#858585")
+            colour = "#d4d4d4"
+            if code.startswith(("from", "def", "return")):
+                colour = "#c586c0"
+            elif code.lstrip().startswith("#"):
+                colour = "#6a9955"
+            draw.text((main_left + 58, y_code), code, font=SMALL, fill=colour)
+
+        draw.rectangle((main_left, TERMINAL_TOP, WIDTH, HEIGHT), fill="#181818")
+        draw.rectangle((main_left, TERMINAL_TOP, WIDTH, TERMINAL_TOP + TERMINAL_HEADER), fill="#252526")
+        draw.text((main_left + 16, TERMINAL_TOP + 10), "PROBLEMS    OUTPUT    DEBUG CONSOLE", font=SMALL, fill="#a8a8a8")
+        draw.text((main_left + 340, TERMINAL_TOP + 10), "TERMINAL", font=SMALL, fill="#ffffff")
+        draw.rectangle((main_left + 340, TERMINAL_TOP + TERMINAL_HEADER - 2, main_left + 409, TERMINAL_TOP + TERMINAL_HEADER), fill="#007acc")
+        draw.text((WIDTH - 110, TERMINAL_TOP + 10), "bash  ⌄   +  ×", font=SMALL, fill="#c5c5c5")
+
+        y = TERMINAL_TOP + TERMINAL_HEADER + 12
         for line in self.visible():
             colour = "#e2e8f0"
             if line.startswith("$ ") or line == "$":
@@ -91,13 +155,13 @@ class Terminal:
                 colour = "#93c5fd"
             elif "LOAD-FAIL" in line or "ValueError:" in line or "RuntimeError:" in line:
                 colour = "#fda4af"
-            draw.text((left + 22, y), line, font=REGULAR, fill=colour)
+            draw.text((main_left + 18, y), line, font=REGULAR, fill=colour)
             y += LINE_HEIGHT
 
         # A blinking cursor makes the command entry readable without pretending this is live capture.
         if self.frame % FPS < int(FPS * 0.7):
             latest = self.visible()[-1]
-            cursor_x = left + 22 + draw.textlength(latest, font=REGULAR)
+            cursor_x = main_left + 18 + draw.textlength(latest, font=REGULAR)
             draw.rectangle((cursor_x + 2, y - LINE_HEIGHT + 4, cursor_x + 11, y - 5), fill="#e2e8f0")
         assert self.encoder.stdin is not None
         self.encoder.stdin.write(image.tobytes())

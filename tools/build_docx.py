@@ -126,7 +126,7 @@ doc.add_heading("CNCF / KubeEdge - Comprehensive Example Restoration for KubeEdg
 for line in [
     "**Candidate:** henryng15 (Henry Nguyen)",
     "**Analysed commit:** kubeedge/ianvs@37a9c60",
-    "**Submitted:** 2026-08-27",
+    "**Submitted:** 2026-08-28",
 ]:
     p = doc.add_paragraph(); rich(p, line)
 

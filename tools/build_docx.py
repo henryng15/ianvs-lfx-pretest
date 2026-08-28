@@ -35,8 +35,18 @@ def mono(text):
 INLINE = re.compile(r"`([^`]+)`|\*\*([^*]+)\*\*|\[([^\]]+)\]\(([^)]+)\)")
 
 
+def prose(text):
+    """Use a single ASCII hyphen in rendered prose.
+
+    Code blocks bypass this helper so command flags and captured terminal output
+    remain byte-for-byte faithful to the evidence.
+    """
+    return text.replace("—", "-").replace(" -- ", " - ")
+
+
 def rich(par, text):
     """Render inline code, bold and links as runs."""
+    text = prose(text)
     pos = 0
     for m in INLINE.finditer(text):
         if m.start() > pos:
@@ -93,7 +103,7 @@ def render(md):
         # a heading needs a space after the hashes -- "#642" is an issue reference
         hm = re.match(r"^(#{1,6})\s+(.*)$", ln)
         if hm:
-            doc.add_heading(hm.group(2).strip(), min(len(hm.group(1)), 4)); i += 1; continue
+            doc.add_heading(prose(hm.group(2).strip()), min(len(hm.group(1)), 4)); i += 1; continue
         if ln.strip() in ("---", "***"):
             doc.add_paragraph("_" * 78).alignment = WD_ALIGN_PARAGRAPH.CENTER; i += 1; continue
         if re.match(r"^\s*[-*]\s+", ln):
@@ -111,8 +121,8 @@ def render(md):
 
 
 # ---- cover -----------------------------------------------------------------
-doc.add_heading("LFX Mentorship 2026 Term 3 — Pre-test Submission", 0)
-doc.add_heading("CNCF / KubeEdge — Comprehensive Example Restoration for KubeEdge Ianvs: Phase IV", 2)
+doc.add_heading("LFX Mentorship 2026 Term 3 - Pre-test Submission", 0)
+doc.add_heading("CNCF / KubeEdge - Comprehensive Example Restoration for KubeEdge Ianvs: Phase IV", 2)
 for line in [
     "**Candidate:** henryng15 (Henry Nguyen)",
     "**Analysed commit:** kubeedge/ianvs@37a9c60",
@@ -161,7 +171,7 @@ for path in [
     render(pathlib.Path(path).read_text())
     doc.add_page_break()
 
-doc.add_heading("Appendix — target-specific comments as posted", 1)
+doc.add_heading("Appendix - target-specific comments as posted", 1)
 order = [("PR", "558"), ("PR", "651"), ("PR", "642"), ("PR", "598"),
          ("PR", "598-followup"), ("PR", "702"), ("PR", "617"),
          ("PR", "617-followup"), ("PR", "617-correction"), ("PR", "569"), ("PR", "739"), ("PR", "632"),

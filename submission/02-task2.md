@@ -311,7 +311,7 @@ reviewer should raise it, and neither PR does.
 
 ## 5. Reproduce
 
-**Live VS Code terminal recording (1:07, no audio):** [watch or download the MP4](https://github.com/henryng15/ianvs-lfx-pretest/blob/main/evidence/videos/task2-reproduction.mp4). This is a capture of an automated demo in a real VS Code Integrated Terminal: commands are typed at a readable pace and the probes execute against the analysed SHA, `pr-558`, R4a, R4b, and the Ianvs runtime. The diagnostic errors shown are expected evidence, not a failed submission; the original full outputs remain in `evidence/*.txt`.
+**Live VS Code terminal recording (1:39, no audio):** [watch or download the MP4](https://github.com/henryng15/ianvs-lfx-pretest/blob/main/evidence/videos/task2-reproduction.mp4). This is a capture of an automated demo in a real VS Code Integrated Terminal: command entry has natural pauses and brief corrections, and the probes execute against the analysed SHA, `pr-558`, R4a, R4b, and the Ianvs runtime. The diagnostic errors shown are expected evidence, not a failed submission; the original full outputs remain in `evidence/*.txt`.
 
 **Executed.** Every probe in R2, R3, R4a and R4b runs the unmodified production helper
 from the stated commit, on CPU, with no dataset, no model weights, no API key and no

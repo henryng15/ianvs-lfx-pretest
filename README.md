@@ -1,32 +1,49 @@
-# Ianvs LFX 2026 Term 3 — Pretest Working Repository
+# Reproducible evidence — KubeEdge Ianvs, LFX 2026 Term 3 pre-test
 
-Working artifacts for the CNCF/KubeEdge LFX Mentorship 2026 Term 3 pretest:
-**"Comprehensive Example Restoration for KubeEdge Ianvs: Phase IV"**.
+Command output, static-analysis censuses and executable probes backing the pre-test
+Discussion **[kubeedge/ianvs#948](https://github.com/kubeedge/ianvs/discussions/948)**
+and its target-specific reviews.
 
-- Pretest spec: <https://github.com/kubeedge/ianvs/issues/230#issuecomment-5375307896>
-- Deadline: **2026-08-28 23:59 UTC**
-- Upstream under analysis: `kubeedge/ianvs` @ `37a9c60` (cloned into `ianvs/`, git-ignored)
+Everything here is measured against upstream `kubeedge/ianvs` at commit **`37a9c60`**.
+Every probe runs on CPU in seconds, with no dataset, model weights, API key or network
+access, so any reviewer can re-run the whole set.
+
+## Reproducing
+
+```bash
+git clone --depth 1 https://github.com/kubeedge/ianvs.git ianvs   # cloned here, git-ignored
+python3 tools/probe_all_is_inert.py ianvs        # E1  __all__ is read by nothing
+python3 tools/probe_parse_kwargs_dead.py ianvs   # E2  parse_kwargs has no callers
+python3 tools/probe_pr558_transitive.py ianvs    # R4a PR #558 sibling-import differential
+python3 tools/probe_pr558_pickle.py ianvs        # R4b PR #558 pickle-recovery differential
+python3 tools/run_shipped_validator.py ianvs     # what the shipped CI validator checks
+```
+
+`probe_pr558_*.py` fetch the PR branch and compare it against `main`, so they need network
+access for the fetch only. `tools/probe_paradigm_runtime.py` additionally needs Ianvs
+installed:
+
+```bash
+python3 -m venv .venv && . .venv/bin/activate
+pip install prettytable pyyaml colorlog tqdm pandas numpy matplotlib onnx scikit-learn
+pip install ianvs/resources/third_party/sedna-0.6.0.1-py3-none-any.whl
+python3 tools/probe_paradigm_runtime.py ianvs
+```
 
 ## Layout
 
 | Path | Contents |
 |---|---|
-| `docs/lfx-2026-term3-pretest-plan.md` | Original evidence-first execution plan |
-| `docs/PROGRESS.md` | Index of progress notes, newest last |
-| `docs/progress/` | One short note per completed component/task |
-| `tools/` | Probe scripts and audit tooling (reproducible, no secrets) |
-| `evidence/` | Raw command output, logs, and audit tables |
-| `submission/` | Draft Discussion body and Task 1-4 + Bonus comments |
+| `tools/probe_*.py` | Executable probes; each prints the claim it tests and its verdict |
+| `tools/scan_*.py`, `tools/build_coverage.py` | AST censuses and the prior-work coverage map |
+| `evidence/*.txt`, `evidence/*.json` | Captured output of the above, unedited |
+| `evidence/diffs/` | Diffs of every reviewed PR at the commit reviewed |
+| `evidence/screenshots/`, `evidence/videos/` | Terminal captures embedded in the Discussion |
 
-## Ground rules
+## Ground rules used throughout
 
-1. Never describe an unexecuted check as passed. Every claim carries command + SHA + output.
-2. Every novelty claim is checked against the prior-art audit before it is written.
-3. Secrets live in `.env` only, which is git-ignored. See `.env.example`.
-
-## Setup
-
-```bash
-cp .env.example .env   # then fill in RUNPOD_API and HF_TOKEN
-git clone --depth 1 https://github.com/kubeedge/ianvs.git ianvs
-```
+1. No unexecuted check is described as passed. Every claim carries its command, the commit
+   it ran against, and its output.
+2. Where execution was impossible, the blocker is stated instead of glossed over.
+3. Claims that turned out to be wrong were retracted in place, publicly, with the
+   corrected finding and its evidence.

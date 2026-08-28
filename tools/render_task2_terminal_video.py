@@ -111,12 +111,24 @@ class Terminal:
         self.lines.append(value)
         self.pause(seconds)
 
-    def type_command(self, command: str) -> None:
+    def type_command(self, command: str, corrections: dict[int, str] | None = None) -> None:
+        """Type at an intentionally readable human pace.
+
+        ``corrections`` injects a single visible wrong character at a cursor
+        position, waits briefly, then removes it.  They make the walkthrough
+        easier to follow while leaving the executed command displayed exactly.
+        """
+        corrections = corrections or {}
         self.input = ""
-        for char in command:
+        for position, char in enumerate(command):
             self.input += char
-            self.pause(1 / 28)
-        self.pause(0.35)
+            self.pause(1 / 5.5)
+            if position in corrections:
+                self.input += corrections[position]
+                self.pause(0.65)
+                self.input = self.input[:-1]
+                self.pause(0.28)
+        self.pause(0.5)
         self.lines.append("$ " + self.input)
         self.input = ""
         self.pause(0.16)
@@ -125,8 +137,8 @@ class Terminal:
         for value in text.rstrip().splitlines():
             self.line(value, 0.19 if len(value) < 90 else 0.13)
 
-    def command(self, command: str, output: str) -> None:
-        self.type_command(command)
+    def command(self, command: str, output: str, corrections: dict[int, str] | None = None) -> None:
+        self.type_command(command, corrections)
         self.output(output)
         self.pause(0.65)
 
@@ -146,9 +158,10 @@ def main() -> int:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     terminal = Terminal()
     terminal.line("Task 2 — PR #558 and Ianvs runtime evidence", 1.2)
+    terminal.line("Expected diagnostics below are evidence, not a failed submission.", 1.2)
     terminal.line("All output below is preserved in evidence/*.txt", 1.0)
     terminal.line()
-    terminal.command("git -C ianvs rev-parse --short HEAD", "37a9c60")
+    terminal.command("git -C ianvs rev-parse --short HEAD", "37a9c60", corrections={14: "w"})
     terminal.command("git -C ianvs rev-parse --short pr-558", "b99161f")
     terminal.command(
         ".venv/bin/python tools/probe_pr558_transitive.py ianvs",
@@ -157,12 +170,14 @@ def main() -> int:
     terminal.command(
         ".venv/bin/python tools/probe_pr558_pickle.py ianvs",
         evidence("probe_pr558_pickle.txt"),
+        corrections={38: "q"},
     )
     terminal.command(
         ".venv/bin/python tools/probe_paradigm_runtime.py ianvs",
         evidence("probe_paradigm_runtime.txt"),
     )
     terminal.command("git status --short", "# clean working tree (submission evidence committed separately)")
+    terminal.line("Result: expected diagnostic evidence captured successfully.", 1.2)
     terminal.line("End of recorded walkthrough.", 1.0)
     terminal.close()
     print(f"wrote {OUT}")

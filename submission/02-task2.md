@@ -311,7 +311,7 @@ reviewer should raise it, and neither PR does.
 
 ## 5. Reproduce
 
-**Terminal evidence video (1:42, no audio):** [watch or download the MP4](https://github.com/henryng15/ianvs-lfx-pretest/blob/e8d3f9f5575b977ed7fd3905577b84676b24f831/evidence/videos/task2-reproduction.mp4). It presents the exact terminal commands and observed output for the analysed SHA, `pr-558`, R4a, R4b, and the Ianvs runtime probe.
+**Terminal evidence video (0:34, no audio):** [watch or download the MP4](https://github.com/henryng15/ianvs-lfx-pretest/blob/main/evidence/videos/task2-reproduction.mp4). A continuous terminal walkthrough types each command and scrolls through its preserved observed output for the analysed SHA, `pr-558`, R4a, R4b, and the Ianvs runtime probe. The original full outputs remain in `evidence/*.txt`.
 
 **Executed.** Every probe in R2, R3, R4a and R4b runs the unmodified production helper
 from the stated commit, on CPU, with no dataset, no model weights, no API key and no

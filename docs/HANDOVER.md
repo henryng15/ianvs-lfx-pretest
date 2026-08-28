@@ -19,7 +19,7 @@ the video.
 | 4 | 4 issue comments posted | ditto |
 | 5 | All 20 links verified HTTP 200 | `python3 tools/verify_links.py` |
 | 6 | Corrections + 2 follow-up reviews posted (see `docs/progress/05-...`) | #598, #617, and Task 3/4/Bonus edited in place |
-| 7 | `.docx` for the email built | `submission/LFX-2026-Term3-Ianvs-Pretest-henryng15.docx` (89 KB) |
+| 7 | `.docx` for the email built | `submission/henryng15-lfx-ianvs-pretest.docx` (101 KB) |
 | 8 | Working repo committed and pushed | https://github.com/henryng15/ianvs-lfx-pretest |
 
 **RunPod was not used.** Every finding runs on CPU with no dataset, model or network, so
@@ -119,7 +119,7 @@ upload unlisted to YouTube and paste the link instead.
 ## TODO 4 — Send the email  ⏱ 10 minutes
 
 **To:** `zimu.zheng@huawei.com`, `content@kaiwei.dev`
-**Attach:** `submission/LFX-2026-Term3-Ianvs-Pretest-henryng15.docx`
+**Attach:** `submission/henryng15-lfx-ianvs-pretest.docx`
 
 > ⚠️ Rebuild the `.docx` **after** you finish TODO 2 and 3, so the attachment matches what
 > is on GitHub — the rules say the email content takes precedence if the two differ:

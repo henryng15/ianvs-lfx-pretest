@@ -85,6 +85,8 @@ ianvs commit under test: 37a9c60
 and no Example star-imports any of the 30 modules. **Impact:** 30 declarations across
 10 Examples are free to say anything at all, and #641 is the visible tip of that.
 
+![Executed terminal output — E1: __all__ census](https://raw.githubusercontent.com/henryng15/ianvs-lfx-pretest/e7685be/evidence/screenshots/shot-task1-e1.png)
+
 ### E2 — `parse_kwargs` is defined once and called never
 
 `tools/probe_parse_kwargs_dead.py` → `evidence/probe_parse_kwargs_dead.txt`
@@ -109,6 +111,8 @@ The defect #597 reports is real — confirmed by execution. Its blast radius is 
 **Impact:** #597 states the bug causes hyperparameters to be silently dropped for
 Examples. On this commit it cannot, because no Example reaches the function. Sedna,
 which *does* filter hyperparameters this way, ships its own copy.
+
+![Executed terminal output — E2: parse_kwargs call-site census](https://raw.githubusercontent.com/henryng15/ianvs-lfx-pretest/e7685be/evidence/screenshots/shot-task1-e2.png)
 
 ### E3 — the loader collision is reproducible on production code
 

@@ -181,6 +181,8 @@ all — visibly broken to anyone who looks. Under #558 it executes and returns a
 wrong number. For a benchmarking framework that is a worse failure mode, not a better
 one, and it will be harder to notice after the obvious collision is gone.
 
+![Executed terminal output — R4a: PR #558 transitive-import differential](https://raw.githubusercontent.com/henryng15/ianvs-lfx-pretest/e7685be/evidence/screenshots/shot-task2-r4a.png)
+
 #### R4b — the PR silently changes what a pickled Example class can be recovered from  *(not raised by anyone)*
 
 **Classification: latent regression + undocumented invariant.** I state the boundary
@@ -257,6 +259,8 @@ today. If the hashed `__name__` is preferred, the invariant "objects placed in
 `task_index` must not be instances of Example-defined classes" should be written down and
 ideally checked. Either is fine; leaving it unstated is the part I would push back on.
 
+![Executed terminal output — R4b: PR #558 pickle-recovery differential](https://raw.githubusercontent.com/henryng15/ianvs-lfx-pretest/e7685be/evidence/screenshots/shot-task2-r4b.png)
+
 ### R5 — Duplicated, conflicting and inconsistent changes across the set
 
 | Overlap | PRs | Status |
@@ -306,6 +310,8 @@ reviewer should raise it, and neither PR does.
   release note rather than a blocker — but it should be written.
 
 ## 5. Reproduce
+
+**Terminal evidence video (1:42, no audio):** [watch or download the MP4](https://github.com/henryng15/ianvs-lfx-pretest/blob/e8d3f9f5575b977ed7fd3905577b84676b24f831/evidence/videos/task2-reproduction.mp4). It presents the exact terminal commands and observed output for the analysed SHA, `pr-558`, R4a, R4b, and the Ianvs runtime probe.
 
 **Executed.** Every probe in R2, R3, R4a and R4b runs the unmodified production helper
 from the stated commit, on CPU, with no dataset, no model weights, no API key and no

@@ -10,7 +10,7 @@ from docx import Document
 from docx.shared import Pt, Inches, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
-OUT = pathlib.Path("submission/LFX-2026-Term3-Ianvs-Pretest-henryng15.docx")
+OUT = pathlib.Path("submission/henryng15-lfx-ianvs-pretest.docx")
 posted = json.loads(pathlib.Path("evidence/posted.json").read_text())
 targets = json.loads(pathlib.Path("evidence/posted_targets.json").read_text())
 

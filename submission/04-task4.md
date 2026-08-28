@@ -317,10 +317,80 @@ evidence. Running the shipped validator:
 Both `yaoba` Examples pass every check the project currently runs, and neither can
 execute — their `paradigm_type` matches no `ParadigmType` member, and dispatch has no
 `else` clause. There are zero references to `ClassFactory`, `register`, `alias` or
-`paradigm_type` under `.github/workflows/validator/`.
+`paradigm_type` under `.github/workflows/validator/`. (See the second correction below
+for what Core itself does check.)
 
 **A note on my own method.** I built a prior-art map over 86 Discussions and every open
 target, and still missed a validator sitting in the tree I had checked out. The failure is
 instructive for this submission's own thesis: I searched for *proposals* in the PR queue
 and did not check what had already *merged*. Recording it here because a verification
 boundary is worth nothing if it only covers the checks that happened to be run.
+
+
+---
+
+## Second correction — posted 2026-08-28, after installing Ianvs and running it
+
+**I got the mechanism wrong in the update above, and I am fixing it with an executed run
+rather than another static reading.**
+
+I wrote that dispatch "has no `else`, so the call returns `None` — no exception, no log
+line, no validation at config-parse time." **That is false.**
+`core/testcasecontroller/algorithm/algorithm.py:140-143` validates `paradigm_type` against
+the enum and raises. It is called from `_parse_config` at line 167, long before the
+dispatch chain I was reading is reached.
+
+Installed Ianvs (`pip install -r requirements.txt` plus the bundled
+`sedna-0.6.0.1` wheel) and ran it:
+
+```text
+ianvs commit under test: 37a9c60
+
+1. ianvs CLI on examples/yaoba/singletask_learning_boost
+   exit code: 1
+   RuntimeError: benchmarkingjob runs failed, error: prepare dataset failed,
+   error: not one of train_index/train_data/train_data_info..
+
+2. Algorithm(...) -- where paradigm_type is validated
+   yaoba acboost: paradigm_type='singletasklearning_acboost'
+      -> ValueError: not support paradigm(singletasklearning_acboost).
+         the following paradigms can be selected: ['singletasklearning', ...]
+   yaoba tta:     paradigm_type='singletasklearning_tta'
+      -> ValueError: not support paradigm(singletasklearning_tta). ...
+   valid control: paradigm_type='singletasklearning'
+      -> constructed, no error
+```
+
+Reproduce: `python3 tools/probe_paradigm_runtime.py ianvs`.
+
+**Corrected statement of the finding.** Two things I claimed are confirmed, one is retracted:
+
+| Claim | Verdict |
+|---|---|
+| Both `yaoba` Examples are unrunnable | **confirmed** — the CLI exits 1, and `Algorithm(...)` raises on the paradigm |
+| The shipped CI validator reports **PASS** for both | **confirmed** |
+| Core validates `paradigm_type` silently / returns `None` | **RETRACTED — Core validates it correctly and loudly** |
+
+The run also shows the Examples fail *even earlier* than the paradigm check, at dataset
+preparation (`not one of train_index/train_data/train_data_info`), so they are broken in at
+least two independent ways.
+
+**What the finding actually is, now that it is measured.** The gap is not that Ianvs fails
+to validate identifiers — Core validates them, with a good error message that even lists
+the valid values. The gap is that **CI and Core validate different things, and CI's set is
+the smaller one.** `ParadigmType` is right there in `core/common/constant.py`; the
+validator under `.github/workflows/validator/` never consults it, so two Examples pass
+every check the project runs and fail immediately when actually executed.
+
+That is a narrower claim than the one I published, and it is a better one: it names the
+information that already exists in the tree and is simply not wired into the check. It is
+also exactly Step 1 of my Task 3 repair strategy — have Core expose what it would resolve,
+so the existing validator can consult it — which I can now say is a small change rather
+than a new subsystem.
+
+**On my own method, again.** This is my second correction on this submission. Both came
+from the same habit: reading a dispatch chain and inferring behaviour instead of running
+it. The first correction I found by reading someone else's review; this one I found by
+finally installing the framework. The submission's own thesis is that unvalidated
+declarations drift until something executes them — which turns out to apply to my
+analysis as well as to the repository's configs.

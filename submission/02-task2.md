@@ -313,8 +313,32 @@ network. #558 was fetched as a real branch (`git fetch origin pull/558/head`, he
 `b99161f`) and compared against `main` in isolated `git worktree`s, so both sides of each
 differential ran the actual PR code.
 
-**Not executed, and why.** No end-to-end `ianvs -f benchmarkingjob.yaml` run is claimed
-for any affected Example. Concretely:
+**Also executed — a real Ianvs install and CLI run (added 2026-08-28).** I installed the
+framework (`pip install -r requirements.txt` plus the bundled `sedna-0.6.0.1` wheel) and
+ran the CLI at `37a9c60`:
+
+```text
+$ python benchmarking.py -f examples/yaoba/singletask_learning_boost/benchmarkingjob.yaml
+exit code: 1
+RuntimeError: benchmarkingjob runs failed, error: prepare dataset failed,
+error: not one of train_index/train_data/train_data_info..
+
+$ Algorithm(name=..., config=yaml2dict(".../yaoba/singletask_learning_boost/testalgorithms/algorithm.yaml"))
+ValueError: not support paradigm(singletasklearning_acboost).
+  the following paradigms can be selected: ['singletasklearning', 'incrementallearning', ...]
+```
+
+Reproduce: `python3 tools/probe_paradigm_runtime.py ianvs`.
+
+This run corrected a claim I had made from static reading — Core validates `paradigm_type`
+loudly rather than silently — and the correction is recorded in the Bonus, Task 3 and Task
+4 comments rather than quietly edited away. It also establishes that the two `yaoba`
+Examples fail at two independent points, and that the CI validator on `main` passes them
+both regardless.
+
+**Not executed, and why.** No end-to-end benchmark *result* is claimed for any affected
+Example — every run above terminates at a configuration or dataset error rather than
+producing a leaderboard. Concretely:
 
 | Example | Blocker |
 |---|---|

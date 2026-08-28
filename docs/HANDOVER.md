@@ -190,7 +190,7 @@ Henry Nguyen (GitHub: henryng15)
 cd ~/VSCode/projects/KubeEdge && python3 tools/verify_links.py
 ```
 
-Expect `22 links checked, 0 broken`. Then open two or three in a **logged-out** browser
+Expect `23 links checked, 0 broken`. Then open two or three in a **logged-out** browser
 window, including the `henryng15/ianvs-lfx-pretest` link from TODO 1.
 
 ---
@@ -264,6 +264,42 @@ are still asserted by **nobody else**.
 
 **Nothing changes in your TODO list.** Same five steps. Two notes:
 
-- The link count in TODO 5 is now **22**, not 20.
+- The link count in TODO 5 is now **23**, not 20.
 - Rebuild the `.docx` after your screenshots/video as before — it already includes the two
   follow-up reviews and the corrections.
+
+
+---
+
+## Update 2 — 2026-08-28, later
+
+**I installed Ianvs and ran it for real**, which did two things.
+
+**It closed the Reproduce gap.** Task 2 §5 previously said no end-to-end `ianvs` run was
+claimed. It now carries an actual CLI run with its exit code and traceback. That was the
+weakest scoring area I could fix without you, and it is fixed. Your video (TODO 3) is
+still worth doing — it demonstrates the #558 differential, which is the headline finding —
+but the section is no longer empty.
+
+**It disproved one of my own claims.** I had written that an unknown `paradigm_type` is
+handled silently. It is not: Core raises `ValueError: not support paradigm(...)` and even
+lists the valid values. Retracted and corrected in the Bonus, Task 3, Task 4 and PR #617
+comments, each under a labelled "Second correction" heading.
+
+The finding survives in narrower form and is better for it: Core validates these
+identifiers correctly, **CI does not**, so two Examples pass every check the project runs
+and fail immediately when executed.
+
+Link count is now **23**. `.docx` rebuilt. Nothing changes in your five steps.
+
+If you want to reproduce the run yourself:
+
+```bash
+cd ~/VSCode/projects/KubeEdge
+python3 -m venv .venv && . .venv/bin/activate
+pip install prettytable pyyaml colorlog tqdm pandas numpy matplotlib onnx scikit-learn
+pip install ianvs/resources/third_party/sedna-0.6.0.1-py3-none-any.whl
+python3 tools/probe_paradigm_runtime.py ianvs
+```
+
+This is also a good candidate for the TODO 3 video, since it is a genuine `ianvs` CLI run.

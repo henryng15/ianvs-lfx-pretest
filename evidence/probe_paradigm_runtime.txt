@@ -1,0 +1,28 @@
+ianvs commit under test: 37a9c60
+
+==========================================================================
+1. ianvs CLI on examples/yaoba/singletask_learning_boost
+==========================================================================
+exit code: 1
+    File "/home/hoan/VSCode/projects/KubeEdge/ianvs/benchmarking.py", line 41, in main
+      raise RuntimeError(f"benchmarkingjob runs failed, error: {err}.") from err
+  RuntimeError: benchmarkingjob runs failed, error: prepare dataset failed, error: not one of train_index/train_data/train_data_info..
+
+==========================================================================
+2. Algorithm(...) -- where paradigm_type is validated
+==========================================================================
+
+  yaoba acboost: paradigm_type='singletasklearning_acboost'
+     -> ValueError: not support paradigm(singletasklearning_acboost).the following paradigms can be selected: ['singletasklearning', 'incrementallearning', 'multiedgeinfe
+
+  yaoba tta: paradigm_type='singletasklearning_tta'
+     -> ValueError: not support paradigm(singletasklearning_tta).the following paradigms can be selected: ['singletasklearning', 'incrementallearning', 'multiedgeinferenc
+
+  valid control: paradigm_type='singletasklearning'
+     -> constructed, no error
+
+==========================================================================
+Conclusion: Ianvs Core DOES validate paradigm_type and fails loudly
+(core/testcasecontroller/algorithm/algorithm.py:140-143). The CI
+validator on main reports PASS for both Examples anyway.
+==========================================================================
